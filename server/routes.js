@@ -19,4 +19,8 @@ router.get('/searchNews', function(req, res){
   newsFetchService.searchByTerm(req.query.q, genericResponseFactory(req, res));
 });
 
+router.get('/searchNews/src', function(req, res){
+  newsFetchService.searchByTermSrc(req.query.q, genericResponseFactory(req, res));
+});
+
 module.exports = router;

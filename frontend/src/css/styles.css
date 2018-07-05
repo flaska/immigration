@@ -1,3 +1,13 @@
-/* You can add global styles to this file, and also import other style files */
+.float-right {
+  float: right;
+  opacity: 0.7;
+}
 
+.center {
+  text-align: center;
+}
 
+#main_heading {
+  font: 100 35px/32px Roboto, "Helvetica Neue", sans-serif;
+  margin: 25px!important;
+}
