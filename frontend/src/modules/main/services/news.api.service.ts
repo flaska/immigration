@@ -1,1 +1,12 @@
-//key ef69c4627682427e8deab8c51a7663ed
+import { Injectable } from '@angular/core';
+import {HttpClient} from '@angular/common/http';
+
+@Injectable({
+  providedIn: 'root',
+})
+export class NewsApiService {
+
+  private url: string = 'https://news.google.com/news?output=rss&q=';
+  constructor(private http: HttpClient) { }
+
+}
