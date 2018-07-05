@@ -1,13 +1,7 @@
-import {Component} from '@angular/core';
+import {Component, Input} from '@angular/core';
 import {NewsApiService} from '../../services/news.api.service';
 import {NewsRecord} from '../../schemas/news.record.schema';
-
-enum NewsChannel {
-  GreenCard = "green card",
-  OPT = "OPT",
-  H1B = "H1B",
-  USCIS = "USCIS",
-}
+import {NewsChannel} from '../../services/news.channel.enum';
 
 @Component({
   selector: 'news-list',
@@ -15,15 +9,18 @@ enum NewsChannel {
   providers: [NewsApiService]
 })
 export class NewsListComponent{
-  channel: NewsChannel = NewsChannel.GreenCard;
+  @Input() channel: NewsChannel;
   newsItems: NewsRecord[];
   constructor(private newsApiService: NewsApiService){
-    this.fetchNews(NewsChannel.GreenCard);
+    this.fetchNews(this.channel);
+  }
+
+  ngOnChanges() {
+    this.fetchNews(this.channel);
   }
 
   fetchNews(channel: NewsChannel){
-    this.channel = channel;
-    this.newsApiService.searchByTerm(this.channel).subscribe(result=>{
+    this.newsApiService.searchByTerm(channel).subscribe(result=>{
       this.newsItems = result;
     });
   }
