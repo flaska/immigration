@@ -2,8 +2,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { MainComponent } from './components/main.component';
-import {MaterialModule} from '../material/material.module';
 import {NewsModule} from '../news/news.module';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -11,8 +11,8 @@ import {NewsModule} from '../news/news.module';
   ],
   imports: [
     BrowserModule,
-    MaterialModule,
-    NewsModule
+    NewsModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [MainComponent]
