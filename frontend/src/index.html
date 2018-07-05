@@ -7,8 +7,71 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+
+  <style>
+    body {
+      background: #FFF;
+    }
+
+    .spinner-container {
+      width: 80px;
+      height: 100px;
+      margin: 100px auto;
+      margin-top: calc(100vh / 2 - 50px);
+    }
+
+    .block {
+      position: relative;
+      box-sizing: border-box;
+      float: left;
+      margin: 0 10px 10px 0;
+      width: 12px;
+      height: 12px;
+      border-radius: 3px;
+      background: #007bff;
+    }
+
+    .block:nth-child(4n+1) { animation: wave 2s ease .0s infinite; }
+    .block:nth-child(4n+2) { animation: wave 2s ease .2s infinite; }
+    .block:nth-child(4n+3) { animation: wave 2s ease .4s infinite; }
+    .block:nth-child(4n+4) { animation: wave 2s ease .6s infinite; margin-right: 0; }
+
+    @keyframes wave {
+      0%   { top: 0;     opacity: 1; }
+      50%  { top: 30px;  opacity: .2; }
+      100% { top: 0;     opacity: 1; }
+    }
+  </style>
+
 </head>
 <body>
-  <app-root></app-root>
+  <section class="mat-typography">
+    <body>
+    <noscript>MEDIT is accessible only with browsers supporting JavaScript.</noscript>
+    <app-root>
+      <div class="spinner-container">
+        <div class="block"></div>
+        <div class="block"></div>
+        <div class="block"></div>
+        <div class="block"></div>
+        <div class="block"></div>
+        <div class="block"></div>
+        <div class="block"></div>
+        <div class="block"></div>
+        <div class="block"></div>
+        <div class="block"></div>
+        <div class="block"></div>
+        <div class="block"></div>
+        <div class="block"></div>
+        <div class="block"></div>
+        <div class="block"></div>
+        <div class="block"></div>
+      </div>
+    </app-root>
+    <script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=Intl.~locale.en"></script>
+    <script src="https://raw.githack.com/zloirock/core-js/v2.5.1/client/shim.min.js" crossorigin="anonymous"></script>
+    </body>
+  </section>
 </body>
 </html>

@@ -11,6 +11,7 @@ import {NewsChannel} from '../../services/news.channel.enum';
 export class NewsListComponent{
   @Input() channel: NewsChannel;
   newsItems: NewsRecord[];
+  showLoading: boolean = false;
   constructor(private newsApiService: NewsApiService){
     this.fetchNews(this.channel);
   }
@@ -20,8 +21,10 @@ export class NewsListComponent{
   }
 
   fetchNews(channel: NewsChannel){
+    this.showLoading = true;
     this.newsApiService.searchByTerm(channel).subscribe(result=>{
       this.newsItems = result;
+      this.showLoading = false;
     });
   }
 }

@@ -1,5 +1,7 @@
 
-
-<span *ngFor="let newsItem of newsItems">
-  <news-item [newsItem]="newsItem"></news-item>
-</span>
+<mat-progress-bar *ngIf="showLoading" mode="indeterminate"></mat-progress-bar>
+<div *ngIf="!showLoading">
+  <span *ngFor="let newsItem of newsItems">
+    <news-item [newsItem]="newsItem"></news-item>
+  </span>
+</div>
