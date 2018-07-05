@@ -50,7 +50,9 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "immigration:build"
+            "browserTarget": "immigration:build",
+            "proxyConfig": "proxy.conf.json",
+            "port": 4202
           },
           "configurations": {
             "production": {

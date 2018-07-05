@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { MainComponent } from './components/main.component';
 import {MaterialModule} from '../material/material.module';
+import {NewsModule} from '../news/news.module';
 
 @NgModule({
   declarations: [
@@ -10,7 +11,8 @@ import {MaterialModule} from '../material/material.module';
   ],
   imports: [
     BrowserModule,
-    MaterialModule
+    MaterialModule,
+    NewsModule
   ],
   providers: [],
   bootstrap: [MainComponent]
