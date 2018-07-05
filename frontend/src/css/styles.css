@@ -1,13 +1,28 @@
 .float-right {
   float: right;
-  opacity: 0.7;
+}
+
+.float-left {
+  float: left;
+}
+
+.clearfix{
+  clear: both;
 }
 
 .center {
   text-align: center;
 }
 
+.quiet {
+  opacity: 0.7;
+}
+
 #main_heading {
   font: 100 35px/32px Roboto, "Helvetica Neue", sans-serif;
   margin: 25px!important;
+}
+
+.mat-body, .mat-body-1, .mat-typography {
+  font: 200 18px/20px Roboto, "Helvetica Neue", sans-serif!important;
 }
