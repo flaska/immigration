@@ -1,5 +1,4 @@
 import {Component, EventEmitter, Input, Output} from '@angular/core';
-import {NewsChannel} from '../../services/news.channel.enum';
 
 @Component({selector: 'channel-select', templateUrl: './channelSelect.component.html'})
 export class ChannelSelectComponent{
