@@ -2,6 +2,9 @@ var request = require('request'),
   parseString = require('xml2js').parseString;
 
 exports.searchByTerm = function(term, cb){
+  if (term === 'all topics') {
+    term = '"green card" OR "H1B" OR "USCIS"';
+  }
   request
     .get('https://news.google.com/news?output=rss&q=' + term, function(err, resp, body){
       parseString(body, function (err, result) {
@@ -23,6 +26,7 @@ exports.searchByTerm = function(term, cb){
             f.img = found.substr(0, found.length - 1);
           } catch(e) {
             console.log(e);
+            f.img = null;
           }
           return f?f:'';
         });

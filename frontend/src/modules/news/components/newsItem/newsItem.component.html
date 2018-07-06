@@ -1,7 +1,7 @@
 <mat-card>
 
   <a [href]="newsItem.url" target="_blank">
-    <img [src]="newsItem.img" class="float-left">
+    <img *ngIf="newsItem.img" [src]="newsItem.img" class="float-left">
     {{newsItem.title}}
   </a>
   <div class="clearfix"></div>
