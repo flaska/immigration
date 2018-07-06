@@ -8,6 +8,7 @@ import {MainNewsComponent} from './components/mainNews/mainNews.component';
 import {ChannelSelectComponent} from './components/channelSelect/channelSelect.component';
 
 
+
 @NgModule({
   declarations: [
     MainNewsComponent,

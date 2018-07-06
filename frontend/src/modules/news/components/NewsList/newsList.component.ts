@@ -13,7 +13,6 @@ export class NewsListComponent{
   newsItems: NewsRecord[];
   showLoading: boolean = false;
   constructor(private newsApiService: NewsApiService){
-    // this.fetchNews(this.channel);
   }
 
   ngOnChanges() {
