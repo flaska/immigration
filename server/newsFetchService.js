@@ -20,6 +20,7 @@ function fetchNews(){
 
         stripUrl(feeds);
         getImg(feeds);
+        stripSource(feeds);
 
         news[keyword] = feeds;
       });
@@ -31,6 +32,16 @@ setInterval(function(){
   fetchNews();
 }, 1000 * 60 * 5);
 fetchNews();
+
+function stripSource(feeds){
+  feeds = feeds.map(f=>{
+    var dividerIndex = f.title.lastIndexOf('-');
+    var title = f.title;
+    f.title = title.substr(0, dividerIndex-1);
+    f.source = title.substr(dividerIndex+2, 100);
+    return f;
+  });
+}
 
 function stripUrl(feeds){
   feeds = feeds.map(f=>{
@@ -60,8 +71,13 @@ exports.getNewsByKeyword = function(term, cb){
 };
 
 exports.getNewsByKeywordSrc = function(term, cb){
+  if (term === 'all topics') {
+    q = '"green card" OR "H1B" OR "USCIS"';
+  } else {
+    q = term;
+  }
   request
-    .get('https://news.google.com/news?output=rss&q=' + term, function(err, resp, body){
+    .get('https://news.google.com/news?output=rss&q=' + q, function(err, resp, body){
       parseString(body, function (err, result) {
         cb(err, result);
       });

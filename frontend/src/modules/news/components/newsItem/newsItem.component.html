@@ -1,14 +1,20 @@
 <mat-card>
 
-  <a [href]="newsItem.url" target="_blank">
-    <img *ngIf="newsItem.img" [src]="newsItem.img" class="float-left" alt="thumbnail" title="See article">
-  </a>
+  <div class="float-right text-right">
+    <a [href]="newsItem.url" target="_blank">
+      <img *ngIf="newsItem.img" [src]="newsItem.img" class="" alt="thumbnail" title="See article">
+    </a>
+    <div>{{newsItem.source}}</div>
+    <div class="quiet">{{newsItem.date | date}}</div>
+  </div>
 
-  <a [href]="newsItem.url" target="_blank">
-    {{newsItem.title}}
-  </a>
+  <div>
+    <a [href]="newsItem.url" target="_blank">
+      {{newsItem.title}}
+    </a>
+  </div>
+
   <div class="clearfix"></div>
-  <div class="float-right quiet">{{newsItem.date | date}}</div>
 
 </mat-card>
 <br>
