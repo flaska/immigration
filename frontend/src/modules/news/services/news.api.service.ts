@@ -8,7 +8,7 @@ import {Observable} from 'rxjs';
 })
 export class NewsApiService {
 
-  private url: string = '/api/searchNews?q=';
+  private url: string = '/api/getNews?q=';
   constructor(private http: HttpClient) { }
 
   searchByTerm(term: string):Observable<NewsRecord[]>{
