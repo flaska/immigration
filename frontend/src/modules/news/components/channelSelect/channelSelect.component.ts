@@ -1,6 +1,6 @@
 import {Component, EventEmitter, Input, Output} from '@angular/core';
 
-@Component({selector: 'channel-select', templateUrl: './channelSelect.component.html'})
+@Component({selector: 'channel-select', templateUrl: './channelSelect.component.html', styleUrls: ['./channelSelect.component.css']})
 export class ChannelSelectComponent{
 
 
@@ -12,3 +12,4 @@ export class ChannelSelectComponent{
   }
 
 }
+
