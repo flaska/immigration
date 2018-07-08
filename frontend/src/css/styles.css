@@ -24,6 +24,7 @@
 #main_heading {
   font: 100 35px/32px Roboto, "Helvetica Neue", sans-serif;
   margin: 25px!important;
+  margin-bottom: 10px!important;
 }
 
 .mat-body, .mat-body-1, .mat-typography {

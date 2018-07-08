@@ -77,7 +77,7 @@ exports.getNewsByKeywordSrc = function(term, cb){
     q = term;
   }
   request
-    .get('https://news.google.com/news?output=rss&q=' + q, function(err, resp, body){
+    .get('https://news.google.com/news?output=rss&gl=us&q=' + q, function(err, resp, body){
       parseString(body, function (err, result) {
         cb(err, result);
       });
