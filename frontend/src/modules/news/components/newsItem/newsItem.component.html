@@ -1,7 +1,7 @@
 <mat-card>
 
   <div class="newsItemThubnail float-right text-right">
-    <a [href]="newsItem.url" target="_blank" rel="external" title="{{newsItem.title}}">
+    <a [href]="newsItem.url" target="_blank" rel="external" title="{{newsItem.title}}" rel="noopener">
       <img *ngIf="newsItem.img" [src]="newsItem.img" class="" alt="thumbnail">
     </a>
     <div>{{newsItem.source}}</div>
@@ -9,7 +9,7 @@
   </div>
 
   <div>
-    <a [href]="newsItem.url" target="_blank" rel="external" title="{{newsItem.title}}">
+    <a [href]="newsItem.url" target="_blank" rel="external" title="{{newsItem.title}}" rel="noopener">
       {{newsItem.title}}
     </a>
   </div>
