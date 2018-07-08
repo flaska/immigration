@@ -72,7 +72,7 @@ exports.getNewsByKeyword = function(term, cb){
 
 exports.getNewsByKeywordSrc = function(term, cb){
   if (term === 'all topics') {
-    q = '"green card" OR "H1B" OR "USCIS"';
+    q = '"green card" OR "H1B" OR "USCIS" OR "deported" OR "ICE"';
   } else {
     q = term;
   }
