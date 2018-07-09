@@ -1,20 +1,19 @@
-<mat-card>
+<mat-card  itemscope itemtype="http://schema.org/NewsArticle">
 
   <div class="newsItemThubnail float-right text-right">
-    <a [href]="newsItem.url" target="_blank" rel="external" title="{{newsItem.title}}" rel="noopener">
-      <img *ngIf="newsItem.img" [src]="newsItem.img" class="" alt="thumbnail">
+    <a [href]="newsItem.url" target="_blank" rel="external" title="{{newsItem.title}}" rel="noopener" itemprop="url">
+      <img *ngIf="newsItem.img" [src]="newsItem.img" class="" alt="thumbnail" itemprop="thumbnailUrl">
     </a>
     <div>{{newsItem.source}}</div>
-    <div class="quiet">{{newsItem.date | date}}</div>
+    <div class="quiet" itemprop="datePublished">{{newsItem.date | date}}</div>
   </div>
 
   <div>
-    <a [href]="newsItem.url" target="_blank" rel="external" title="{{newsItem.title}}" rel="noopener">
-      {{newsItem.title}}
+    <a [href]="newsItem.url" target="_blank" rel="external" title="{{newsItem.title}}" rel="noopener" itemprop="url">
+      <span itemprop="headline">{{newsItem.title}}</span>
     </a>
   </div>
 
   <div class="clearfix"></div>
-
 </mat-card>
 <br>

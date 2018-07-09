@@ -27,6 +27,10 @@
   margin-bottom: 10px!important;
 }
 
+#sub_heading {
+  font: 200 18px/20px Roboto, "Helvetica Neue", sans-serif!important;
+}
+
 .mat-body, .mat-body-1, .mat-typography {
   font: 200 18px/20px Roboto, "Helvetica Neue", sans-serif!important;
 }
