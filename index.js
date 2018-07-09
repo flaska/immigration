@@ -2,8 +2,10 @@ const express = require('express'),
   compression = require('compression'),
   app = express(),
   routes = require('./server/routes'),
-  request = require('request')
+  request = require('request'),
+  sslRedirect = require('heroku-ssl-redirect')
 ;
+app.use(sslRedirect());
 app.use(compression());
 app.use(express.static('public'));
 app.use('/api', routes);
