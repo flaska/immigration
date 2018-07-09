@@ -11,7 +11,7 @@ function fetchNews(){
     } else {
       q = keyword;
     }
-    request.get('https://news.google.com/news?output=rss&num=20&q=' + q, function(err, resp, body){
+    request.get('https://news.google.com/news?output=rss&scoring=n&gl=US&num=20&q=' + q, function(err, resp, body){
       parseString(body, function (err, result) {
         var feeds = result.rss.channel[0].item.map(r=>{
           return {title: r.title[0], url: r.link[0], date: r.pubDate[0], img: r.description[0]};
@@ -77,7 +77,7 @@ exports.getNewsByKeywordSrc = function(term, cb){
     q = term;
   }
   request
-    .get('https://news.google.com/news?output=rss&hl=en-US&gl=US&ceid=US:en&q=' + q, function(err, resp, body){
+    .get('https://news.google.com/news?output=rss&gl=US&scoring=n&q=' + q, function(err, resp, body){
       parseString(body, function (err, result) {
         cb(err, result);
       });
