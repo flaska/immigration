@@ -13,5 +13,5 @@ app.use('/api', routes);
 app.listen(process.env.PORT || 3001, () => console.log('Example app listening on port 3000!'));
 
 setTimeout(function(){
-  request('http://www.immigration.media', function (error, response, body) {});
+  request('https://www.immigration.media', function (error, response, body) {});
 }, 5*60*1000);

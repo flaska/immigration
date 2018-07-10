@@ -14,7 +14,7 @@ export class NewsItemComponent implements OnInit{
     if (dd.hours()>1 && dd.hours()<=6) this.newsItem.dateDiff = Math.floor(dd.hours()) + ' hours ago';
     if (dd.hours()>6 && dd.hours()<=12) this.newsItem.dateDiff = 'today';
     if (dd.hours()>12 && dd.days()<=1.5) this.newsItem.dateDiff = 'yesterday';
-    if (dd.days()>1.5) this.newsItem.dateDiff = Math.floor(dd.days().floor()) + ' days ago';
+    if (dd.days()>1.5) this.newsItem.dateDiff = Math.floor(dd.days()) + ' days ago';
 
   }
 }
