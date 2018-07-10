@@ -8,8 +8,10 @@
     <!--<div class="quiet" itemprop="datePublished">{{newsItem.date | date}}</div>-->
     <div class="quiet" itemprop="datePublished">
 
-      <div></div>
-
+      <!--<div *ngIf="newsItem.dateDiff.days>=1"> {{ newsItem.dateDiff.days }} days ago</div>-->
+      <!--<div *ngIf="newsItem.dateDiff.days<1 && newsItem.dateDiff.hours>=1">{{ newsItem.dateDiff.hours }} hours ago</div>-->
+      <!--<div *ngIf="newsItem.dateDiff.hours<1 &&newsItem.dateDiff.minutes>1">{{ newsItem.dateDiff.minutes }} minutes ago</div>-->
+      {{newsItem.dateDiff}}
     </div>
   </div>
 
