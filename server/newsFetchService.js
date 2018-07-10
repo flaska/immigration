@@ -7,7 +7,7 @@ const keywords = ['all topics', 'green card', 'H1B', 'USCIS'];
 function fetchNews(){
   keywords.forEach(function(keyword){
     if (keyword === 'all topics') {
-      q = '"green card" OR "H1B" OR "USCIS"';
+      q = '"green card" OR "H1B" OR "USCIS" OR "path to citizenship"';
     } else {
       q = keyword;
     }
