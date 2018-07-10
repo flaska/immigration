@@ -12,4 +12,12 @@ a:hover {
   border-left: 1px solid  rgba(0, 0, 0, 0.12);
   padding-left: 7px;
   margin-left: 5px;
+  font: 200 16px/20px Roboto, "Helvetica Neue", sans-serif!important;
+  overflow: hidden;
+  min-height: 115px;
+}
+
+.empty_thumbnail{
+  zoom: 2.5;
+  margin-left: 5px;
 }
