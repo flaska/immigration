@@ -3,4 +3,9 @@ export class NewsRecord{
   url: string;
   date: string;
   source: string;
+  dateDiff?: {
+    days: number;
+    hours: number;
+    minutes: number;
+  };
 }
