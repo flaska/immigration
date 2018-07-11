@@ -1,19 +1,28 @@
-import { Component } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {NewsApiService} from '../../../news/services/news.api.service';
 import {MatSnackBar} from '@angular/material';
+import {NewsRecord} from '../../../news/schemas/news.record.schema';
 
 @Component({
   selector: 'block-resource',
   templateUrl: './block.resource.component.html',
   styleUrls: ['./block.resource.component.css']
 })
-export class BlockResourceComponent {
+export class BlockResourceComponent implements OnInit{
   url: string;
   password: string;
 
+  blockedFeeds: NewsRecord[];
+
   constructor(private newsApiService: NewsApiService, public snackBar: MatSnackBar){
 
+  }
+
+  ngOnInit(){
+    this.newsApiService.getBlockedFeeds().subscribe((data)=>{
+      this.blockedFeeds = data;
+    });
   }
 
   blockUrl(){

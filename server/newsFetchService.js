@@ -78,6 +78,23 @@ exports.getNewsItems = function(q, from){
   return news[q].slice(f, f + 10);
 };
 
-exports.blockFeed = function(url){
 
+var blockedFeeds = [];
+
+exports.blockUrl = function(url){
+  var deleted;
+  Object.keys(news).forEach((channelFeeds)=>{
+    var indexToDelete = null;
+    news[channelFeeds].forEach((feed, i)=>{
+      if (feed.url == url) indexToDelete = i;
+    });
+    if (indexToDelete!=undefined) {
+      deleted = news[channelFeeds].splice(indexToDelete,1);
+    }
+  });
+  if (deleted) blockedFeeds.push(deleted);
+};
+
+exports.getBlockedFeeds = function(){
+  return blockedFeeds;
 };

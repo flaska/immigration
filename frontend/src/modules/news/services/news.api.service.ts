@@ -10,6 +10,7 @@ export class NewsApiService {
 
   private getUrl: string = '/api/getNews';
   private blockAddr: string = '/api/blockUrl';
+  private blockedFeedsAddr: string = '/api/getBlockedFeeds';
   constructor(private http: HttpClient) { }
 
   searchByTerm(term: string, from: number):Observable<NewsRecord[]>{
@@ -18,5 +19,9 @@ export class NewsApiService {
 
   blockUrl(url: string, password: string):Observable<boolean>{
     return this.http.delete<boolean>(this.blockAddr + '?url=' + url + '&password=' + password);
+  }
+
+  getBlockedFeeds():Observable<NewsRecord[]>{
+    return this.http.get<NewsRecord[]>(this.blockedFeedsAddr);
   }
 }
