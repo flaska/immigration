@@ -1,18 +1,3 @@
-<div *ngIf="!isOffline">
-  <mat-progress-bar *ngIf="showLoading" mode="indeterminate"></mat-progress-bar>
-  <div *ngIf="!showLoading">
-    <span *ngFor="let newsItem of newsItems">
-      <news-item [newsItem]="newsItem"></news-item>
-    </span>
-  </div>
-</div>
-<div *ngIf="isOffline" class="center">
-  <br><br><br>
-  <h2>
-    Offline
-    <i class="material-icons">
-      sentiment_dissatisfied
-    </i>
-  </h2>
-  Please check your internet connection or try later
-</div>
+<span *ngFor="let newsItem of newsItems">
+  <news-item [newsItem]="newsItem"></news-item>
+</span>
