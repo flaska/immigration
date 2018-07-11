@@ -7,6 +7,13 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MaterialModule} from '../material/material.module';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../../environments/environment';
+import { RouterModule, Routes } from '@angular/router';
+import {AdminModule} from '../admin/admin.module';
+
+export let appRoutes: Routes = [
+  { path: 'admin', loadChildren: '../admin/admin.module#AdminModule'},
+];
+
 
 @NgModule({
   declarations: [
@@ -17,6 +24,7 @@ import { environment } from '../../environments/environment';
     NewsModule,
     BrowserAnimationsModule,
     MaterialModule,
+    RouterModule.forRoot(appRoutes),
     ServiceWorkerModule.register('/ngsw-worker.js', { enabled: environment.production })
   ],
   providers: [],

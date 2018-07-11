@@ -62,7 +62,6 @@ function getImg(feeds){
       var found = f.img.match(re)[0].substr(9, 1000);
       f.img = found.substr(0, found.length - 1);
     } catch(e) {
-      console.log(e);
       f.img = null;
     }
     return f?f:'';
