@@ -1,3 +1,7 @@
 <span *ngFor="let newsItem of newsItems">
   <news-item [newsItem]="newsItem"></news-item>
 </span>
+<div class="center">
+  <button (click)="fetchMore.emit()" mat-raised-button color="">Load more news...</button>
+</div>
+<br>

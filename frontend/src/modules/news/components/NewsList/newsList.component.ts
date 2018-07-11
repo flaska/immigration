@@ -1,4 +1,4 @@
-import {Component, Input} from '@angular/core';
+import {Component, EventEmitter, Input, Output} from '@angular/core';
 import {NewsRecord} from '../../schemas/news.record.schema';
 import {NewsApiService} from '../../services/news.api.service';
 
@@ -9,5 +9,6 @@ import {NewsApiService} from '../../services/news.api.service';
 })
 export class NewsListComponent{
   @Input()  newsItems: NewsRecord[];
+  @Output() fetchMore: EventEmitter<null> = new EventEmitter<null>();
 }
 

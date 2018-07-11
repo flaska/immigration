@@ -19,13 +19,14 @@ export class NewsListWrapperComponent{
   }
 
   ngOnChanges() {
-    this.fetchNews(this.channel);
+    this.newsItems = [];
+    this.fetchNews(this.channel, 0);
   }
 
-  fetchNews(channel: NewsChannel){
+  fetchNews(channel: NewsChannel, from: number){
     this.showLoading = true;
-    this.newsApiService.searchByTerm(channel).pipe(retry(3)).subscribe(result=>{
-      this.newsItems = result;
+    this.newsApiService.searchByTerm(channel, from).pipe(retry(3)).subscribe(result=>{
+      this.newsItems = this.newsItems.concat(result);
       this.showLoading = false;
       this.isOffline = false;
     }, error => {
@@ -33,7 +34,9 @@ export class NewsListWrapperComponent{
     })
   }
 
-  showOffline(){
-
+  fetchMore(){
+    var from = this.newsItems.length;
+    this.fetchNews(this.channel, from);
   }
+
 }
