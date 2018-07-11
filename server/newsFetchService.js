@@ -72,6 +72,7 @@ function getImg(feeds){
 
 
 exports.getNewsItems = function(q, from){
+  if (!news[q]) return [];
   var f;
   if (from) f = parseInt(from);
   else f = 0;
