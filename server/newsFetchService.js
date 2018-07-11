@@ -92,7 +92,7 @@ exports.blockUrl = function(url){
       deleted = news[channelFeeds].splice(indexToDelete,1);
     }
   });
-  if (deleted) blockedFeeds.push(deleted);
+  if (deleted) blockedFeeds.push(deleted[0]);
 };
 
 exports.getBlockedFeeds = function(){

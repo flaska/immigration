@@ -28,7 +28,7 @@ export let routes: Routes = [
     MaterialModule,
     RouterModule.forChild(routes),
   ],
-  exports: [MainNewsComponent],
+  exports: [MainNewsComponent, NewsListComponent],
   providers: []
 })
 export class NewsModule { }

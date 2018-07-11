@@ -4,6 +4,7 @@ import {RouterModule, Routes} from '@angular/router';
 import {MainAdminComponent} from './components/main/main.admin.component';
 import {BlockResourceComponent} from './components/block/block.resource.component';
 import {FormsModule} from '@angular/forms';
+import {NewsModule} from '../news/news.module';
 
 export let routes: Routes = [
   { path: 'main', component: MainAdminComponent},
@@ -18,6 +19,7 @@ export let routes: Routes = [
     MaterialModule,
     FormsModule,
     RouterModule.forChild(routes),
+    NewsModule
   ],
   providers: []
 })
