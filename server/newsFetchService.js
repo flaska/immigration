@@ -14,7 +14,7 @@ function fetchNews(){
       q = keyword;
     }
     q = q + exclude;
-    request.get('https://news.google.com/news?output=rss&scoring=n&gl=US&num=100&q=' + q, function(err, resp, body){
+    request.get('https://news.google.com/news?output=rss&scoring=n&gl=US&num=50&q=' + q, function(err, resp, body){
       parseString(body, function (err, result) {
         var feeds = result.rss.channel[0].item.map(r=>{
           return {title: r.title[0], url: r.link[0], date: r.pubDate[0], img: r.description[0]};
