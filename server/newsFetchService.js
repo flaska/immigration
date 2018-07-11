@@ -2,7 +2,7 @@ var request = require('request'),
   parseString = require('xml2js').parseString;
 
 var news = {};
-const keywords = ['all topics', 'green card', 'H1B', 'USCIS', 'path to citizenship', 'OPT -opt-out'];
+const keywords = ['all topics', 'green card', 'H1B', 'USCIS', 'path to citizenship'];
 const exclude = " -soccer";
 
 

@@ -42,6 +42,7 @@
 
 .mat-button-toggle-label-content {
   color: black;
+  padding: 0px 8px!important;
 }
 
 .mat-button-toggle-checked{
