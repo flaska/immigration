@@ -2,7 +2,9 @@ var request = require('request'),
   parseString = require('xml2js').parseString;
 
 var news = {};
-const keywords = ['all topics', 'green card', 'H1B', 'USCIS'];
+const keywords = ['all topics', 'green card', 'H1B', 'USCIS', 'path to citizenship', 'OPT -opt-out'];
+const exclude = " -soccer";
+
 
 function fetchNews(){
   keywords.forEach(function(keyword){
@@ -11,6 +13,7 @@ function fetchNews(){
     } else {
       q = keyword;
     }
+    q = q + exclude;
     request.get('https://news.google.com/news?output=rss&scoring=n&gl=US&num=20&q=' + q, function(err, resp, body){
       parseString(body, function (err, result) {
         var feeds = result.rss.channel[0].item.map(r=>{
