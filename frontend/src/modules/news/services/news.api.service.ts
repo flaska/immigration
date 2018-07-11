@@ -8,10 +8,15 @@ import {Observable} from 'rxjs';
 })
 export class NewsApiService {
 
-  private url: string = '/api/getNews';
+  private getUrl: string = '/api/getNews';
+  private blockAddr: string = '/api/blockUrl';
   constructor(private http: HttpClient) { }
 
   searchByTerm(term: string, from: number):Observable<NewsRecord[]>{
-    return this.http.get<NewsRecord[]>(this.url + '?q=' + term + '&from=' + from);
+    return this.http.get<NewsRecord[]>(this.getUrl + '?q=' + term + '&from=' + from);
+  }
+
+  blockUrl(url: string, password: string):Observable<boolean>{
+    return this.http.delete<boolean>(this.blockAddr + '?url=' + url + '&password=' + password);
   }
 }

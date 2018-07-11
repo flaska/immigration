@@ -21,4 +21,10 @@ router.get('/getNews', function(req, res){
   else res.status(404).send();
 });
 
+router.delete('/blockUrl', function(req, res){
+  if (req.query.password!=='heslo') return res.status(401).send();
+  newsFetchService.blockFeed(req.query.url);
+  res.send(true);
+});
+
 module.exports = router;

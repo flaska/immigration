@@ -1,0 +1,8 @@
+  <mat-form-field class="full-width">
+    <input matInput placeholder="URL" [(ngModel)]="url">
+  </mat-form-field>
+
+  <mat-form-field class="full-width">
+    <input matInput placeholder="Password" [(ngModel)]="password">
+  </mat-form-field>
+  <button (click)="blockUrl()" mat-raised-button color="accent">Remove</button>

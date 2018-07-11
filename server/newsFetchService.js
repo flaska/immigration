@@ -78,3 +78,6 @@ exports.getNewsItems = function(q, from){
   return news[q].slice(f, f + 10);
 };
 
+exports.blockFeed = function(url){
+
+};
