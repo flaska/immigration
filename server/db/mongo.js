@@ -15,5 +15,5 @@ exports.storeBlockedUrl = function(url, cb){
 };
 
 exports.getBlockedUrls = function(cb){
-  BlockedUrl.find({}).limit(100).exec(cb);
+  BlockedUrl.find({}).sort({date: -1}).limit(100).exec(cb);
 };
