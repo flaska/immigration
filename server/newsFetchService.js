@@ -1,5 +1,7 @@
 var request = require('request'),
-  parseString = require('xml2js').parseString;
+  parseString = require('xml2js').parseString,
+  mongo = require('./db/mongo')
+;
 
 var news = {};
 const keywords = ['all topics', 'green card', 'H1B', 'USCIS', 'path to citizenship'];
@@ -113,10 +115,20 @@ function removeUrl(url){
 //   });
 //   if (deleted) blockedFeeds.push(deleted[0]);
 // };
+//
+// exports.blockUrl = function(url){
+//   blockedUrls.push(url);
+//   removeUrl(url);
+// };
+//
+// exports.getBlockedFeeds = function(){
+//   return blockedUrls;
+// };
 
-exports.blockUrl = function(url){
-  blockedUrls.push(url);
+
+exports.blockUrl = function(url, cb){
   removeUrl(url);
+  mongo.storeBlockedUrl(url, cb);
 };
 
 exports.getBlockedFeeds = function(){

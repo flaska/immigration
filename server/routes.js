@@ -21,17 +21,33 @@ router.get('/getNews', function(req, res){
   else res.status(404).send();
 });
 
+
+
+// router.post('/blockUrl', function(req, res){
+//   if (req.body.password!=='heslo') return res.status(401).send();
+//   newsFetchService.blockUrl(req.body.url);
+//   res.send(true);
+// });
+//
+// router.get('/getBlockedFeeds', function(req, res){
+//   var blockedFeeds = newsFetchService.getBlockedFeeds();
+//   if (blockedFeeds) res.send(blockedFeeds);
+//   else res.status(404).send();
+// });
+
+
 router.post('/blockUrl', function(req, res){
   if (req.body.password!=='heslo') return res.status(401).send();
-  newsFetchService.blockUrl(req.body.url);
-  res.send(true);
+  newsFetchService.blockUrl(req.body.url, genericResponseFactory(req, res));
 });
 
-router.get('/getBlockedFeeds', function(req, res){
-  var blockedFeeds = newsFetchService.getBlockedFeeds();
-  if (blockedFeeds) res.send(blockedFeeds);
-  else res.status(404).send();
-});
+// router.get('/getBlockedFeeds', function(req, res){
+//   var blockedFeeds = newsFetchService.getBlockedFeeds();
+//   if (blockedFeeds) res.send(blockedFeeds);
+//   else res.status(404).send();
+// });
+
+
 
 
 module.exports = router;
