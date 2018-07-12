@@ -9,8 +9,11 @@ import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../../environments/environment';
 import { RouterModule, Routes } from '@angular/router';
 import {AdminModule} from '../admin/admin.module';
+import {MainNewsComponent} from '../news/components/mainNews/mainNews.component';
 
 export let appRoutes: Routes = [
+  { path: '', component: MainNewsComponent},
+  { path: 'news/:channel', component: MainNewsComponent},
   { path: 'admin', loadChildren: '../admin/admin.module#AdminModule'},
 ];
 

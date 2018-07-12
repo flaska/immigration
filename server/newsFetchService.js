@@ -4,13 +4,14 @@ var request = require('request'),
 ;
 
 var news = {};
-const keywords = ['all topics', 'green card', 'H1B', 'USCIS'];
+const keywords = ['all topics', 'green card', 'h1b', 'uscis'];
 
 
 function fetchNews(){
   keywords.forEach(function(keyword){
+    var q;
     if (keyword === 'all topics') {
-      q = '"green card" OR "H1B" OR "USCIS"';
+      q = '"green card" OR "h1b" OR "uscis"';
     } else {
       q = keyword;
     }

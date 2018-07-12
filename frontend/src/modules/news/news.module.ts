@@ -8,11 +8,7 @@ import {MainNewsComponent} from './components/mainNews/mainNews.component';
 import {ChannelSelectComponent} from './components/channelSelect/channelSelect.component';
 import {NewsListWrapperComponent} from './components/newsListWrapper/newsListWrapper.component';
 import {RouterModule, Routes} from '@angular/router';
-
-export let routes: Routes = [
-  { path: '', component: MainNewsComponent},
-];
-
+import {Title} from '@angular/platform-browser';
 
 @NgModule({
   declarations: [
@@ -26,10 +22,9 @@ export let routes: Routes = [
     CommonModule,
     HttpClientModule,
     MaterialModule,
-    RouterModule.forChild(routes),
   ],
   exports: [MainNewsComponent, NewsListComponent],
-  providers: []
+  providers: [Title]
 })
 export class NewsModule { }
 
