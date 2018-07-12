@@ -4,8 +4,7 @@ db.on('error', console.error.bind(console, 'MongoDB connection error. '))
 db.once('open', function() {
   console.log('Connected to MongoDB');
 });
-
-var BlockedUrl = mongoose.model('blockedUrl', mongoose.Schema({
+var BlockedUrl = db.model('blockedUrl', mongoose.Schema({
   url: String,
   date: Date
 }));
