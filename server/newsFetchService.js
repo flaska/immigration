@@ -4,18 +4,16 @@ var request = require('request'),
 ;
 
 var news = {};
-const keywords = ['all topics', 'green card', 'H1B', 'USCIS', 'path to citizenship'];
-const exclude = " -soccer";
+const keywords = ['all topics', 'green card', 'H1B', 'USCIS'];
 
 
 function fetchNews(){
   keywords.forEach(function(keyword){
     if (keyword === 'all topics') {
-      q = '"green card" OR "H1B" OR "USCIS" OR "path to citizenship"';
+      q = '"green card" OR "H1B" OR "USCIS"';
     } else {
       q = keyword;
     }
-    q = q + exclude;
     request.get('https://news.google.com/news?output=rss&scoring=n&gl=US&num=70&q=' + q, function(err, resp, body){
       parseString(body, function (err, result) {
         var feeds = result.rss.channel[0].item.map(r=>{
@@ -28,7 +26,7 @@ function fetchNews(){
         stripSource(feeds);
 
         news[keyword] = feeds;
-        filterBlockedUrls();
+        filterBlockedUrls(news);
       });
     });
   });
@@ -71,8 +69,6 @@ function getImg(feeds){
   });
 }
 
-
-
 exports.getNewsItems = function(q, from){
   if (!news[q]) return [];
   var f;
@@ -82,13 +78,12 @@ exports.getNewsItems = function(q, from){
 };
 
 function filterBlockedUrls(){
-  blockedUrls.forEach((url)=>{
-    removeUrl(url);
+  getBlockedFeeds(function(err, urls){
+    urls.forEach((url)=>{
+      removeUrl(url.url);
+    });
   });
 }
-
-
-var blockedUrls = [];
 
 function removeUrl(url){
   Object.keys(news).forEach((channelFeeds)=>{
@@ -102,35 +97,11 @@ function removeUrl(url){
   });
 };
 
-// exports.blockUrl = function(url){
-//   var deleted;
-//   Object.keys(news).forEach((channelFeeds)=>{
-//     var indexToDelete = null;
-//     news[channelFeeds].forEach((feed, i)=>{
-//       if (feed.url == url) indexToDelete = i;
-//     });
-//     if (indexToDelete!=undefined) {
-//       deleted = news[channelFeeds].splice(indexToDelete,1);
-//     }
-//   });
-//   if (deleted) blockedFeeds.push(deleted[0]);
-// };
-//
-// exports.blockUrl = function(url){
-//   blockedUrls.push(url);
-//   removeUrl(url);
-// };
-//
-// exports.getBlockedFeeds = function(){
-//   return blockedUrls;
-// };
-
-
 exports.blockUrl = function(url, cb){
   removeUrl(url);
   mongo.storeBlockedUrl(url, cb);
 };
 
-exports.getBlockedFeeds = function(){
-  return blockedUrls;
+exports.getBlockedFeeds = getBlockedFeeds = function(cb){
+  mongo.getBlockedUrls(cb);
 };

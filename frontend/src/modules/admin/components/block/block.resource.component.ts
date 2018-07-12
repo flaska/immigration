@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
-import {NewsApiService} from '../../../news/services/news.api.service';
+import {BlockedUrl, NewsApiService} from '../../../news/services/news.api.service';
 import {MatSnackBar} from '@angular/material';
 import {NewsRecord} from '../../../news/schemas/news.record.schema';
 
@@ -13,7 +13,7 @@ export class BlockResourceComponent implements OnInit{
   url: string;
   password: string;
 
-  blockedUrls: string[];
+  blockedUrls: BlockedUrl[];
 
   constructor(private newsApiService: NewsApiService, public snackBar: MatSnackBar){
 

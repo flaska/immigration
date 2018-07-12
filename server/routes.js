@@ -41,11 +41,9 @@ router.post('/blockUrl', function(req, res){
   newsFetchService.blockUrl(req.body.url, genericResponseFactory(req, res));
 });
 
-// router.get('/getBlockedFeeds', function(req, res){
-//   var blockedFeeds = newsFetchService.getBlockedFeeds();
-//   if (blockedFeeds) res.send(blockedFeeds);
-//   else res.status(404).send();
-// });
+router.get('/getBlockedUrls', function(req, res){
+  newsFetchService.getBlockedFeeds(genericResponseFactory(req, res));
+});
 
 
 

@@ -3,6 +3,11 @@ import {HttpClient} from '@angular/common/http';
 import {NewsRecord} from '../schemas/news.record.schema';
 import {Observable} from 'rxjs';
 
+export class BlockedUrl{
+  date: Date;
+  url: string;
+}
+
 @Injectable({
   providedIn: 'root',
 })
@@ -10,7 +15,7 @@ export class NewsApiService {
 
   private getUrl: string = '/api/getNews';
   private blockAddr: string = '/api/blockUrl';
-  private blockedFeedsAddr: string = '/api/getBlockedFeeds';
+  private blockedFeedsAddr: string = '/api/getBlockedUrls';
   constructor(private http: HttpClient) { }
 
   searchByTerm(term: string, from: number):Observable<NewsRecord[]>{
@@ -21,7 +26,7 @@ export class NewsApiService {
     return this.http.post<boolean>(this.blockAddr, {url: url, password: password});
   }
 
-  getBlockedFeeds():Observable<string[]>{
-    return this.http.get<string[]>(this.blockedFeedsAddr);
+  getBlockedFeeds():Observable<BlockedUrl[]>{
+    return this.http.get<BlockedUrl[]>(this.blockedFeedsAddr);
   }
 }
