@@ -4,10 +4,12 @@ const express = require('express'),
   routes = require('./server/routes'),
   request = require('request'),
   sslRedirect = require('heroku-ssl-redirect'),
-  path = require('path')
+  path = require('path'),
+  bodyParser = require('body-parser')
 ;
 app.use(sslRedirect());
 app.use(compression());
+app.use(bodyParser.json());
 app.use(express.static('public'));
 app.use('/api', routes);
 

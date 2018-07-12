@@ -7,4 +7,4 @@
   </mat-form-field>
   <button (click)="blockUrl()" mat-raised-button color="accent">Remove</button>
 
-  <news-list [newsItems]="blockedFeeds"></news-list>
+<div *ngFor="let url of blockedUrls">{{url}}</div>

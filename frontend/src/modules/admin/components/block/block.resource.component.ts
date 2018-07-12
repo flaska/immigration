@@ -13,16 +13,20 @@ export class BlockResourceComponent implements OnInit{
   url: string;
   password: string;
 
-  blockedFeeds: NewsRecord[];
+  blockedUrls: string[];
 
   constructor(private newsApiService: NewsApiService, public snackBar: MatSnackBar){
 
   }
 
-  ngOnInit(){
+  fetchBlockedUrls(){
     this.newsApiService.getBlockedFeeds().subscribe((data)=>{
-      this.blockedFeeds = data;
+      this.blockedUrls = data;
     });
+  }
+
+  ngOnInit(){
+    this.fetchBlockedUrls();
   }
 
   blockUrl(){
@@ -32,6 +36,7 @@ export class BlockResourceComponent implements OnInit{
       this.snackBar.open("URL Blocked", "Close", {
         duration: 3000,
       });
+      this.fetchBlockedUrls();
     }, ()=>{
       this.snackBar.open("Error", "Close", {
         duration: 3000,

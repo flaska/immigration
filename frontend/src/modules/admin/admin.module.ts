@@ -5,6 +5,7 @@ import {MainAdminComponent} from './components/main/main.admin.component';
 import {BlockResourceComponent} from './components/block/block.resource.component';
 import {FormsModule} from '@angular/forms';
 import {NewsModule} from '../news/news.module';
+import {CommonModule} from "@angular/common";
 
 export let routes: Routes = [
   { path: 'main', component: MainAdminComponent},
@@ -16,6 +17,7 @@ export let routes: Routes = [
     BlockResourceComponent
   ],
   imports: [
+    CommonModule,
     MaterialModule,
     FormsModule,
     RouterModule.forChild(routes),

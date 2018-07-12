@@ -21,9 +21,9 @@ router.get('/getNews', function(req, res){
   else res.status(404).send();
 });
 
-router.delete('/blockUrl', function(req, res){
-  if (req.query.password!=='heslo') return res.status(401).send();
-  newsFetchService.blockUrl(req.query.url);
+router.post('/blockUrl', function(req, res){
+  if (req.body.password!=='heslo') return res.status(401).send();
+  newsFetchService.blockUrl(req.body.url);
   res.send(true);
 });
 

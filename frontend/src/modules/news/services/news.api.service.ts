@@ -18,10 +18,10 @@ export class NewsApiService {
   }
 
   blockUrl(url: string, password: string):Observable<boolean>{
-    return this.http.delete<boolean>(this.blockAddr + '?url=' + url + '&password=' + password);
+    return this.http.post<boolean>(this.blockAddr, {url: url, password: password});
   }
 
-  getBlockedFeeds():Observable<NewsRecord[]>{
-    return this.http.get<NewsRecord[]>(this.blockedFeedsAddr);
+  getBlockedFeeds():Observable<string[]>{
+    return this.http.get<string[]>(this.blockedFeedsAddr);
   }
 }

@@ -14,7 +14,7 @@ function fetchNews(){
       q = keyword;
     }
     q = q + exclude;
-    request.get('https://news.google.com/news?output=rss&scoring=n&gl=US&num=50&q=' + q, function(err, resp, body){
+    request.get('https://news.google.com/news?output=rss&scoring=n&gl=US&num=70&q=' + q, function(err, resp, body){
       parseString(body, function (err, result) {
         var feeds = result.rss.channel[0].item.map(r=>{
           return {title: r.title[0], url: r.link[0], date: r.pubDate[0], img: r.description[0]};
@@ -26,6 +26,7 @@ function fetchNews(){
         stripSource(feeds);
 
         news[keyword] = feeds;
+        filterBlockedUrls();
       });
     });
   });
@@ -78,23 +79,46 @@ exports.getNewsItems = function(q, from){
   return news[q].slice(f, f + 10);
 };
 
+function filterBlockedUrls(){
+  blockedUrls.forEach((url)=>{
+    removeUrl(url);
+  });
+}
 
-var blockedFeeds = [];
 
-exports.blockUrl = function(url){
-  var deleted;
+var blockedUrls = [];
+
+function removeUrl(url){
   Object.keys(news).forEach((channelFeeds)=>{
     var indexToDelete = null;
     news[channelFeeds].forEach((feed, i)=>{
       if (feed.url == url) indexToDelete = i;
     });
     if (indexToDelete!=undefined) {
-      deleted = news[channelFeeds].splice(indexToDelete,1);
+      news[channelFeeds].splice(indexToDelete,1);
     }
   });
-  if (deleted) blockedFeeds.push(deleted[0]);
+};
+
+// exports.blockUrl = function(url){
+//   var deleted;
+//   Object.keys(news).forEach((channelFeeds)=>{
+//     var indexToDelete = null;
+//     news[channelFeeds].forEach((feed, i)=>{
+//       if (feed.url == url) indexToDelete = i;
+//     });
+//     if (indexToDelete!=undefined) {
+//       deleted = news[channelFeeds].splice(indexToDelete,1);
+//     }
+//   });
+//   if (deleted) blockedFeeds.push(deleted[0]);
+// };
+
+exports.blockUrl = function(url){
+  blockedUrls.push(url);
+  removeUrl(url);
 };
 
 exports.getBlockedFeeds = function(){
-  return blockedFeeds;
+  return blockedUrls;
 };
