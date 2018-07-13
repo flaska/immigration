@@ -21,6 +21,10 @@
   opacity: 0.7;
 }
 
+.flip {
+  transform: scaleX(-1);
+}
+
 #main_heading {
   font: 100 35px/32px Roboto, "Helvetica Neue", sans-serif;
   margin: 25px!important;
@@ -40,15 +44,25 @@
   margin: auto;
 }
 
+
+
 .mat-button-toggle-label-content {
   color: black;
   padding: 0px 8px!important;
 }
 
-.mat-button-toggle-checked{
-  background-color: #1565c0 !important;
+.mat-button-toggle-group {
+  margin: 7px!important;
 }
 
 .mat-button-toggle-checked .mat-button-toggle-label-content {
   color: white!important;
+}
+
+.selectNewsKeyword .mat-button-toggle-checked{
+  background-color: #1565c0 !important;
+}
+
+.selectNewsScoring .mat-button-toggle-checked{
+  background-color: #d32f2f !important;
 }

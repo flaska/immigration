@@ -2,14 +2,14 @@ import {Component, Input, OnInit} from '@angular/core';
 import {ActivatedRoute, Router} from '@angular/router';
 import {Title} from '@angular/platform-browser';
 
-@Component({selector: 'main-news', templateUrl: './mainNews.component.html'})
+@Component({selector: 'main-news', templateUrl: './mainNews.component.html', styleUrls: ['./mainNews.component.css']})
 export class MainNewsComponent implements OnInit{
 
   channel: string;
   scoring: string;
   private allowedChannels = ['all topics', 'green card', 'uscis', 'h1b'];
   private allowedScoring = ['new', 'top'];
-  private title = 'Immigration in Media | Latest US immigration news';
+  private title = 'Immigration in Media | --scoring-- US immigration news about --channel--';
 
   constructor(private route: ActivatedRoute, private router: Router, private titleService: Title){}
 
@@ -38,11 +38,15 @@ export class MainNewsComponent implements OnInit{
   }
 
   setPageTitle(channel: string, scoring: string){
-    var appendix;
-    if (channel === 'all topics') appendix = 'Green Card, USCIS, H1B';
-    if (channel === 'green card') appendix = 'Green Card';
-    if (channel === 'h1b') appendix = 'H1B';
-    if (channel === 'uscis') appendix = 'USCIS';
-    this.titleService.setTitle( this.title + ' about ' + appendix + " | " + scoring);
+    var channelString, scoringString;
+    if (channel === 'all topics') channelString = 'Green Card, USCIS, H1B';
+    if (channel === 'green card') channelString = 'Green Card';
+    if (channel === 'h1b') channelString = 'H1B';
+    if (channel === 'uscis') channelString = 'USCIS';
+
+    if (scoring==='new') scoringString = 'Latest';
+    if (scoring==='top') scoringString = 'Top';
+
+    this.titleService.setTitle( this.title.replace('--scoring--',scoringString).replace('--channel--', channelString));
   }
 }
