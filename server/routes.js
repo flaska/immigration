@@ -16,7 +16,7 @@ function genericResponseFactory(req, res){
 };
 
 router.get('/getNews', function(req, res){
-  var newsItems = newsFetchService.getNewsItems(req.query.q, req.query.from);
+  var newsItems = newsFetchService.getNewsItems(req.query.q, req.query.scoring, req.query.from);
   if (newsItems) res.send(newsItems);
   else res.status(404).send();
 });

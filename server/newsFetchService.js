@@ -3,40 +3,48 @@ var request = require('request'),
   mongo = require('./db/mongo')
 ;
 
-var news = {};
+var fetchedNews = {top: {}, new: {}};
 const keywords = ['all topics', 'green card', 'h1b', 'uscis'];
 
 
-function fetchNews(){
-  keywords.forEach(function(keyword){
-    var q;
-    if (keyword === 'all topics') {
-      q = '"green card" OR "h1b" OR "uscis"';
-    } else {
-      q = keyword;
-    }
-    request.get('https://news.google.com/news?output=rss&scoring=n&gl=US&num=70&q=' + q, function(err, resp, body){
-      parseString(body, function (err, result) {
-        var feeds = result.rss.channel[0].item.map(r=>{
-          return {title: r.title[0], url: r.link[0], date: r.pubDate[0], img: r.description[0]};
-        });
-        feeds.shift();
-
-        stripUrl(feeds);
-        getImg(feeds);
-        stripSource(feeds);
-
-        news[keyword] = feeds;
-        filterBlockedUrls(news);
+function fetchNewsChannel(keyword, scoring){
+  var q, s;
+  if (keyword === 'all topics') {
+    q = '"green card" OR "h1b" OR "uscis"';
+  } else {
+    q = keyword;
+  }
+  if (scoring=='new') s = 'n';
+  if (scoring=='top') s = 'r';
+  if (!s) s = 'n';
+  request.get('https://news.google.com/news?output=rss&gl=US&num=70&scoring=' + s + '&q=' + q, function(err, resp, body){
+    parseString(body, function (err, result) {
+      var feeds = result.rss.channel[0].item.map(r=>{
+        return {title: r.title[0], url: r.link[0], date: r.pubDate[0], img: r.description[0]};
       });
+      feeds.shift();
+
+      stripUrl(feeds);
+      getImg(feeds);
+      stripSource(feeds);
+
+      fetchedNews[scoring][keyword] = feeds;
+      filterBlockedUrls(fetchedNews);
     });
+  });
+}
+
+function fetchAllNews(){
+  keywords.forEach(function(keyword){
+    fetchNewsChannel(keyword, 'new');
+    fetchNewsChannel(keyword, 'top');
   });
 };
 
 setInterval(function(){
-  fetchNews();
-}, 1000 * 60 * 5);
-fetchNews();
+  fetchAllNews();
+}, 1000 * 60 * 15);
+fetchAllNews();
 
 function stripSource(feeds){
   feeds = feeds.map(f=>{
@@ -70,12 +78,13 @@ function getImg(feeds){
   });
 }
 
-exports.getNewsItems = function(q, from){
-  if (!news[q]) return [];
+exports.getNewsItems = function(q, scoring, from){
+  if (['new', 'top'].indexOf(scoring)===-1) scoring = 'new';
+  if (!fetchedNews[scoring][q]) return [];
   var f;
   if (from) f = parseInt(from);
   else f = 0;
-  return news[q].slice(f, f + 10);
+  return fetchedNews[scoring][q].slice(f, f + 10);
 };
 
 function filterBlockedUrls(){
@@ -87,15 +96,17 @@ function filterBlockedUrls(){
 }
 
 function removeUrl(url){
-  Object.keys(news).forEach((channelFeeds)=>{
-    var indexToDelete = null;
-    news[channelFeeds].forEach((feed, i)=>{
-      if (feed.url == url) indexToDelete = i;
+  ['new', 'top'].forEach(function(scoring){
+    Object.keys(fetchedNews[scoring]).forEach((channelFeeds)=>{
+      var indexToDelete = null;
+      fetchedNews[scoring][channelFeeds].forEach((feed, i)=>{
+        if (feed.url == url) indexToDelete = i;
+      });
+      if (indexToDelete!=undefined) {
+        fetchedNews[scoring][channelFeeds].splice(indexToDelete,1);
+      }
     });
-    if (indexToDelete!=undefined) {
-      news[channelFeeds].splice(indexToDelete,1);
-    }
-  });
+  })
 };
 
 exports.blockUrl = function(url, cb){
