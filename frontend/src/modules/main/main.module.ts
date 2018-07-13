@@ -13,7 +13,7 @@ import {MainNewsComponent} from '../news/components/mainNews/mainNews.component'
 
 export let appRoutes: Routes = [
   { path: '', component: MainNewsComponent},
-  { path: 'news/:channel', component: MainNewsComponent},
+  { path: 'news/:channel/:scoring', component: MainNewsComponent},
   { path: 'admin', loadChildren: '../admin/admin.module#AdminModule'},
 ];
 

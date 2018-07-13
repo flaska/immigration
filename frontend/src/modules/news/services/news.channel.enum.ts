@@ -4,3 +4,8 @@ export enum NewsChannel {
   H1B = "H1B",
   USCIS = "USCIS",
 }
+
+export enum Scoring {
+  New = "new",
+  Top = "top",
+}

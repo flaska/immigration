@@ -6,32 +6,43 @@ import {Title} from '@angular/platform-browser';
 export class MainNewsComponent implements OnInit{
 
   channel: string;
+  scoring: string;
   private allowedChannels = ['all topics', 'green card', 'uscis', 'h1b'];
-  private title = 'Immigration in Media | Latest US immigration news'
+  private allowedScoring = ['new', 'top'];
+  private title = 'Immigration in Media | Latest US immigration news';
 
   constructor(private route: ActivatedRoute, private router: Router, private titleService: Title){}
 
   ngOnInit(){
-    if (this.router.url==='/') return this.channel = 'all topics';
+    if (this.router.url==='/'){
+      this.channel = 'all topics';
+      this.scoring = 'new';
+      return;
+    }
     var urlChannel = this.route.snapshot.params['channel'].replace('-', ' ');
+    var scoring = this.route.snapshot.params['scoring'];
     if (this.allowedChannels.indexOf(urlChannel)>-1) this.channel = urlChannel;
     else this.channel = 'all topics';
+
+    if (this.allowedScoring.indexOf(scoring)>-1) this.scoring = scoring;
+    else this.channel = 'new';
   }
 
-  changed(channel){
-    if (!channel) return;
-    this.channel = channel;
-    this.setPageTitle(channel);
-    if (channel=='all topics') this.router.navigateByUrl('/');
-    else this.router.navigateByUrl('/news/' + channel.replace(' ', '-'));
+  changed(result : {channel: string; scoring: string}){
+    if (!result.channel) return;
+    this.channel = result.channel;
+    this.scoring = result.scoring;
+    this.setPageTitle(result.channel, result.scoring);
+    if (result.channel=='all topics') this.router.navigateByUrl('/');
+    else this.router.navigateByUrl('/news/' + result.channel.replace(' ', '-') + '/' + result.scoring);
   }
 
-  setPageTitle(channel: string){
+  setPageTitle(channel: string, scoring: string){
     var appendix;
     if (channel === 'all topics') appendix = 'Green Card, USCIS, H1B';
     if (channel === 'green card') appendix = 'Green Card';
     if (channel === 'h1b') appendix = 'H1B';
     if (channel === 'uscis') appendix = 'USCIS';
-    this.titleService.setTitle( this.title + ' about ' + appendix);
+    this.titleService.setTitle( this.title + ' about ' + appendix + " | " + scoring);
   }
 }

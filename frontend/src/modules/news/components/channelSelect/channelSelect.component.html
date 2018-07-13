@@ -5,3 +5,8 @@
   <mat-button-toggle value="h1b">H1B</mat-button-toggle>
 </mat-button-toggle-group>
 
+
+<mat-button-toggle-group [(value)]="scoring" (valueChange)="changeChannel()">
+  <mat-button-toggle value="new">New</mat-button-toggle>
+  <mat-button-toggle value="top">Top</mat-button-toggle>
+</mat-button-toggle-group>

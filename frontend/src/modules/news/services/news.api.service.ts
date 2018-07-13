@@ -18,8 +18,8 @@ export class NewsApiService {
   private blockedFeedsAddr: string = '/api/getBlockedUrls';
   constructor(private http: HttpClient) { }
 
-  searchByTerm(term: string, from: number):Observable<NewsRecord[]>{
-    return this.http.get<NewsRecord[]>(this.getUrl + '?q=' + term + '&from=' + from);
+  searchByTerm(term: string, scoring: string, from: number):Observable<NewsRecord[]>{
+    return this.http.get<NewsRecord[]>(this.getUrl + '?q=' + term + '&from=' + from + '&scoring=' + scoring);
   }
 
   blockUrl(url: string, password: string):Observable<boolean>{

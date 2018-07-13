@@ -1,7 +1,7 @@
 import {Component, Input} from '@angular/core';
 import {NewsApiService} from '../../services/news.api.service';
 import {NewsRecord} from '../../schemas/news.record.schema';
-import {NewsChannel} from '../../services/news.channel.enum';
+import {NewsChannel, Scoring} from '../../services/news.channel.enum';
 import {catchError, retry} from "rxjs/operators";
 import {Observable} from "rxjs/internal/Observable";
 
@@ -12,6 +12,7 @@ import {Observable} from "rxjs/internal/Observable";
 })
 export class NewsListWrapperComponent{
   @Input() channel: NewsChannel;
+  @Input() scoring: Scoring;
   newsItems: NewsRecord[];
   showLoading: boolean = false;
   isOffline: boolean = false;
@@ -20,12 +21,12 @@ export class NewsListWrapperComponent{
 
   ngOnChanges() {
     this.newsItems = [];
-    this.fetchNews(this.channel, 0);
+    this.fetchNews(this.channel, this.scoring, 0);
   }
 
-  fetchNews(channel: NewsChannel, from: number){
+  fetchNews(channel: NewsChannel, scoring: Scoring, from: number){
     this.showLoading = true;
-    this.newsApiService.searchByTerm(channel, from).pipe(retry(3)).subscribe(result=>{
+    this.newsApiService.searchByTerm(channel, scoring, from).pipe(retry(3)).subscribe(result=>{
       this.newsItems = this.newsItems.concat(result);
       this.showLoading = false;
       this.isOffline = false;
@@ -36,7 +37,7 @@ export class NewsListWrapperComponent{
 
   fetchMore(){
     var from = this.newsItems.length;
-    this.fetchNews(this.channel, from);
+    this.fetchNews(this.channel, this.scoring, from);
   }
 
 }

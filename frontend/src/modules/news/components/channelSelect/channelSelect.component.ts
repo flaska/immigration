@@ -5,11 +5,13 @@ export class ChannelSelectComponent{
 
 
   @Input() channel: string;
-  @Output() chanelChange: EventEmitter<string> = new EventEmitter<string>();
+  @Input() scoring: string;
+  @Output() chanelChange: EventEmitter<{channel: string, scoring: string}> = new EventEmitter<{channel: string, scoring: string}>();
 
   changeChannel(){
-    this.chanelChange.emit(this.channel);
+    this.chanelChange.emit({channel: this.channel, scoring: this.scoring});
   }
 
 }
+
 
