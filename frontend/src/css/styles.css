@@ -52,7 +52,7 @@
 }
 
 .mat-button-toggle-group {
-  margin: 7px!important;
+  margin: 5px!important;
 }
 
 .mat-button-toggle-checked .mat-button-toggle-label-content {
@@ -65,4 +65,8 @@
 
 .selectNewsScoring .mat-button-toggle-checked{
   background-color: #d32f2f !important;
+}
+
+@media (min-width: 600px) {
+  #channelSelectWrapper {margin: 12px;}
 }

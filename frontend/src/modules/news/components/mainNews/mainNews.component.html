@@ -1,8 +1,6 @@
 <div id="channelSelectWrapper" class="center">
   <channel-select style="margin: auto;" [channel]="channel" [scoring]='scoring' (chanelChange)="changed($event)"></channel-select>
 </div>
-<br>
 <mat-divider></mat-divider>
-<br>
 <news-list-wrapper [channel]="channel" [scoring]='scoring'></news-list-wrapper>
 <br>
