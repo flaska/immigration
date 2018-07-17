@@ -14,6 +14,7 @@ export class BlogPostDetailComponent implements OnInit{
     var blogId = this.route.snapshot.params['id'];
     this.blogPostService.getPost(blogId).subscribe((post)=>{
       this.post = post;
+      this.titleService.setTitle(this.titleService.getTitle() + " | " + post.title);
     });
   }
 }

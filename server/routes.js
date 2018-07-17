@@ -1,7 +1,8 @@
 var express = require('express'),
   router = express.Router(),
   newsFetchService = require('./news/newsFetchService'),
-  blogService = require('./blog/blogService')
+  blogService = require('./blog/blogService'),
+  sponsored = require('./sponsored/sponsored')
 ;
 
 
@@ -18,6 +19,7 @@ function genericResponseFactory(req, res){
 
 router.get('/getNews', function(req, res){
   var newsItems = newsFetchService.getNewsItems(req.query.q, req.query.scoring, req.query.from);
+  if (req.query.q === 'all topics' && req.query.scoring === 'new' && req.query.from == '0') sponsored.addSponsored(newsItems);
   if (newsItems) res.send(newsItems);
   else res.status(404).send();
 });
