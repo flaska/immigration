@@ -70,3 +70,13 @@
 @media (min-width: 600px) {
   #channelSelectWrapper {margin: 12px;}
 }
+
+@media (max-width: 600px) {
+  .blogContentImage{
+    max-width: 150px;
+  }
+}
+
+
+
+
