@@ -22,6 +22,8 @@
       "installMode": "lazy",
       "updateMode": "prefetch",
       "urls": [
+        "/assets/blogPost/img/i797-h1b.png",
+        "/assets/blogPost/passport.html",
         "/assets/favicon.png",
         "/assets/icons/icon192.png",
         "/assets/icons/icon512.png"
@@ -33,6 +35,8 @@
   "hashTable": {
     "/0.3d72a04cda431f564785.js": "15ed88b7c6cd01619658bce6eaf0de6be11bf80f",
     "/1.f17c995591d2fe13d23b.js": "92cc14f319fd19d6a53939020a0880f4ffedf248",
+    "/assets/blogPost/img/i797-h1b.png": "12365ce8d66dbb1a1d5b3c955d7d8b7979d78fad",
+    "/assets/blogPost/passport.html": "bb74b183e56c3edaa053ca8ac1efa706a40b4c48",
     "/assets/favicon.png": "03aa5dd3082a77f67442f9cecbec0b893cbb7607",
     "/assets/icons/icon192.png": "c14313a653b8bd3fbda3e81401418370502971ec",
     "/assets/icons/icon512.png": "044f91f1cbcebea72f4ef892c594587a32091f5a",
