@@ -14,4 +14,7 @@ export class BlogPostService {
 
   constructor(private http: HttpClient) { }
 
+  getPost(id:string):Observable<BlogPost>{
+    return this.http.get<BlogPost>('/api/blog/post?id='+id);
+  }
 }

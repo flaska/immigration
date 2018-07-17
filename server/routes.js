@@ -1,6 +1,7 @@
 var express = require('express'),
   router = express.Router(),
-  newsFetchService = require('./newsFetchService')
+  newsFetchService = require('./news/newsFetchService'),
+  blogService = require('./blog/blogService')
 ;
 
 
@@ -30,5 +31,8 @@ router.get('/getBlockedUrls', function(req, res){
   newsFetchService.getBlockedFeeds(genericResponseFactory(req, res));
 });
 
+router.get('/blog/post', function(req, res){
+  blogService.getBlogPost(req.query.id, genericResponseFactory(req, res));
+});
 
 module.exports = router;

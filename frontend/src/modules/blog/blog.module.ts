@@ -6,8 +6,7 @@ import {RouterModule, Routes} from '@angular/router';
 import {Title} from '@angular/platform-browser';
 import {BlogPostDetailComponent} from './post/blog.post.detail.component';
 import {BlogListComponent} from './list/blog.list.component';
-import {MainAdminComponent} from '../admin/components/main/main.admin.component';
-import {FormsModule} from '@angular/forms';
+import {BlogPostService} from './services/blog.post.service';
 
 export let routes: Routes = [
   { path: 'list', component: BlogListComponent},
@@ -23,11 +22,10 @@ export let routes: Routes = [
     CommonModule,
     HttpClientModule,
     MaterialModule,
-    // FormsModule,
     RouterModule.forChild(routes),
   ],
   exports: [],
-  providers: [Title]
+  providers: [Title,  BlogPostService]
 })
 export class BlogModule { }
 

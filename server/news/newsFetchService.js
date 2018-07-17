@@ -1,6 +1,6 @@
 var request = require('request'),
   parseString = require('xml2js').parseString,
-  mongo = require('./db/mongo')
+  mongo = require('../db/mongo')
 ;
 
 var fetchedNews = {top: {}, new: {}};
