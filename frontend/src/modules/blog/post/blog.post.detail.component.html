@@ -1,3 +1,5 @@
 <div *ngIf="post">
-{{post.title}}
+  <br>
+  <h1>{{post.title}}</h1>
+  <div id="blogPostContentWrapper" [innerHTML]="post.body"></div>
 </div>
