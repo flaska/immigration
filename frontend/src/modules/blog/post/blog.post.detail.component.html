@@ -1,5 +1,5 @@
 <div *ngIf="post">
   <br>
   <h1>{{post.title}}</h1>
-  <div id="blogPostContentWrapper" [innerHTML]="post.body"></div>
+  <div id="blogPostContentWrapper" [innerHTML]="sanitizer.bypassSecurityTrustHtml(post.body)"></div>
 </div>

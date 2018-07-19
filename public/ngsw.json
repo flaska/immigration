@@ -7,13 +7,13 @@
       "installMode": "prefetch",
       "updateMode": "prefetch",
       "urls": [
-        "/0.dd67ea511c29df4b7b7b.js",
+        "/0.c25a70799ed7ba572fd7.js",
         "/1.f17c995591d2fe13d23b.js",
         "/index.html",
         "/main.94d8f918c159bf444d00.js",
         "/polyfills.4eaf33024219056eeb7b.js",
-        "/runtime.cfc9bce66114ef1af90a.js",
-        "/styles.b477abd1c6cef3f69e7d.css"
+        "/runtime.73f319243aefca6f5bd1.js",
+        "/styles.69488b7c6b75787bdfae.css"
       ],
       "patterns": []
     },
@@ -22,29 +22,37 @@
       "installMode": "lazy",
       "updateMode": "prefetch",
       "urls": [
+        "/assets/ads.txt",
+        "/assets/blogPost/img/hamster.png",
         "/assets/blogPost/img/i797-h1b.png",
+        "/assets/blogPost/invisibleHamster.html",
         "/assets/blogPost/passport.html",
         "/assets/favicon.png",
         "/assets/icons/icon192.png",
-        "/assets/icons/icon512.png"
+        "/assets/icons/icon512.png",
+        "/assets/sitemap.txt"
       ],
       "patterns": []
     }
   ],
   "dataGroups": [],
   "hashTable": {
-    "/0.dd67ea511c29df4b7b7b.js": "e463bcaf38069dd7d69c00babcaadadc0c271da7",
+    "/0.c25a70799ed7ba572fd7.js": "21aa14b03c4d2400b976a3cc4120e32dc134c491",
     "/1.f17c995591d2fe13d23b.js": "92cc14f319fd19d6a53939020a0880f4ffedf248",
+    "/assets/ads.txt": "8a4fa0a676ef7bca7c3b0f8de263311481eb7e13",
+    "/assets/blogPost/img/hamster.png": "fed6cd614b1e06e83bdf8ee64adb5da4320c89ac",
     "/assets/blogPost/img/i797-h1b.png": "12365ce8d66dbb1a1d5b3c955d7d8b7979d78fad",
+    "/assets/blogPost/invisibleHamster.html": "53ca6c841822ae3529a75b6e3d50d4b030e1f503",
     "/assets/blogPost/passport.html": "5165e731ef9b2618c5aedec00960ec5fc50bac95",
     "/assets/favicon.png": "03aa5dd3082a77f67442f9cecbec0b893cbb7607",
     "/assets/icons/icon192.png": "c14313a653b8bd3fbda3e81401418370502971ec",
     "/assets/icons/icon512.png": "044f91f1cbcebea72f4ef892c594587a32091f5a",
-    "/index.html": "cf76c966131d8143a84ac5c83457c319e3276290",
+    "/assets/sitemap.txt": "2b923457c71bc6e406d93595c8f9d0b6e7632c6e",
+    "/index.html": "2c792c1e7270ed44e8f74b9da8f1ec70c701ef49",
     "/main.94d8f918c159bf444d00.js": "5136f5f9f8813799404095711fc8298bdcc31e8d",
     "/polyfills.4eaf33024219056eeb7b.js": "18662b25bf116963901843d05e92bb589450929d",
-    "/runtime.cfc9bce66114ef1af90a.js": "deea5ae3e1224220f34b33f5eaa6c08ae10a1471",
-    "/styles.b477abd1c6cef3f69e7d.css": "ef814b0086711359ea465aa4d139f8dc47770615"
+    "/runtime.73f319243aefca6f5bd1.js": "d1fe443c94d577c43d900d3baa3aa9aa3bd7a4d0",
+    "/styles.69488b7c6b75787bdfae.css": "99a067fa178e3e44113a3d6e6ca831e28202dd20"
   },
   "navigationUrls": [
     {

@@ -1,14 +1,19 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {ActivatedRoute, Router} from '@angular/router';
-import {Title} from '@angular/platform-browser';
+import {DomSanitizer, Title} from '@angular/platform-browser';
 import {BlogPost, BlogPostService} from '../services/blog.post.service';
 
-@Component({selector: 'blog-post-detail', templateUrl: './blog.post.detail.component.html', styleUrls: ['./blog.post.detail.component.css']})
+@Component({
+  selector: 'blog-post-detail',
+  templateUrl: './blog.post.detail.component.html',
+  styleUrls: ['./blog.post.detail.component.css'],
+  // providers: [/*DomSanitizer*/]
+})
 export class BlogPostDetailComponent implements OnInit{
 
   post: BlogPost;
 
-  constructor(private route: ActivatedRoute, private blogPostService: BlogPostService, private titleService: Title){}
+  constructor(private route: ActivatedRoute, private blogPostService: BlogPostService, private titleService: Title, private sanitizer: DomSanitizer){}
 
   ngOnInit(){
     var blogId = this.route.snapshot.params['id'];
