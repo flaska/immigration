@@ -100,7 +100,7 @@ function removeUrl(url){
     Object.keys(fetchedNews[scoring]).forEach((channelFeeds)=>{
       var indexToDelete = null;
       fetchedNews[scoring][channelFeeds].forEach((feed, i)=>{
-        if (feed.url == url) indexToDelete = i;
+        if (feed.url.indexOf(url)>-1) indexToDelete = i;
       });
       if (indexToDelete!=undefined) {
         fetchedNews[scoring][channelFeeds].splice(indexToDelete,1);
