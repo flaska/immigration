@@ -48,10 +48,10 @@ fetchAllNews();
 
 function stripSource(feeds){
   feeds = feeds.map(f=>{
-    var dividerIndex = f.title.lastIndexOf('-');
+    var dividerIndex = f.title.lastIndexOf(' - ');
     var title = f.title;
-    f.title = title.substr(0, dividerIndex-1);
-    f.source = title.substr(dividerIndex+2, 100);
+    f.title = title.substr(0, dividerIndex);
+    f.source = title.substr(dividerIndex+3, 100);
     return f;
   });
 }
