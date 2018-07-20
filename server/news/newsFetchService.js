@@ -7,6 +7,16 @@ var fetchedNews = {top: {}, new: {}};
 const keywords = ['all topics', 'green card', 'h1b', 'uscis'];
 
 
+function filterPernamentlyBlocked(feeds){
+  var blockedServers = ['www.lexology.com'];
+  blockedServers.forEach((badUrl)=>{
+    feeds = feeds.filter((f)=>{
+      return f.url.indexOf(badUrl) === -1;
+    })
+  });
+  return feeds;
+};
+
 function fetchNewsChannel(keyword, scoring){
   var q, s;
   if (keyword === 'all topics') {
@@ -27,7 +37,7 @@ function fetchNewsChannel(keyword, scoring){
       stripUrl(feeds);
       getImg(feeds);
       stripSource(feeds);
-
+      feeds = filterPernamentlyBlocked(feeds);
       fetchedNews[scoring][keyword] = feeds;
       filterBlockedUrls(fetchedNews);
     });
@@ -100,7 +110,7 @@ function removeUrl(url){
     Object.keys(fetchedNews[scoring]).forEach((channelFeeds)=>{
       var indexToDelete = null;
       fetchedNews[scoring][channelFeeds].forEach((feed, i)=>{
-        if (feed.url.indexOf(url)>-1) indexToDelete = i;
+        if (feed.url==url) indexToDelete = i;
       });
       if (indexToDelete!=undefined) {
         fetchedNews[scoring][channelFeeds].splice(indexToDelete,1);
