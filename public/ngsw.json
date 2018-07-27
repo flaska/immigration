@@ -7,12 +7,12 @@
       "installMode": "prefetch",
       "updateMode": "prefetch",
       "urls": [
-        "/0.c25a70799ed7ba572fd7.js",
+        "/0.0ad4b9d2cbfb6be6fc9a.js",
         "/1.f17c995591d2fe13d23b.js",
         "/index.html",
         "/main.94d8f918c159bf444d00.js",
         "/polyfills.4eaf33024219056eeb7b.js",
-        "/runtime.73f319243aefca6f5bd1.js",
+        "/runtime.30629c3acd16c6a19b91.js",
         "/styles.69488b7c6b75787bdfae.css"
       ],
       "patterns": []
@@ -23,6 +23,10 @@
       "updateMode": "prefetch",
       "urls": [
         "/assets/ads.txt",
+        "/assets/blogPost/ads.html",
+        "/assets/blogPost/img/example.ad.crop.png",
+        "/assets/blogPost/img/example.ad.full.png",
+        "/assets/blogPost/img/example.ad.png",
         "/assets/blogPost/img/hamster.png",
         "/assets/blogPost/img/i797-h1b.png",
         "/assets/blogPost/img/kayak.jpg",
@@ -38,9 +42,13 @@
   ],
   "dataGroups": [],
   "hashTable": {
-    "/0.c25a70799ed7ba572fd7.js": "21aa14b03c4d2400b976a3cc4120e32dc134c491",
+    "/0.0ad4b9d2cbfb6be6fc9a.js": "95ee1477ff2bcdc51cbc348e7b981f9dbafb8bc6",
     "/1.f17c995591d2fe13d23b.js": "92cc14f319fd19d6a53939020a0880f4ffedf248",
     "/assets/ads.txt": "8a4fa0a676ef7bca7c3b0f8de263311481eb7e13",
+    "/assets/blogPost/ads.html": "da39a3ee5e6b4b0d3255bfef95601890afd80709",
+    "/assets/blogPost/img/example.ad.crop.png": "1cb3047bfff4ab5e70b5b1aa025e02588cbf0c86",
+    "/assets/blogPost/img/example.ad.full.png": "776dd108de6dde9039e8b279d0cf1cfa4906102b",
+    "/assets/blogPost/img/example.ad.png": "fec95cb39c045e2c9ecf2faebb4fad94705cc385",
     "/assets/blogPost/img/hamster.png": "fed6cd614b1e06e83bdf8ee64adb5da4320c89ac",
     "/assets/blogPost/img/i797-h1b.png": "12365ce8d66dbb1a1d5b3c955d7d8b7979d78fad",
     "/assets/blogPost/img/kayak.jpg": "29471779e073a07ab2a1ac4d8a5926548c5bc962",
@@ -50,10 +58,10 @@
     "/assets/icons/icon192.png": "c14313a653b8bd3fbda3e81401418370502971ec",
     "/assets/icons/icon512.png": "044f91f1cbcebea72f4ef892c594587a32091f5a",
     "/assets/sitemap.txt": "2b923457c71bc6e406d93595c8f9d0b6e7632c6e",
-    "/index.html": "2c792c1e7270ed44e8f74b9da8f1ec70c701ef49",
+    "/index.html": "ff862be642167bf40ba20dcb885d1d58795da85e",
     "/main.94d8f918c159bf444d00.js": "5136f5f9f8813799404095711fc8298bdcc31e8d",
     "/polyfills.4eaf33024219056eeb7b.js": "18662b25bf116963901843d05e92bb589450929d",
-    "/runtime.73f319243aefca6f5bd1.js": "d1fe443c94d577c43d900d3baa3aa9aa3bd7a4d0",
+    "/runtime.30629c3acd16c6a19b91.js": "27fe9ea92ba33ab4789655302cb1cb9dc94cfbd4",
     "/styles.69488b7c6b75787bdfae.css": "99a067fa178e3e44113a3d6e6ca831e28202dd20"
   },
   "navigationUrls": [

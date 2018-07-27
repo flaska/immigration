@@ -7,12 +7,9 @@ import {BlogPost, BlogPostService} from '../services/blog.post.service';
   selector: 'blog-post-detail',
   templateUrl: './blog.post.detail.component.html',
   styleUrls: ['./blog.post.detail.component.css'],
-  // providers: [/*DomSanitizer*/]
 })
 export class BlogPostDetailComponent implements OnInit{
-
   post: BlogPost;
-
   constructor(private route: ActivatedRoute, private blogPostService: BlogPostService, private titleService: Title, private sanitizer: DomSanitizer){}
 
   ngOnInit(){

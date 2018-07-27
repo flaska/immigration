@@ -6,10 +6,17 @@ exports.addSponsored = function(feeds){
   //   url: '/blog/post/lost-passport-lost-american-life'
   // })
 
+  // feeds.push({
+  //   title: 'Save life of an invisible hamster!',
+  //   source: 'Immigration in Media',
+  //   url: '/blog/post/invisible-hamster-save-life',
+  //   img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTD7kgeOABtRTcIT2d5M72L9nldZVp3yQT8uap9Cy08lB6jjQ5gwg'
+  // });
+
   feeds.push({
-    title: 'Save life of an invisible hamster!',
+    title: 'Your business can be here!',
     source: 'Immigration in Media',
-    url: '/blog/post/invisible-hamster-save-life',
-    img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTD7kgeOABtRTcIT2d5M72L9nldZVp3yQT8uap9Cy08lB6jjQ5gwg'
+    url: '/blog/post/your-business-ads',
+    img: 'http://icons.iconarchive.com/icons/paomedia/small-n-flat/1024/star-icon.png'
   });
 };
