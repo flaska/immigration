@@ -17,6 +17,6 @@ exports.addSponsored = function(feeds){
     title: 'Your business can be here!',
     source: 'Immigration in Media',
     url: '/blog/post/your-business-ads',
-    img: 'http://icons.iconarchive.com/icons/paomedia/small-n-flat/1024/star-icon.png'
+    img: '/assets/blogPost/img/star-icon.png'
   });
 };
