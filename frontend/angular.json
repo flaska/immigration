@@ -20,6 +20,8 @@
             "tsConfig": "src/tsconfig.app.json",
             "assets": [
               "src/assets/favicon.png",
+              "src/assets/ads.txt",
+              "src/assets/sitemap.txt",
               "src/assets",
               "src/manifest.json"
             ],

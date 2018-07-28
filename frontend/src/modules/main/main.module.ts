@@ -15,6 +15,7 @@ export let appRoutes: Routes = [
   { path: '', component: MainNewsComponent},
   { path: 'news/:channel/:scoring', component: MainNewsComponent},
   { path: 'admin', loadChildren: '../admin/admin.module#AdminModule'},
+  { path: 'blog', loadChildren: '../blog/blog.module#BlogModule'},
 ];
 
 

@@ -1,11 +1,21 @@
 var request = require('request'),
   parseString = require('xml2js').parseString,
-  mongo = require('./db/mongo')
+  mongo = require('../db/mongo')
 ;
 
 var fetchedNews = {top: {}, new: {}};
 const keywords = ['all topics', 'green card', 'h1b', 'uscis'];
 
+
+function filterPernamentlyBlocked(feeds){
+  var blockedServers = ['www.lexology.com'];
+  blockedServers.forEach((badUrl)=>{
+    feeds = feeds.filter((f)=>{
+      return f.url.indexOf(badUrl) === -1;
+    })
+  });
+  return feeds;
+};
 
 function fetchNewsChannel(keyword, scoring){
   var q, s;
@@ -27,7 +37,7 @@ function fetchNewsChannel(keyword, scoring){
       stripUrl(feeds);
       getImg(feeds);
       stripSource(feeds);
-
+      feeds = filterPernamentlyBlocked(feeds);
       fetchedNews[scoring][keyword] = feeds;
       filterBlockedUrls(fetchedNews);
     });
@@ -48,10 +58,10 @@ fetchAllNews();
 
 function stripSource(feeds){
   feeds = feeds.map(f=>{
-    var dividerIndex = f.title.lastIndexOf('-');
+    var dividerIndex = f.title.lastIndexOf(' - ');
     var title = f.title;
-    f.title = title.substr(0, dividerIndex-1);
-    f.source = title.substr(dividerIndex+2, 100);
+    f.title = title.substr(0, dividerIndex);
+    f.source = title.substr(dividerIndex+3, 100);
     return f;
   });
 }
@@ -100,7 +110,7 @@ function removeUrl(url){
     Object.keys(fetchedNews[scoring]).forEach((channelFeeds)=>{
       var indexToDelete = null;
       fetchedNews[scoring][channelFeeds].forEach((feed, i)=>{
-        if (feed.url == url) indexToDelete = i;
+        if (feed.url==url) indexToDelete = i;
       });
       if (indexToDelete!=undefined) {
         fetchedNews[scoring][channelFeeds].splice(indexToDelete,1);

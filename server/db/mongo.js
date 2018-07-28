@@ -17,3 +17,14 @@ exports.storeBlockedUrl = function(url, cb){
 exports.getBlockedUrls = function(cb){
   BlockedUrl.find({}).sort({date: -1}).limit(100).exec(cb);
 };
+
+var BlogPost = db.model('BlogPost', mongoose.Schema({
+  id: String,
+  title: String,
+  date: Date,
+  body: String
+}, { collection: 'blogposts' }));
+
+exports.getBlogPost = function(id, cb){
+  BlogPost.findOne({id: id}).exec(cb);
+};

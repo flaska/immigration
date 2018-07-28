@@ -7,12 +7,13 @@
       "installMode": "prefetch",
       "updateMode": "prefetch",
       "urls": [
-        "/0.19cee742bef3592f1cf9.js",
+        "/0.8cfaf8b2fd573b14f7a0.js",
+        "/1.f17c995591d2fe13d23b.js",
         "/index.html",
-        "/main.e41ab4d56d6b78945b00.js",
-        "/polyfills.d24366e9c2cd4ae3b2eb.js",
-        "/runtime.4501dd3b94486cebc602.js",
-        "/styles.9d0feac0ea6f23f734e3.css"
+        "/main.e96ad549f86272f120ab.js",
+        "/polyfills.4eaf33024219056eeb7b.js",
+        "/runtime.1af47fb214ae185d79ed.js",
+        "/styles.69488b7c6b75787bdfae.css"
       ],
       "patterns": []
     },
@@ -21,24 +22,49 @@
       "installMode": "lazy",
       "updateMode": "prefetch",
       "urls": [
+        "/assets/ads.txt",
+        "/assets/blogPost/ads.html",
+        "/assets/blogPost/img/example.ad.crop.png",
+        "/assets/blogPost/img/example.ad.full.png",
+        "/assets/blogPost/img/example.ad.png",
+        "/assets/blogPost/img/hamster.png",
+        "/assets/blogPost/img/i797-h1b.png",
+        "/assets/blogPost/img/kayak.jpg",
+        "/assets/blogPost/img/star-icon.png",
+        "/assets/blogPost/invisibleHamster.html",
+        "/assets/blogPost/passport.html",
         "/assets/favicon.png",
         "/assets/icons/icon192.png",
-        "/assets/icons/icon512.png"
+        "/assets/icons/icon512.png",
+        "/assets/sitemap.txt"
       ],
       "patterns": []
     }
   ],
   "dataGroups": [],
   "hashTable": {
-    "/0.19cee742bef3592f1cf9.js": "3b772a75cdaafeb79cb2aad7318f5f64cead4cb9",
+    "/0.8cfaf8b2fd573b14f7a0.js": "f017483779cb9c0329f5a5374cbf904c4bdcfa15",
+    "/1.f17c995591d2fe13d23b.js": "92cc14f319fd19d6a53939020a0880f4ffedf248",
+    "/assets/ads.txt": "8a4fa0a676ef7bca7c3b0f8de263311481eb7e13",
+    "/assets/blogPost/ads.html": "da39a3ee5e6b4b0d3255bfef95601890afd80709",
+    "/assets/blogPost/img/example.ad.crop.png": "1cb3047bfff4ab5e70b5b1aa025e02588cbf0c86",
+    "/assets/blogPost/img/example.ad.full.png": "776dd108de6dde9039e8b279d0cf1cfa4906102b",
+    "/assets/blogPost/img/example.ad.png": "fec95cb39c045e2c9ecf2faebb4fad94705cc385",
+    "/assets/blogPost/img/hamster.png": "fed6cd614b1e06e83bdf8ee64adb5da4320c89ac",
+    "/assets/blogPost/img/i797-h1b.png": "12365ce8d66dbb1a1d5b3c955d7d8b7979d78fad",
+    "/assets/blogPost/img/kayak.jpg": "29471779e073a07ab2a1ac4d8a5926548c5bc962",
+    "/assets/blogPost/img/star-icon.png": "eeb5b9debeff9ff744adcd455d0a2baeba3588ed",
+    "/assets/blogPost/invisibleHamster.html": "3c3064bb87c9c1178e0ccec804e4211f64a91579",
+    "/assets/blogPost/passport.html": "5165e731ef9b2618c5aedec00960ec5fc50bac95",
     "/assets/favicon.png": "03aa5dd3082a77f67442f9cecbec0b893cbb7607",
     "/assets/icons/icon192.png": "c14313a653b8bd3fbda3e81401418370502971ec",
     "/assets/icons/icon512.png": "044f91f1cbcebea72f4ef892c594587a32091f5a",
-    "/index.html": "ef7c74554141b807cf9566e811e41e6059b64bbc",
-    "/main.e41ab4d56d6b78945b00.js": "1d003ccf0ff9dff78829a68527091f2b7aed8611",
-    "/polyfills.d24366e9c2cd4ae3b2eb.js": "32ff103404372406dccb69a68c193ef7bea153c0",
-    "/runtime.4501dd3b94486cebc602.js": "d28fa57649ce916785774828af47f354fae714e1",
-    "/styles.9d0feac0ea6f23f734e3.css": "4a80d17c2ae3ce6f9dc1fe20873bcb30e104d76d"
+    "/assets/sitemap.txt": "2b923457c71bc6e406d93595c8f9d0b6e7632c6e",
+    "/index.html": "4a8f56ed0db604dddd53d568a45eef4ea5b2c918",
+    "/main.e96ad549f86272f120ab.js": "9b5e69a11de848bd1f367e5403b7e71c0fc00051",
+    "/polyfills.4eaf33024219056eeb7b.js": "18662b25bf116963901843d05e92bb589450929d",
+    "/runtime.1af47fb214ae185d79ed.js": "d526732f5e6e3a6effe384ab6390f3b11c421b8e",
+    "/styles.69488b7c6b75787bdfae.css": "99a067fa178e3e44113a3d6e6ca831e28202dd20"
   },
   "navigationUrls": [
     {
