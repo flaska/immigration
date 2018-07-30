@@ -1,4 +1,4 @@
-import {MatButtonModule, MatCardModule, MatInputModule, MatSnackBarModule} from '@angular/material';
+import {MatButtonModule, MatCardModule, MatChipsModule, MatInputModule, MatSnackBarModule} from '@angular/material';
 import {NgModule} from '@angular/core';
 import {MatButtonToggleModule} from '@angular/material/button-toggle';
 import {MatProgressBarModule} from '@angular/material/progress-bar';
@@ -10,8 +10,8 @@ import {MatListModule} from '@angular/material/list'
 
 @NgModule({
   imports: [MatButtonModule, MatCardModule, MatButtonToggleModule, MatProgressBarModule, MatDividerModule, MatFormFieldModule, MatInputModule, MatSnackBarModule,
-    MatListModule],
+    MatListModule, MatChipsModule],
   exports: [MatButtonModule, MatCardModule, MatButtonToggleModule, MatProgressBarModule, MatDividerModule, MatFormFieldModule, MatInputModule, MatSnackBarModule,
-    MatListModule],
+    MatListModule, MatChipsModule],
 })
 export class MaterialModule { }

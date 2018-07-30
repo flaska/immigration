@@ -1,28 +1,70 @@
 <br>
 <img id="users" src="http://philippinesreport.com/wp-content/uploads/2017/11/Social-media-users-advised-to-be-critical-of-trolls.jpg">
-<h1>1000 new users for your business is waiting</h1>
-<p>Place your ad on our website and get 1000 new users for $99 only</p>
+
+<br><br>
+
+  <h1>1000 new users for your business is waiting</h1>
+  <p>Place your ad on our website and get 1000 new users for $99 only</p>
+
 
 <div class="clearfix"></div>
 
+<br><br><br>
+
+<hr>
+<br><br>
+<h1>We know our users</h1>
+
+<mat-chip-list>
+  <mat-chip>News/Politics</mat-chip>
+  <mat-chip selected color="accent">US Immigration</mat-chip>
+  <mat-chip >25-45 years old</mat-chip>
+  <mat-chip >65% male</mat-chip>
+  <mat-chip selected color="accent">Green Card</mat-chip>
+  <mat-chip selected color="accent">H1B</mat-chip>
+  <mat-chip>Air Travel</mat-chip>
+  <mat-chip selected color="accent">Live in USA</mat-chip>
+</mat-chip-list>
+
+<br><br>
+
 <hr>
 
-Try it!
+<br><br>
+
+<h1>Try it!</h1>
+
+<br>
+<p>Fill in the following fields</p>
+<br>
 
 <div>
   <mat-form-field>
-    <input matInput placeholder="Some catchy line.." value="Get your green card now! Trump is getting tougher.">
+    <input matInput [(ngModel)]="userInputNewsItem.title" placeholder="Some catchy line.." >
   </mat-form-field>
 </div>
 <div>
   <mat-form-field>
-    <input matInput placeholder="Your business name" value="Bob's Immigration Law, LLC">
+    <input matInput [(ngModel)]="userInputNewsItem.source" placeholder="Your business name" >
   </mat-form-field>
 </div>
 <div>
   <mat-form-field>
-    <input matInput placeholder="URL of your website" value="https://www.bobslaw.com">
+    <input matInput [(ngModel)]="userInputNewsItem.url" placeholder="URL of your website" >
   </mat-form-field>
 </div>
 
+<div>
+  <mat-form-field>
+    <input matInput [(ngModel)]="userInputNewsItem.img" placeholder="URL for your logo" >
+  </mat-form-field>
+</div>
+
+<br><br>
+
+<p>This could be your ad</p>
+<br>
 <news-item [newsItem]="userInputNewsItem"></news-item>
+<br>
+<p>Right on our home page. Exposed to 1000 visitors daily.</p>
+<p>However, you care about people coming to your site? You will get charged only for that. 1000 new users for $99 only.</p>

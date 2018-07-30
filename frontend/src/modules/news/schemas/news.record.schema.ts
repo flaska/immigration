@@ -3,6 +3,7 @@ export class NewsRecord{
   url: string;
   date: string;
   source: string;
+  img: string;
   // dateDiff?: {
   //   days: number;
   //   hours: number;

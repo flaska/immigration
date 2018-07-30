@@ -9,6 +9,7 @@ import {BlogListComponent} from './list/blog.list.component';
 import {BlogPostService} from './services/blog.post.service';
 import {AdsPostComponent} from './ads-post/ads.post.component';
 import {NewsModule} from "../news/news.module";
+import {FormsModule} from '@angular/forms';
 
 export let routes: Routes = [
   { path: 'list', component: BlogListComponent},
@@ -27,6 +28,7 @@ export let routes: Routes = [
     CommonModule,
     HttpClientModule,
     MaterialModule,
+    FormsModule,
     RouterModule.forChild(routes),
     NewsModule
   ],
