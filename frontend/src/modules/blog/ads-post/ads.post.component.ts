@@ -1,4 +1,5 @@
 import {Component} from '@angular/core';
+import {NewsRecord} from "../../news/schemas/news.record.schema";
 
 @Component({
   selector: 'post-dev',
@@ -6,5 +7,5 @@ import {Component} from '@angular/core';
   styleUrls: ['./ads.post.component.css'],
 })
 export class AdsPostComponent {
-
+  userInputNewsItem: NewsRecord;
 }

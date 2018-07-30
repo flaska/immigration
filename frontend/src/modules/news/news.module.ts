@@ -21,9 +21,9 @@ import {Title} from '@angular/platform-browser';
   imports: [
     CommonModule,
     HttpClientModule,
-    MaterialModule,
+    MaterialModule
   ],
-  exports: [MainNewsComponent, NewsListComponent],
+  exports: [MainNewsComponent, NewsListComponent, NewsItemComponent],
   providers: [Title]
 })
 export class NewsModule { }

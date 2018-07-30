@@ -14,7 +14,7 @@ exports.addSponsored = function(feeds){
   // });
 
   feeds.push({
-    title: 'Your business can be here!',
+    title: '1000 new users for your business is waiting. Place your advertisement right here.',
     source: 'Immigration in Media',
     url: '/blog/post/your-business-ads',
     img: '/assets/blogPost/img/star-icon.png'

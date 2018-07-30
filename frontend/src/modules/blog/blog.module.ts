@@ -8,6 +8,7 @@ import {BlogPostDetailComponent} from './post/blog.post.detail.component';
 import {BlogListComponent} from './list/blog.list.component';
 import {BlogPostService} from './services/blog.post.service';
 import {AdsPostComponent} from './ads-post/ads.post.component';
+import {NewsModule} from "../news/news.module";
 
 export let routes: Routes = [
   { path: 'list', component: BlogListComponent},
@@ -27,6 +28,7 @@ export let routes: Routes = [
     HttpClientModule,
     MaterialModule,
     RouterModule.forChild(routes),
+    NewsModule
   ],
   exports: [],
   providers: [Title,  BlogPostService]
