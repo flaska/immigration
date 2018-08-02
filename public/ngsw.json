@@ -7,12 +7,12 @@
       "installMode": "prefetch",
       "updateMode": "prefetch",
       "urls": [
-        "/0.8cfaf8b2fd573b14f7a0.js",
-        "/1.f17c995591d2fe13d23b.js",
+        "/0.98fa1fe2e17e6f70abc6.js",
+        "/1.ce8dd302d63d770e5e7c.js",
         "/index.html",
-        "/main.e96ad549f86272f120ab.js",
+        "/main.c01897d2a35f5835bc40.js",
         "/polyfills.4eaf33024219056eeb7b.js",
-        "/runtime.1af47fb214ae185d79ed.js",
+        "/runtime.470f2319874c80530b4e.js",
         "/styles.69488b7c6b75787bdfae.css"
       ],
       "patterns": []
@@ -43,8 +43,8 @@
   ],
   "dataGroups": [],
   "hashTable": {
-    "/0.8cfaf8b2fd573b14f7a0.js": "f017483779cb9c0329f5a5374cbf904c4bdcfa15",
-    "/1.f17c995591d2fe13d23b.js": "92cc14f319fd19d6a53939020a0880f4ffedf248",
+    "/0.98fa1fe2e17e6f70abc6.js": "18c63b9e13b3c1f9c9f34b67f528ad9648e698c4",
+    "/1.ce8dd302d63d770e5e7c.js": "573ed5645a2b9cf5b17aecf2c4efae4d3e5d7a01",
     "/assets/ads.txt": "8a4fa0a676ef7bca7c3b0f8de263311481eb7e13",
     "/assets/blogPost/ads.html": "da39a3ee5e6b4b0d3255bfef95601890afd80709",
     "/assets/blogPost/img/example.ad.crop.png": "1cb3047bfff4ab5e70b5b1aa025e02588cbf0c86",
@@ -60,10 +60,10 @@
     "/assets/icons/icon192.png": "c14313a653b8bd3fbda3e81401418370502971ec",
     "/assets/icons/icon512.png": "044f91f1cbcebea72f4ef892c594587a32091f5a",
     "/assets/sitemap.txt": "2b923457c71bc6e406d93595c8f9d0b6e7632c6e",
-    "/index.html": "4a8f56ed0db604dddd53d568a45eef4ea5b2c918",
-    "/main.e96ad549f86272f120ab.js": "9b5e69a11de848bd1f367e5403b7e71c0fc00051",
+    "/index.html": "7e872bef00f381b6afe55a5add556d18dac5747f",
+    "/main.c01897d2a35f5835bc40.js": "2e130c53e15122954b2583e464f51760e379d37c",
     "/polyfills.4eaf33024219056eeb7b.js": "18662b25bf116963901843d05e92bb589450929d",
-    "/runtime.1af47fb214ae185d79ed.js": "d526732f5e6e3a6effe384ab6390f3b11c421b8e",
+    "/runtime.470f2319874c80530b4e.js": "b5da24925e4a2720beb9d961152293bc83a1fb37",
     "/styles.69488b7c6b75787bdfae.css": "99a067fa178e3e44113a3d6e6ca831e28202dd20"
   },
   "navigationUrls": [
