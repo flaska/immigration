@@ -1,12 +1,12 @@
 import {Component} from '@angular/core';
-import {NewsRecord} from "../../news/schemas/news.record.schema";
+import {NewsRecord} from "../../../news/schemas/news.record.schema";
 
 @Component({
-  selector: 'post-dev',
-  templateUrl: './ads.post.component.html',
-  styleUrls: ['./ads.post.component.css'],
+  selector: 'ads-page',
+  templateUrl: './ads.page.html',
+  styleUrls: ['./ads.page.css'],
 })
-export class AdsPostComponent {
+export class AdsPage {
   userInputNewsItem: NewsRecord = {
     title: 'Get your green card now! Trump is getting tougher.',
     source: 'Mueler Law',

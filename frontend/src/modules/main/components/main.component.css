@@ -1,3 +1,23 @@
 #sub_heading strong {
   font-weight: 500!important;
 }
+
+#footer {
+  background-color: #0000001a;
+  text-align: center;
+  padding-bottom: 3rem;
+  padding-top: 1rem;
+  border-top: 1px solid #00000026;
+}
+
+#code-house-logo {
+  width: 70px;
+  top: 40px;
+  left: -17px;
+  position: relative;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}

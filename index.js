@@ -17,7 +17,9 @@ app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, './public/index.html'));
 });
 
-app.listen(process.env.PORT || 3001, () => console.log('Example app listening on port 3000!'));
+const webServerPort = process.env.PORT || 3001;
+
+app.listen(webServerPort, () => console.log('Webserver listening on port ' + webServerPort));
 
 setTimeout(function(){
   request('https://www.immigration.media', function (error, response, body) {});
