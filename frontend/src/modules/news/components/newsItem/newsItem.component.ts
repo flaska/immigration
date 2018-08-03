@@ -7,9 +7,7 @@ export class NewsItemComponent implements OnInit{
   @Input() newsItem;
 
   ngOnInit(){
-    // console.log();
     var dd = new DateDiff(new Date(), new Date(this.newsItem.date));
-    // this.newsItem.dateDiff = {days: dd.days(), hours: dd.hours(), minutes: dd.minutes()};
 
     if (dd.hours()<=1) this.newsItem.dateDiff = 'now';
     if (dd.hours()>1 && dd.hours()<=6) this.newsItem.dateDiff = Math.floor(dd.hours()) + ' hours ago';
