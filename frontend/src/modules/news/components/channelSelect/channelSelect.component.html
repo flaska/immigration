@@ -1,11 +1,11 @@
-<mat-button-toggle-group class="selectNewsKeyword" [(value)]="channel" (valueChange)="changeChannel()" (click)="tagManager()">
-  <mat-button-toggle value="all topics">All</mat-button-toggle>
-  <mat-button-toggle value="green card">Green Card</mat-button-toggle>
-  <mat-button-toggle value="uscis">USCIS</mat-button-toggle>
-  <mat-button-toggle value="h1b">H1B</mat-button-toggle>
+<mat-button-toggle-group class="selectNewsKeyword" [(value)]="channel" (valueChange)="changeChannel()" >
+  <mat-button-toggle id="channelSelect_all" value="all topics">All</mat-button-toggle>
+  <mat-button-toggle id="channelSelect_greenCard" value="green card">Green Card</mat-button-toggle>
+  <mat-button-toggle id="channelSelect_uscis" value="uscis">USCIS</mat-button-toggle>
+  <mat-button-toggle id="channelSelect_h1b" value="h1b">H1B</mat-button-toggle>
 </mat-button-toggle-group>
 
-<mat-button-toggle-group class="selectNewsScoring" [(value)]="scoring" (valueChange)="changeChannel()" (click)="tagManager()">
-  <mat-button-toggle value="new">New</mat-button-toggle>
-  <mat-button-toggle value="top">Top</mat-button-toggle>
+<mat-button-toggle-group class="selectNewsScoring" [(value)]="scoring" (valueChange)="changeChannel()" >
+  <mat-button-toggle id="channelSelect_new" value="new">New</mat-button-toggle>
+  <mat-button-toggle id="channelSelect_top" value="top">Top</mat-button-toggle>
 </mat-button-toggle-group>
