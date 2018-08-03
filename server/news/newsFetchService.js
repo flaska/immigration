@@ -38,9 +38,17 @@ function fetchNewsChannel(keyword, scoring){
       getImg(feeds);
       stripSource(feeds);
       feeds = filterPernamentlyBlocked(feeds);
+      feeds = filterOutHttp(feeds);
       fetchedNews[scoring][keyword] = feeds;
       filterBlockedUrls(fetchedNews);
     });
+  });
+}
+
+function filterOutHttp(feeds){
+  return feeds.filter((f)=>{
+    if (f.url.indexOf('http://')==0) return false;
+    return true;
   });
 }
 
