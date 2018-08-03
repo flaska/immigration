@@ -1,7 +1,7 @@
 <mat-card  itemscope itemtype="http://schema.org/NewsArticle">
 
   <div class="newsItemThubnail float-right text-right">
-    <a [href]="newsItem.url" target="_blank" rel="external" title="{{newsItem.title}}" rel="noopener" itemprop="url">
+    <a [href]="newsItem.url" target="_blank" rel="external" title="{{newsItem.title}}" rel="noopener" itemprop="url" (click)="tagManager(newsItem)">
       <img *ngIf="newsItem.img" [src]="newsItem.img" class="" alt="thumbnail" itemprop="thumbnailUrl image">
 
       <div *ngIf="!newsItem.img" class="empty_thumbnail center">
@@ -18,7 +18,7 @@
   </div>
 
   <div>
-    <a [href]="newsItem.url" target="_blank" rel="external" title="{{newsItem.title}}" rel="noopener" itemprop="url">
+    <a [href]="newsItem.url" target="_blank" rel="external" title="{{newsItem.title}}" rel="noopener" itemprop="url" (click)="tagManager(newsItem)">
       <span itemprop="headline">{{newsItem.title}}</span>
     </a>
   </div>

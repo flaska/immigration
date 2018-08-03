@@ -12,6 +12,16 @@ export class ChannelSelectComponent{
     this.chanelChange.emit({channel: this.channel, scoring: this.scoring});
   }
 
+  tagManager(){
+    setTimeout(()=>{
+      window['dataLayer'].push({
+        event: 'MenuNavClick',
+        channel: this.channel,
+        scoring: this.scoring
+      });
+    },100);
+  }
+
 }
 
 

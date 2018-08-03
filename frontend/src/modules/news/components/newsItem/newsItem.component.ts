@@ -1,5 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {default as DateDiff} from 'date-diff';
+import {NewsRecord} from '../../schemas/news.record.schema';
 
 @Component({selector: 'news-item', templateUrl: './newsItem.component.html', styleUrls: ['./newsItem.component.css']})
 export class NewsItemComponent implements OnInit{
@@ -16,5 +17,14 @@ export class NewsItemComponent implements OnInit{
     if (dd.hours()>12 && dd.days()<=1.5) this.newsItem.dateDiff = 'yesterday';
     if (dd.days()>1.5) this.newsItem.dateDiff = Math.floor(dd.days()) + ' days ago';
 
+  }
+
+  tagManager(newsItem: NewsRecord){
+    try {
+      var host = new RegExp("https://.+?/","g").exec(newsItem.url)[0];
+      window['dataLayer'].push({'event': 'NewsLinkClick', title: newsItem.title, host: host});
+    } catch (e) {
+      console.log(e);
+    }
   }
 }
