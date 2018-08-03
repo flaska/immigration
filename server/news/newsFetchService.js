@@ -81,6 +81,7 @@ function getImg(feeds){
     try {
       var found = f.img.match(re)[0].substr(9, 1000);
       f.img = found.substr(0, found.length - 1);
+      f.img = 'https:' + f.img;
     } catch(e) {
       f.img = null;
     }
