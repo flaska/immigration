@@ -1,0 +1,23 @@
+@import "../../css/import/_component_import.scss";
+
+
+.mat-button-toggle-label-content {
+  color: black;
+  padding: 0px 8px!important;
+}
+
+.mat-button-toggle-group {
+  margin: 5px!important;
+}
+
+:host ::ng-deep .mat-button-toggle-checked .mat-button-toggle-label-content {
+  color: white!important;
+}
+
+.selectNewsKeyword .mat-button-toggle-checked{
+  background-color: mat-color($candy-app-primary) !important;
+}
+
+.selectNewsScoring .mat-button-toggle-checked{
+  background-color: mat-color($candy-app-accent) !important;
+}
