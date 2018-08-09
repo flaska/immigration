@@ -7,7 +7,6 @@ import {MaterialModule} from '../material/material.module';
 import {MainNewsComponent} from './components/mainNews/mainNews.component';
 import {ChannelSelectComponent} from './components/channelSelect/channelSelect.component';
 import {NewsListWrapperComponent} from './components/newsListWrapper/newsListWrapper.component';
-import {RouterModule, Routes} from '@angular/router';
 import {Title} from '@angular/platform-browser';
 
 @NgModule({
