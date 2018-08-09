@@ -29,7 +29,7 @@
               "src/css/theme.scss",
               "src/css/styles.css",
               "src/css/utilities.css"
-            ]
+            ],
             "scripts": []
           },
           "configurations": {
