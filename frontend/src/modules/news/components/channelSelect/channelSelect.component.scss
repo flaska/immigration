@@ -1,10 +1,15 @@
 @import "../../css/import/_component_import.scss";
 
 
-.mat-button-toggle-label-content {
-  color: black;
+:host ::ng-deep  .mat-button-toggle-label-content {
+  color: mat-color($on-surface)!important;
   padding: 0px 8px!important;
 }
+
+:host ::ng-deep  .mat-button-toggle-label-content:hover {
+  background-color: mat-color($surface-hover)!important;
+}
+
 
 .mat-button-toggle-group {
   margin: 5px!important;

@@ -5,6 +5,7 @@ import {NewsApiService} from '../../services/news.api.service';
 @Component({
   selector: 'news-list',
   templateUrl: './newsList.component.html',
+  styleUrls: ['./newsList.component.scss'],
   providers: [NewsApiService]
 })
 export class NewsListComponent{
