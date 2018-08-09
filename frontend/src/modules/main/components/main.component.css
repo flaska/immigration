@@ -35,3 +35,18 @@ a {
 .fb-like {
   margin-left: 5px;
 }
+
+#main_heading {
+  font: 100 35px/32px Roboto, "Helvetica Neue", sans-serif;
+  margin: 25px!important;
+  margin-bottom: 10px!important;
+}
+
+#sub_heading {
+  font: 200 18px/20px Roboto, "Helvetica Neue", sans-serif!important;
+}
+
+#main_content_wrapper {
+  max-width: 900px;
+  margin: auto;
+}
