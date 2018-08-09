@@ -11,7 +11,7 @@
 }
 
 :host ::ng-deep .mat-button-toggle-checked .mat-button-toggle-label-content {
-  color: white!important;
+  color: mat-color($on-primary)!important;
 }
 
 .selectNewsKeyword .mat-button-toggle-checked{

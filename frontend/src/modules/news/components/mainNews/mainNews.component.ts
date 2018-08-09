@@ -2,7 +2,7 @@ import {Component, Input, OnInit} from '@angular/core';
 import {ActivatedRoute, Router} from '@angular/router';
 import {Title} from '@angular/platform-browser';
 
-@Component({selector: 'main-news', templateUrl: './mainNews.component.html', styleUrls: ['./mainNews.component.css']})
+@Component({selector: 'main-news', templateUrl: './mainNews.component.html', styleUrls: ['./mainNews.component.scss']})
 export class MainNewsComponent implements OnInit{
 
   channel: string;
