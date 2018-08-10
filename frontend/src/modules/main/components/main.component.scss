@@ -11,7 +11,6 @@
 }
 
 #footer a {
-  text-decoration: none!important;
   color: black!important;
 }
 
@@ -53,8 +52,17 @@
   width: 70px;
 }
 
-#forum_header_link{
-  a:hover {
+nav {
+  position: absolute;
+  right: 9px;
+  top: 9px;
+  a {
+    margin-left: 13px;
+  }
+  a[active]:hover {
     background-color: mat-color($accent-hover);
+  }
+  a:not([active]):hover {
+    background-color: mat-color($primary-hover);
   }
 }

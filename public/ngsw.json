@@ -7,13 +7,13 @@
       "installMode": "prefetch",
       "updateMode": "prefetch",
       "urls": [
-        "/0.e6262ac394cdf2953b72.js",
-        "/1.afce475ea98fb720a895.js",
+        "/0.7cc3c1ad3098f627ce12.js",
+        "/1.588d0a1ec66be17edec0.js",
         "/index.html",
-        "/main.01dcb7b7440bc43c8c02.js",
+        "/main.eac97bf82505bcf10afd.js",
         "/polyfills.86d97acabef9b19ae717.js",
-        "/runtime.9d1b085a768668b3c0a3.js",
-        "/styles.96167448c0b86e577b93.css"
+        "/runtime.ffc1ba4d41785dd01118.js",
+        "/styles.1b52b07d61d7e397d435.css"
       ],
       "patterns": []
     },
@@ -45,8 +45,8 @@
   ],
   "dataGroups": [],
   "hashTable": {
-    "/0.e6262ac394cdf2953b72.js": "8c607b35121ee415bbbb4ae5632287f415dcefbc",
-    "/1.afce475ea98fb720a895.js": "a744d694c2739d1f83f7f5921d90be603d129f2e",
+    "/0.7cc3c1ad3098f627ce12.js": "b0bb589bb7dfd37a6b6848a4aabdccf7c1c843b0",
+    "/1.588d0a1ec66be17edec0.js": "06c91f9210375dd48f0607bc105af7b8f463c852",
     "/assets/ads.txt": "8a4fa0a676ef7bca7c3b0f8de263311481eb7e13",
     "/assets/blogPost/ads.html": "da39a3ee5e6b4b0d3255bfef95601890afd80709",
     "/assets/blogPost/img/example.ad.crop.png": "1cb3047bfff4ab5e70b5b1aa025e02588cbf0c86",
@@ -64,11 +64,11 @@
     "/assets/icons/icon512.png": "044f91f1cbcebea72f4ef892c594587a32091f5a",
     "/assets/img/code-house.png": "8980038b742c6092f58fe4896581da234d9bd46f",
     "/assets/sitemap.txt": "2b923457c71bc6e406d93595c8f9d0b6e7632c6e",
-    "/index.html": "53fa604155f3167542d61df5caebba31e1c38c85",
-    "/main.01dcb7b7440bc43c8c02.js": "341e9866ea8b5958846f3fd721d9a7e0d7e6d5a4",
+    "/index.html": "6daac69135b71994385a7ecc1193f60492d6c0f0",
+    "/main.eac97bf82505bcf10afd.js": "b07c44c7f117b643652fac6d6161e49badf0cd17",
     "/polyfills.86d97acabef9b19ae717.js": "ab79d02b7198d6d3679eee6a1daad6a65512417c",
-    "/runtime.9d1b085a768668b3c0a3.js": "99221c8e3d9233a09451e08d8bcc74dd900b510b",
-    "/styles.96167448c0b86e577b93.css": "392a0e35e43b5dec9296c3761a57b78eaca41ca6"
+    "/runtime.ffc1ba4d41785dd01118.js": "f3a9a1e5882a5e314dc9ecea6ee02a93d415ff55",
+    "/styles.1b52b07d61d7e397d435.css": "cb56d89668f9f3b8dc2a1d2279503288e75523f8"
   },
   "navigationUrls": [
     {

@@ -9,9 +9,9 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatListModule} from '@angular/material/list'
 
 @NgModule({
-  imports: [MatButtonModule, MatCardModule, MatButtonToggleModule, MatProgressBarModule, MatDividerModule, MatFormFieldModule, MatInputModule, MatSnackBarModule,
-    MatListModule, MatChipsModule],
-  exports: [MatButtonModule, MatCardModule, MatButtonToggleModule, MatProgressBarModule, MatDividerModule, MatFormFieldModule, MatInputModule, MatSnackBarModule,
-    MatListModule, MatChipsModule],
+  imports: [MatButtonModule, MatCardModule, MatButtonToggleModule, MatProgressBarModule, MatFormFieldModule, MatInputModule, MatSnackBarModule, MatListModule, MatChipsModule
+    ],
+  exports: [MatButtonModule, MatCardModule, MatButtonToggleModule, MatProgressBarModule, MatFormFieldModule, MatInputModule, MatSnackBarModule, MatListModule, MatChipsModule
+    ],
 })
 export class MaterialModule { }
