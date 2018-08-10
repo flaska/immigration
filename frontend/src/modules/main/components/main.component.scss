@@ -23,16 +23,27 @@
 }
 
 #main_heading {
-  font: 300 25px/52px Roboto, "Helvetica Neue", sans-serif;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  font-weight: 300;
+  font-size: 25px;
+  line-height: 52px;
   margin-left: 10px;
-  margin-bottom: 3px;
+  margin-bottom: 0px;
 
-  @media(max-width: 380px){
+  @media(max-width: 360px){
+    font-size: 15px;
+  }
+
+  @media (min-width: 360px) and (max-width: 385px){
     font-size: 17px;
   }
 
-  @media(min-width: 380px) and (max-width: 460px){
+  @media(min-width: 385px) and (max-width: 400px){
     font-size: 20px;
+  }
+
+  @media(min-width: 400px) and (max-width: 460px){
+    font-size: 21px;
   }
 
 }
@@ -64,7 +75,7 @@
 nav {
   position: absolute;
   right: 9px;
-  top: 9px;
+  top: 8px;
   a {
     margin-left: 13px;
   }
@@ -75,7 +86,7 @@ nav {
     background-color: mat-color($primary-hover);
   }
   @media(max-width: 460px){
-    top: 13px;
+    top: 11px;
     .nav-link {
       zoom: 0.85;
     }
