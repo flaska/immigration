@@ -24,3 +24,7 @@
 .flip {
   transform: scaleX(-1);
 }
+
+.inline-block{
+  display: inline-block;
+}

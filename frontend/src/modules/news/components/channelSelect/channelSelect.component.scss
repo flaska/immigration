@@ -17,7 +17,7 @@
   color: mat-color($on-primary)!important;
 }
 
-.selectNewsScoring .mat-button-toggle-checked, .selectNewsKeyword .mat-button-toggle-checked{
+.menu_category .mat-button-toggle-checked{
   background-color: mat-color($candy-app-primary);
   &:hover {
     background-color: mat-color($primary-hover);
