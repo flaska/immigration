@@ -1,4 +1,18 @@
 <div id="channelSelectWrapper" class="center">
   <channel-select style="margin: auto;" [channel]="channel" [scoring]='scoring' (chanelChange)="changed($event)"></channel-select>
 </div>
+
+<div class="center">
+  <h2 id="sub_heading">
+    <span *ngIf="scoring === 'new'">Latest </span>
+    <span *ngIf="scoring === 'top'">Top </span>
+
+    <span *ngIf="channel === 'all topics'"><strong>US immigration news</strong></span>
+    <span *ngIf="channel === 'green card'">news about <strong>Green Card</strong></span>
+    <span *ngIf="channel === 'h1b'">news about <strong>H1B</strong></span>
+    <span *ngIf="channel === 'uscis'">news about <strong>USCIS</strong></span>. Stay up to date...
+    <div class="fb-like" data-href="https://www.facebook.com/immimedia/" data-layout="button" data-action="like" data-size="small" data-show-faces="true" data-share="false"></div>
+  </h2>
+</div>
+
 <news-list-wrapper [channel]="channel" [scoring]='scoring'></news-list-wrapper>
