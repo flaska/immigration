@@ -26,6 +26,15 @@
   font: 300 25px/52px Roboto, "Helvetica Neue", sans-serif;
   margin-left: 10px;
   margin-bottom: 3px;
+
+  @media(max-width: 380px){
+    font-size: 17px;
+  }
+
+  @media(min-width: 380px) and (max-width: 460px){
+    font-size: 20px;
+  }
+
 }
 
 .main_content_wrapper {
@@ -64,5 +73,11 @@ nav {
   }
   a:not([active]):hover {
     background-color: mat-color($primary-hover);
+  }
+  @media(max-width: 460px){
+    top: 13px;
+    .nav-link {
+      zoom: 0.85;
+    }
   }
 }
