@@ -17,17 +17,9 @@
   color: mat-color($on-primary)!important;
 }
 
-.selectNewsKeyword .mat-button-toggle-checked{
+.selectNewsScoring .mat-button-toggle-checked, .selectNewsKeyword .mat-button-toggle-checked{
   background-color: mat-color($candy-app-primary);
   &:hover {
     background-color: mat-color($primary-hover);
-  }
-}
-
-
-.selectNewsScoring .mat-button-toggle-checked{
-  background-color: mat-color($candy-app-accent);
-  &:hover {
-    background-color: mat-color($accent-hover);
   }
 }
