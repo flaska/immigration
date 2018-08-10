@@ -1,0 +1,56 @@
+@import "../../../css/import/_component_import.scss";
+
+#sub_heading strong {
+  font-weight: 500!important;
+}
+
+#header {
+  background-color: mat-color(mat-palette($mat-gray,200));
+  padding: 20px 0px;
+  box-shadow: 0 3px 1px -2px rgba(0,0,0,.2), 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12);
+}
+
+#footer a {
+  text-decoration: none!important;
+  color: black!important;
+}
+
+#code-house-link:hover {
+  text-shadow: 0 0 20px black;
+}
+
+.fb-like {
+  margin-left: 5px;
+}
+
+#main_heading {
+  font: 100 35px/32px Roboto, "Helvetica Neue", sans-serif;
+}
+
+#sub_heading {
+  font: 200 18px/20px Roboto, "Helvetica Neue", sans-serif!important;
+  margin-bottom: 0px;
+}
+
+.main_content_wrapper {
+  max-width: 800px;
+  margin: auto;
+}
+
+
+#footer {
+  text-align: center;
+  padding-bottom: 2rem;
+  padding-top: 1rem;
+  background-color: mat-color(mat-palette($mat-gray,200));
+  box-shadow: 0 -3px 1px -2px rgba(0,0,0,.2), 0 -2px 2px 0 rgba(0,0,0,.14), 0 -1px 5px 0 rgba(0,0,0,.12);
+}
+
+#content {
+  padding-bottom: 15px;
+}
+
+
+#code-house-logo {
+  width: 70px;
+}
