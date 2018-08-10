@@ -17,9 +17,13 @@
   color: mat-color($on-primary)!important;
 }
 
-.menu_category .mat-button-toggle-checked{
-  background-color: mat-color($candy-app-primary);
-  &:hover {
-    background-color: mat-color($primary-hover);
+
+.menu_category {
+  margin-left: 10px;
+  .mat-button-toggle-checked {
+    background-color: mat-color($candy-app-primary);
+    &:hover {
+      background-color: mat-color($primary-hover);
+    }
   }
 }
