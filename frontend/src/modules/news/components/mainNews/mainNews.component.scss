@@ -9,14 +9,3 @@
       margin-bottom: 10px;
   }
 }
-
-
-#forum_header_link{
-  margin-left: 10px;
-  position: relative;
-  top: -2px;
-  left: 5px;
-  &:hover {
-    background-color: mat-color($accent-hover);
-  }
-}

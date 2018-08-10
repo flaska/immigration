@@ -54,3 +54,9 @@
 #code-house-logo {
   width: 70px;
 }
+
+#forum_header_link{
+  &:hover {
+    background-color: mat-color($accent-hover);
+  }
+}

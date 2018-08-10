@@ -1,5 +1,4 @@
 <div id="channelSelectWrapper" class="center">
   <channel-select style="margin: auto;" [channel]="channel" [scoring]='scoring' (chanelChange)="changed($event)"></channel-select>
-  <a id="forum_header_link" mat-raised-button href="https://forum.immigration.media/" color="accent" target="_blank">Forum</a>
 </div>
 <news-list-wrapper [channel]="channel" [scoring]='scoring'></news-list-wrapper>
