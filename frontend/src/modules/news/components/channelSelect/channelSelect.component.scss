@@ -1,5 +1,4 @@
-@import "../../css/import/_component_import.scss";
-
+@import "../../../../css/import/_component_import.scss";
 
 :host ::ng-deep  .mat-button-toggle-label-content {
   color: mat-color($on-surface)!important;
