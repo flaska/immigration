@@ -1,6 +1,9 @@
+@import "import/component_import.scss";
+
 .mat-body, .mat-body-1, .mat-typography {
   font: 200 18px/20px Roboto, "Helvetica Neue", sans-serif!important;
 }
 
-
-
+body {
+  background-color: mat-color($background);
+}

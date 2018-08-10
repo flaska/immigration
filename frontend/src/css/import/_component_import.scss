@@ -2,6 +2,7 @@
 
 
 $primary-hover: mat-palette($mat-blue, 900);
+$accent-hover: mat-palette($mat-red, 900);
 
 $on-primary: mat-palette($mat-gray, 50);
 $on-accent:  mat-palette($mat-gray, 50);
@@ -10,5 +11,5 @@ $background:  mat-palette($mat-gray, 50);
 $on-background: mat-palette($mat-gray, 900);
 
 $surface:  mat-palette($mat-gray, 50);
-$surface-hover: mat-palette($mat-gray, 300);
+$surface-hover: mat-palette($mat-gray, 100);
 $on-surface: mat-palette($mat-gray, 900);

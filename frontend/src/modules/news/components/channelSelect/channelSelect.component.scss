@@ -5,10 +5,9 @@
   padding: 0px 8px!important;
 }
 
-:host ::ng-deep  .mat-button-toggle-label-content:hover {
-  background-color: mat-color($surface-hover)!important;
+.channelSelect_item:hover {
+  background-color: mat-color($surface-hover);
 }
-
 
 .mat-button-toggle-group {
   margin: 5px!important;
@@ -19,9 +18,16 @@
 }
 
 .selectNewsKeyword .mat-button-toggle-checked{
-  background-color: mat-color($candy-app-primary) !important;
+  background-color: mat-color($candy-app-primary);
+  &:hover {
+    background-color: mat-color($primary-hover);
+  }
 }
 
+
 .selectNewsScoring .mat-button-toggle-checked{
-  background-color: mat-color($candy-app-accent) !important;
+  background-color: mat-color($candy-app-accent);
+  &:hover {
+    background-color: mat-color($accent-hover);
+  }
 }

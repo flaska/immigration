@@ -2,7 +2,7 @@ import {Component, Input, OnInit} from '@angular/core';
 import {default as DateDiff} from 'date-diff';
 import {NewsRecord} from '../../schemas/news.record.schema';
 
-@Component({selector: 'news-item', templateUrl: './newsItem.component.html', styleUrls: ['./newsItem.component.css']})
+@Component({selector: 'news-item', templateUrl: './newsItem.component.html', styleUrls: ['./newsItem.component.scss']})
 export class NewsItemComponent implements OnInit{
   @Input() newsItem;
 

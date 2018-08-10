@@ -1,3 +1,5 @@
+@import "../../../../css/import/_component_import.scss";
+
 
 #channelSelectWrapper {
   margin-top: 5px;
@@ -14,4 +16,7 @@
   position: relative;
   top: -2px;
   left: 5px;
+  &:hover {
+    background-color: mat-color($primary-hover);
+  }
 }

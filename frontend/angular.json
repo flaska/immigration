@@ -27,7 +27,7 @@
             ],
             "styles": [
               "src/css/theme.scss",
-              "src/css/styles.css",
+              "src/css/sharedStyles.scss",
               "src/css/utilities.css",
               "src/css/import/_component_import.scss"
             ],
