@@ -4,6 +4,8 @@ import { ModuleMapLoaderModule } from '@nguniversal/module-map-ngfactory-loader'
 import {MainModule} from '../main/main.module';
 import {MainComponent} from '../main/components/main.component';
 
+import {APP_BASE_HREF} from '@angular/common';
+
 
 @NgModule({
   imports: [
@@ -11,8 +13,7 @@ import {MainComponent} from '../main/components/main.component';
     AngularServerModule,
     ModuleMapLoaderModule
   ],
-  providers: [
-  ],
+  providers: [{provide: APP_BASE_HREF, useValue: 'http://localhost:3001'}],
   bootstrap: [ MainComponent ],
 })
 export class AppServerModule {}

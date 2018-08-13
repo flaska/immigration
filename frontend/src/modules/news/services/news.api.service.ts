@@ -17,7 +17,7 @@ export class NewsApiService {
   constructor(private http: HttpClient, @Optional() @Inject(APP_BASE_HREF) origin: string) {
     console.log('origin: ' + origin);
     if (origin) this.serverUrl = origin + this.serverUrl;
-    console.log('server url' + this.serverUrl)
+    console.log('server url: ' + this.serverUrl)
   }
 
   private serverUrl = '/';
