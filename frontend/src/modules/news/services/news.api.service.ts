@@ -1,7 +1,8 @@
-import { Injectable } from '@angular/core';
+import {Inject, Injectable, Optional} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {NewsRecord} from '../schemas/news.record.schema';
 import {Observable} from 'rxjs';
+import {APP_BASE_HREF} from '@angular/common';
 
 export class BlockedUrl{
   date: Date;
@@ -13,12 +14,18 @@ export class BlockedUrl{
 })
 export class NewsApiService {
 
+  constructor(private http: HttpClient, @Optional() @Inject(APP_BASE_HREF) origin: string) {
+    console.log('origin: ' + origin);
+    if (origin) this.serverUrl = origin + this.serverUrl;
+    console.log('server url' + this.serverUrl)
+  }
+
   private serverUrl = '/';
 
   private getUrl: string = 'api/getNews';
   private blockAddr: string = 'api/blockUrl';
   private blockedFeedsAddr: string = 'api/getBlockedUrls';
-  constructor(private http: HttpClient) { }
+
 
   searchByTerm(term: string, scoring: string, from: number):Observable<NewsRecord[]>{
     return this.http.get<NewsRecord[]>(this.serverUrl + this.getUrl + '?q=' + term + '&from=' + from + '&scoring=' + scoring);
