@@ -3,7 +3,6 @@ import {NewsApiService} from '../../services/news.api.service';
 import {NewsRecord} from '../../schemas/news.record.schema';
 import {NewsChannel, Scoring} from '../../services/news.channel.enum';
 import {catchError, retry} from "rxjs/operators";
-import {Observable} from "rxjs/internal/Observable";
 
 @Component({
   selector: 'news-list-wrapper',
@@ -16,12 +15,16 @@ export class NewsListWrapperComponent{
   newsItems: NewsRecord[];
   showLoading: boolean = false;
   isOffline: boolean = false;
+
+  private state;
+
   constructor(private newsApiService: NewsApiService){
   }
 
   ngOnChanges() {
-    this.newsItems = [];
+    if (this.state!=this.channel+this.scoring) this.newsItems = [];
     this.fetchNews(this.channel, this.scoring, 0);
+    this.state = this.channel + this.scoring;
   }
 
   fetchNews(channel: NewsChannel, scoring: Scoring, from: number){

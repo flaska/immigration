@@ -6,12 +6,9 @@
     "start": "ng serve",
     "build": "ng build --prod",
     "buildpush": "npm run build && git add ../public && git commit -a -m 'x' && git push heroku master && git push origin master",
-
-
     "build:ssr": "npm run buiild && npm run build:server && npm run webpack:server",
     "build:server": "ng run immigration:server",
     "webpack:server": "webpack --config webpack.server.config.js --progress --colors",
-
     "serverBuildRun": "npm run build && npm run build:server && npm run webpack:server && node dist/server"
   },
   "private": true,
@@ -32,6 +29,7 @@
     "@angular/service-worker": "^6.0.3",
     "@nguniversal/express-engine": "^6.0.0",
     "@nguniversal/module-map-ngfactory-loader": "^6.0.0",
+    "@ngx-universal/state-transfer": "^4.0.1",
     "body-parser": "^1.18.3",
     "compression": "^1.7.3",
     "core-js": "^2.5.4",
