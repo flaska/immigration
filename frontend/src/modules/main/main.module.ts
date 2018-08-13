@@ -23,7 +23,7 @@ export let appRoutes: Routes = [
     MainComponent
   ],
   imports: [
-    BrowserModule,
+    BrowserModule.withServerTransition({ appId: 'immigration-in-media' }),
     NewsModule,
     BrowserAnimationsModule,
     MaterialModule,
