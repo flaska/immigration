@@ -7,7 +7,7 @@ const express = require('express'),
   path = require('path'),
   bodyParser = require('body-parser')
 ;
-app.use(sslRedirect());
+// app.use(sslRedirect());
 app.use(compression());
 app.use(bodyParser.json());
 app.use(express.static('./frontend/dist/browser'));
