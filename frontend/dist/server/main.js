@@ -1688,13 +1688,20 @@ var NewsApiService = /** @class */ (function () {
     }
     NewsApiService.prototype.searchByTerm = function (term, scoring, from, cb) {
         var _this = this;
+        console.log('search by term');
         var cachedState = this.transferState.get(platform_browser_1.makeStateKey(term + scoring + from), null);
         if (cachedState)
             return cb(null, cachedState);
+        console.log('server querying: ' + this.serverUrl + this.getUrl + '?q=' + term + '&from=' + from + '&scoring=' + scoring);
         this.http.get(this.serverUrl + this.getUrl + '?q=' + term + '&from=' + from + '&scoring=' + scoring).pipe(operators_1.retry(3)).subscribe(function (result) {
+            console.log('query succsess');
+            console.log(result[0]);
+            console.log('storing state ' + platform_browser_1.makeStateKey(term + scoring + from));
             _this.transferState.set(platform_browser_1.makeStateKey(term + scoring + from), result);
             cb(null, result);
         }, function (error) {
+            console.log('query error');
+            console.log(error);
             cb(error, null);
         });
     };

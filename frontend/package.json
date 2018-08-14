@@ -6,8 +6,8 @@
     "start": "ng serve",
     "build": "ng build --prod",
     "buildpush": "npm run build && git add ./dist && git commit -a -m 'x' && git push heroku && git push origin master",
-    "buildpush-qa": "npm run build && git add ./dist && git commit -a -m 'x' && git push heroku-qa && git push",
-    "build:ssr": "npm run buiild && npm run build:server && npm run webpack:server",
+    "buildpush-qa": "npm run build:ssr && git add ./dist && git commit -a -m 'x' && git push heroku-qa && git push",
+    "build:ssr": "npm run build && npm run build:server && npm run webpack:server",
     "build:server": "ng run immigration:server",
     "webpack:server": "webpack --config webpack.server.config.js --progress --colors",
     "serverBuild": "npm run build && npm run build:server && npm run webpack:server"
