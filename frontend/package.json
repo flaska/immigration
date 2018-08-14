@@ -5,10 +5,12 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build --prod",
-    "buildpush": "npm run build && git add ../public && git commit -a -m 'x' && git push heroku master && git push origin master",
-    "test": "ng test",
-    "lint": "ng lint",
-    "e2e": "ng e2e"
+    "buildpush": "npm run build && git add ./dist && git commit -a -m 'x' && git push heroku && git push origin master",
+    "buildpush-qa": "npm run build:ssr && git add ./dist && git commit -a -m 'x' && git push heroku-qa && git push",
+    "build:ssr": "npm run build && npm run build:server && npm run webpack:server",
+    "build:server": "ng run immigration:server",
+    "webpack:server": "webpack --config webpack.server.config.js --progress --colors",
+    "serverBuild": "npm run build && npm run build:server && npm run webpack:server"
   },
   "private": true,
   "dependencies": {
@@ -22,12 +24,20 @@
     "@angular/material": "^6.3.2",
     "@angular/platform-browser": "^6.0.3",
     "@angular/platform-browser-dynamic": "^6.0.3",
+    "@angular/platform-server": "^6.1.2",
     "@angular/pwa": "^0.6.8",
     "@angular/router": "^6.0.3",
     "@angular/service-worker": "^6.0.3",
+    "@nguniversal/express-engine": "^6.0.0",
+    "@nguniversal/module-map-ngfactory-loader": "^6.0.0",
+    "@ngx-universal/state-transfer": "^4.0.1",
+    "body-parser": "^1.18.3",
+    "compression": "^1.7.3",
     "core-js": "^2.5.4",
     "date-diff": "^0.2.0",
+    "heroku-ssl-redirect": "0.0.4",
     "rxjs": "^6.0.0",
+    "ts-loader": "^4.4.2",
     "zone.js": "^0.8.26"
   },
   "devDependencies": {
@@ -49,6 +59,7 @@
     "protractor": "~5.3.0",
     "ts-node": "~5.0.1",
     "tslint": "~5.9.1",
-    "typescript": "~2.7.2"
+    "typescript": "~2.7.2",
+    "webpack-cli": "^3.1.0"
   }
 }

@@ -1,7 +1,10 @@
-import { Injectable } from '@angular/core';
+import {Inject, Injectable, Optional} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {NewsRecord} from '../schemas/news.record.schema';
 import {Observable} from 'rxjs';
+import {APP_BASE_HREF} from '@angular/common';
+import {TransferState, makeStateKey} from '@angular/platform-browser';
+import {retry} from 'rxjs/operators';
 
 export class BlockedUrl{
   date: Date;
@@ -13,20 +16,35 @@ export class BlockedUrl{
 })
 export class NewsApiService {
 
-  private getUrl: string = '/api/getNews';
-  private blockAddr: string = '/api/blockUrl';
-  private blockedFeedsAddr: string = '/api/getBlockedUrls';
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient, @Optional() @Inject(APP_BASE_HREF) origin: string,  private transferState: TransferState) {
+    console.log('origin: ' + origin);
+    if (origin) this.serverUrl = origin + this.serverUrl;
+    console.log('server url: ' + this.serverUrl)
+  }
 
-  searchByTerm(term: string, scoring: string, from: number):Observable<NewsRecord[]>{
-    return this.http.get<NewsRecord[]>(this.getUrl + '?q=' + term + '&from=' + from + '&scoring=' + scoring);
+  private serverUrl = '/';
+  private getUrl: string = 'api/getNews';
+  private blockAddr: string = 'api/blockUrl';
+  private blockedFeedsAddr: string = 'api/getBlockedUrls';
+
+  searchByTerm(term: string, scoring: string, from: number, cb: (error:any, result:NewsRecord[])=>void){
+
+    var cachedState = this.transferState.get(makeStateKey(term+scoring+from), null as NewsRecord[]);
+    if (cachedState) return cb(null, cachedState);
+
+    this.http.get<NewsRecord[]>(this.serverUrl + this.getUrl + '?q=' + term + '&from=' + from + '&scoring=' + scoring).pipe(retry(3)).subscribe((result)=>{
+      this.transferState.set(makeStateKey(term+scoring+from), result as NewsRecord[]);
+      cb(null, result);
+    },error => {
+      cb(error, null);
+    });
   }
 
   blockUrl(url: string, password: string):Observable<boolean>{
-    return this.http.post<boolean>(this.blockAddr, {url: url, password: password});
+    return this.http.post<boolean>(this.serverUrl + this.blockAddr, {url: url, password: password});
   }
 
   getBlockedFeeds():Observable<BlockedUrl[]>{
-    return this.http.get<BlockedUrl[]>(this.blockedFeedsAddr);
+    return this.http.get<BlockedUrl[]>(this.serverUrl + this.blockedFeedsAddr);
   }
 }
