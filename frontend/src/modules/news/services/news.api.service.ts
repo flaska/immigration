@@ -32,6 +32,8 @@ export class NewsApiService {
 
   searchByTerm(term: string, scoring: string, from: number, cb: (error:any, result:NewsRecord[])=>void){
 
+    console.log('search by term');
+
     var cachedState = this.transferState.get(makeStateKey(term+scoring+from), null as NewsRecord[]);
     if (cachedState) return cb(null, cachedState);
 
