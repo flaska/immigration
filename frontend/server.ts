@@ -1,38 +1,25 @@
-// These are important and needed before anything else
 import 'zone.js/dist/zone-node';
 import 'reflect-metadata';
-
 import { enableProdMode } from '@angular/core';
-
 import * as express from 'express';
 import { join } from 'path';
+const { AppServerModuleNgFactory, LAZY_MODULE_MAP } = require('./dist/server/main');
+import { ngExpressEngine } from '@nguniversal/express-engine';
+import { provideModuleMap } from '@nguniversal/module-map-ngfactory-loader';
 var request = require('request'),
   compression = require('compression'),
-  sslRedirect = require('heroku-ssl-redirect'),
-  bodyParser = require('body-parser');
+  bodyParser = require('body-parser'),
+  forceSSL = require('express-force-ssl');
 
-// Faster server renders w/ Prod mode (dev mode never needed)
 enableProdMode();
 
-// Express server
 const app = express();
-
 const PORT = process.env.PORT || 4000;
 const DIST_FOLDER = join(process.cwd(), 'dist');
 
-// * NOTE :: leave this as require() since this file is built Dynamically from webpack
-const { AppServerModuleNgFactory, LAZY_MODULE_MAP } = require('./dist/server/main');
-
-// Express Engine
-import { ngExpressEngine } from '@nguniversal/express-engine';
-// Import module map for lazy loading
-import { provideModuleMap } from '@nguniversal/module-map-ngfactory-loader';
-
-
-app.use(sslRedirect());
+if (PORT!=4000) app.use(forceSSL);
 app.use(compression());
 app.use(bodyParser.json());
-
 
 app.engine('html', ngExpressEngine({
   bootstrap: AppServerModuleNgFactory,
@@ -52,21 +39,14 @@ app.get('/api/*', function(req, res) {
   } else {
     r = request(url);
   }
-
-  console.log(url);
-
   req.pipe(r).pipe(res);
 });
 
-// Server static files from /browser
 app.get('*.*', express.static(join(DIST_FOLDER, 'browser')));
-
-// All regular routes use the Universal engine
 app.get('*', (req, res) => {
   res.render('index', { req });
 });
 
-// Start up the Node server
 app.listen(PORT, () => {
-  console.log(`Node server listening on http://localhost:${PORT}`);
+  console.log(`WebServer server listening on http://localhost:${PORT}`);
 });
