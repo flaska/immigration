@@ -5,11 +5,11 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build --prod",
-    "buildpush": "npm run build && git add ../public && git commit -a -m 'x' && git push heroku master && git push origin master",
+    "buildpush": "npm run build && git add ./dist && git commit -a -m 'x' && git push heroku master && git push origin master",
     "build:ssr": "npm run buiild && npm run build:server && npm run webpack:server",
     "build:server": "ng run immigration:server",
     "webpack:server": "webpack --config webpack.server.config.js --progress --colors",
-    "serverBuildRun": "npm run build && npm run build:server && npm run webpack:server && node dist/server"
+    "serverBuild": "npm run build && npm run build:server && npm run webpack:server"
   },
   "private": true,
   "dependencies": {
