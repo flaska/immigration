@@ -3,6 +3,8 @@ import {HttpClient} from '@angular/common/http';
 import {NewsRecord} from '../schemas/news.record.schema';
 import {Observable} from 'rxjs';
 import {APP_BASE_HREF} from '@angular/common';
+import {TransferState, StateKey, makeStateKey} from '@angular/platform-browser';
+import {retry} from 'rxjs/operators';
 
 export class BlockedUrl{
   date: Date;
@@ -14,11 +16,12 @@ export class BlockedUrl{
 })
 export class NewsApiService {
 
-  constructor(private http: HttpClient, @Optional() @Inject(APP_BASE_HREF) origin: string) {
+  constructor(private http: HttpClient, @Optional() @Inject(APP_BASE_HREF) origin: string,  private transferState: TransferState) {
     console.log('origin: ' + origin);
     if (origin) this.serverUrl = origin + this.serverUrl;
     console.log('server url: ' + this.serverUrl)
   }
+
 
   private serverUrl = '/';
 
@@ -27,8 +30,18 @@ export class NewsApiService {
   private blockedFeedsAddr: string = 'api/getBlockedUrls';
 
 
-  searchByTerm(term: string, scoring: string, from: number):Observable<NewsRecord[]>{
-    return this.http.get<NewsRecord[]>(this.serverUrl + this.getUrl + '?q=' + term + '&from=' + from + '&scoring=' + scoring);
+  searchByTerm(term: string, scoring: string, from: number, cb: (error:any, result:NewsRecord[])=>void){
+
+    var cachedState = this.transferState.get(makeStateKey(term+scoring+from), null as NewsRecord[]);
+    if (cachedState) return cb(null, cachedState);
+
+    this.http.get<NewsRecord[]>(this.serverUrl + this.getUrl + '?q=' + term + '&from=' + from + '&scoring=' + scoring).pipe(retry(3)).subscribe((result)=>{
+      this.transferState.set(makeStateKey(term+scoring+from), result as NewsRecord[]);
+      cb(null, result);
+    },error => {
+      cb(error, null);
+    });
+
   }
 
   blockUrl(url: string, password: string):Observable<boolean>{
