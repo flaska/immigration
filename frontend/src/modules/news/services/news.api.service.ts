@@ -35,10 +35,17 @@ export class NewsApiService {
     var cachedState = this.transferState.get(makeStateKey(term+scoring+from), null as NewsRecord[]);
     if (cachedState) return cb(null, cachedState);
 
+    console.log('server querying: ' + this.serverUrl + this.getUrl + '?q=' + term + '&from=' + from + '&scoring=' + scoring);
+
     this.http.get<NewsRecord[]>(this.serverUrl + this.getUrl + '?q=' + term + '&from=' + from + '&scoring=' + scoring).pipe(retry(3)).subscribe((result)=>{
+      console.log('query succsess');
+      console.log(result[0]);
+      console.log('storing state ' + makeStateKey(term+scoring+from));
       this.transferState.set(makeStateKey(term+scoring+from), result as NewsRecord[]);
       cb(null, result);
     },error => {
+      console.log('query error');
+      console.log(error);
       cb(error, null);
     });
 
