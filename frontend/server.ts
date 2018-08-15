@@ -19,9 +19,20 @@ const app = express();
 const PORT = process.env.PORT || 4000;
 const DIST_FOLDER = join(process.cwd(), 'dist');
 
-// if (PORT!=4000) app.use(forceSSL);
+// app.use(sslRedirect());
 
-app.use(sslRedirect());
+app.use(function(req, res, next) {
+  if (process.env.PORT) {
+    if (req.headers['x-forwarded-proto'] != 'https') {
+      res.redirect(status, 'https://' + req.hostname + req.originalUrl);
+    }
+    else {
+      next();
+    }
+  } else {
+    next();
+  }
+});
 
 app.use(compression());
 app.use(bodyParser.json());
