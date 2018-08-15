@@ -8,9 +8,7 @@ import { ngExpressEngine } from '@nguniversal/express-engine';
 import { provideModuleMap } from '@nguniversal/module-map-ngfactory-loader';
 var request = require('request'),
   compression = require('compression'),
-  bodyParser = require('body-parser'),
-  forceSSL = require('express-force-ssl'),
-  sslRedirect = require('heroku-ssl-redirect')
+  bodyParser = require('body-parser')
 ;
 
 enableProdMode();
@@ -19,12 +17,10 @@ const app = express();
 const PORT = process.env.PORT || 4000;
 const DIST_FOLDER = join(process.cwd(), 'dist');
 
-// app.use(sslRedirect());
-
 app.use(function(req, res, next) {
   if (process.env.PORT) {
     if (req.headers['x-forwarded-proto'] != 'https') {
-      res.redirect(status, 'https://' + req.hostname + req.originalUrl);
+      res.redirect(302, 'https://' + req.hostname + req.originalUrl);
     }
     else {
       next();
