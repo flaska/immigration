@@ -5,20 +5,16 @@ import {MainModule} from '../main/main.module';
 import {MainComponent} from '../main/components/main.component';
 
 import {APP_BASE_HREF} from '@angular/common';
-import {BrowserModule} from '@angular/platform-browser';
-
-
 
 @NgModule({
   imports: [
     MainModule,
     AngularServerModule,
     ModuleMapLoaderModule,
-    ServerTransferStateModule  //.forRoot
+    ServerTransferStateModule
   ],
   providers: [{provide: APP_BASE_HREF, useValue: 'http://localhost:3001'}],
   bootstrap: [ MainComponent ],
 })
 export class AppServerModule {
-
 }
