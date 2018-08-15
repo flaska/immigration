@@ -17,7 +17,7 @@ const app = express();
 const PORT = process.env.PORT || 4000;
 const DIST_FOLDER = join(process.cwd(), 'dist');
 
-if (PORT!=4000) app.use(forceSSL);
+// if (PORT!=4000) app.use(forceSSL);
 app.use(compression());
 app.use(bodyParser.json());
 
