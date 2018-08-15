@@ -9,7 +9,9 @@ import { provideModuleMap } from '@nguniversal/module-map-ngfactory-loader';
 var request = require('request'),
   compression = require('compression'),
   bodyParser = require('body-parser'),
-  forceSSL = require('express-force-ssl');
+  forceSSL = require('express-force-ssl'),
+  sslRedirect = require('heroku-ssl-redirect')
+;
 
 enableProdMode();
 
@@ -18,6 +20,9 @@ const PORT = process.env.PORT || 4000;
 const DIST_FOLDER = join(process.cwd(), 'dist');
 
 // if (PORT!=4000) app.use(forceSSL);
+
+app.use(sslRedirect());
+
 app.use(compression());
 app.use(bodyParser.json());
 
