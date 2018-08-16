@@ -4,7 +4,7 @@ import {ModuleMapLoaderModule} from '@nguniversal/module-map-ngfactory-loader';
 import {APP_BASE_HREF} from '@angular/common';
 
 import {MainModule} from '../main/main.module';
-import {MainComponent} from '../main/components/main.component';
+import {MainComponent} from '../main/components/main/main.component';
 
 
 

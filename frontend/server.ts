@@ -55,8 +55,23 @@ app.get('/api/*', function(req, res) {
 });
 
 app.get('*.*', express.static(join(DIST_FOLDER, 'browser')));
-app.get('*', (req, res) => {
+app.get(['/', '/news'], (req, res) => {
   res.render('index', { req });
+});
+
+app.get('*', function(req, res){
+  res.status(404);
+
+  if (req.accepts('html')) {
+    res.render('index', { req });
+    return;
+  }
+  if (req.accepts('json')) {
+    res.send({ error: 'Not found' });
+    return;
+  }
+
+  res.type('txt').send('404 - Not found - Requested URL not found');
 });
 
 app.listen(PORT, () => {

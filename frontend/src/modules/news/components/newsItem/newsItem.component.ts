@@ -15,7 +15,7 @@ export class NewsItemComponent implements OnInit{
       if (dd.hours() > 12 && dd.days() <= 1.5) this.newsItem.dateDiff = 'yesterday';
       if (dd.days() > 1.5) this.newsItem.dateDiff = Math.floor(dd.days()) + ' days ago';
     } catch(e){
-      console.log(e);
+      console.log("Date diff not working.");
     }
 
   }

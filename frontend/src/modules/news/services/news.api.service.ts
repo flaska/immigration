@@ -1,7 +1,6 @@
 import {Inject, Injectable, Optional} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {NewsRecord} from '../schemas/news.record.schema';
-import {Observable} from 'rxjs';
 import {APP_BASE_HREF} from '@angular/common';
 import {TransferState, makeStateKey} from '@angular/platform-browser';
 import {retry} from 'rxjs/operators';
@@ -17,9 +16,7 @@ export class BlockedUrl{
 export class NewsApiService {
 
   constructor(private http: HttpClient, @Optional() @Inject(APP_BASE_HREF) origin: string,  private transferState: TransferState) {
-    console.log('origin: ' + origin);
     if (origin) this.serverUrl = origin + this.serverUrl;
-    console.log('server url: ' + this.serverUrl)
   }
 
   private serverUrl = '/';
@@ -39,12 +36,12 @@ export class NewsApiService {
       cb(error, null);
     });
   }
-
-  blockUrl(url: string, password: string):Observable<boolean>{
-    return this.http.post<boolean>(this.serverUrl + this.blockAddr, {url: url, password: password});
-  }
-
-  getBlockedFeeds():Observable<BlockedUrl[]>{
-    return this.http.get<BlockedUrl[]>(this.serverUrl + this.blockedFeedsAddr);
-  }
+  //
+  // blockUrl(url: string, password: string):Observable<boolean>{
+  //   return this.http.post<boolean>(this.serverUrl + this.blockAddr, {url: url, password: password});
+  // }
+  //
+  // getBlockedFeeds():Observable<BlockedUrl[]>{
+  //   return this.http.get<BlockedUrl[]>(this.serverUrl + this.blockedFeedsAddr);
+  // }
 }

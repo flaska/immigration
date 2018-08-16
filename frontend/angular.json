@@ -19,11 +19,10 @@
             "polyfills": "src/polyfills.ts",
             "tsConfig": "src/tsconfig.app.json",
             "assets": [
-              "src/assets/favicon.png",
-              "src/assets/ads.txt",
-              "src/assets/sitemap.txt",
               "src/assets",
-              "src/manifest.json"
+              "src/manifest.json",
+              "src/robots.txt",
+              "src/sitemap.txt"
             ],
             "styles": [
               "src/css/theme.scss",
