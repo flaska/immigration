@@ -1,10 +1,12 @@
-import { NgModule } from '@angular/core';
+import {NgModule} from '@angular/core';
 import {ServerModule as AngularServerModule, ServerTransferStateModule} from '@angular/platform-server';
-import { ModuleMapLoaderModule } from '@nguniversal/module-map-ngfactory-loader';
+import {ModuleMapLoaderModule} from '@nguniversal/module-map-ngfactory-loader';
+import {APP_BASE_HREF} from '@angular/common';
+
 import {MainModule} from '../main/main.module';
 import {MainComponent} from '../main/components/main.component';
 
-import {APP_BASE_HREF} from '@angular/common';
+
 
 @NgModule({
   imports: [

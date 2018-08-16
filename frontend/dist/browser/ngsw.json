@@ -7,13 +7,11 @@
       "installMode": "prefetch",
       "updateMode": "prefetch",
       "urls": [
-        "/0.a29abf75292ec284b0ed.js",
-        "/1.dbc7c407642b74ffdca3.js",
         "/index.html",
-        "/main.c29344c11a579878ad7d.js",
-        "/polyfills.86d97acabef9b19ae717.js",
-        "/runtime.e34a686d2f6581a16047.js",
-        "/styles.c74f9660971046469207.css"
+        "/main.7789604e7668956e58b8.js",
+        "/polyfills.9f773b75ffcda6bb2a95.js",
+        "/runtime.a66f828dca56eeb90e02.js",
+        "/styles.e2ec66e40b2a45c83cab.css"
       ],
       "patterns": []
     },
@@ -45,8 +43,6 @@
   ],
   "dataGroups": [],
   "hashTable": {
-    "/0.a29abf75292ec284b0ed.js": "d6828762d816a99ea0cf9e25a51e2713e02fc21e",
-    "/1.dbc7c407642b74ffdca3.js": "bd247b10f3fbc47052d3304208e0214797c5fd69",
     "/assets/ads.txt": "8a4fa0a676ef7bca7c3b0f8de263311481eb7e13",
     "/assets/blogPost/ads.html": "da39a3ee5e6b4b0d3255bfef95601890afd80709",
     "/assets/blogPost/img/example.ad.crop.png": "1cb3047bfff4ab5e70b5b1aa025e02588cbf0c86",
@@ -64,11 +60,11 @@
     "/assets/icons/icon512.png": "044f91f1cbcebea72f4ef892c594587a32091f5a",
     "/assets/img/code-house.png": "8980038b742c6092f58fe4896581da234d9bd46f",
     "/assets/sitemap.txt": "2b923457c71bc6e406d93595c8f9d0b6e7632c6e",
-    "/index.html": "8aab0d01de98f71cb58194b4c3aab9a84ec8afbd",
-    "/main.c29344c11a579878ad7d.js": "e560542bd676b88ae319ba57f720ee136b5dda9b",
-    "/polyfills.86d97acabef9b19ae717.js": "ab79d02b7198d6d3679eee6a1daad6a65512417c",
-    "/runtime.e34a686d2f6581a16047.js": "cc9b90785710d621ed4a091a1ed5fe1f2bf899f6",
-    "/styles.c74f9660971046469207.css": "2f101baf898b5e42916b9f49f4b7922c21da6441"
+    "/index.html": "a1ce5cd4bc38c76835f25c4bf25468d07591fb29",
+    "/main.7789604e7668956e58b8.js": "e154972893bd7869a8d14436f4b657895e4e50a0",
+    "/polyfills.9f773b75ffcda6bb2a95.js": "27aab6116a9bc7504a07d9d37fdd2d938187bafe",
+    "/runtime.a66f828dca56eeb90e02.js": "078e320cc6fdaf355836c3b1c52b059cdd33fc7e",
+    "/styles.e2ec66e40b2a45c83cab.css": "c304b36d5f1070a107b923f606148a6c7e5245e2"
   },
   "navigationUrls": [
     {
@@ -77,15 +73,15 @@
     },
     {
       "positive": false,
-      "regex": "^\\/(?:.+\\/)?[^\\/]*\\.[^\\/]*$"
+      "regex": "^\\/(?:.+\\/)?[^/]*\\.[^/]*$"
     },
     {
       "positive": false,
-      "regex": "^\\/(?:.+\\/)?[^\\/]*__[^\\/]*$"
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*$"
     },
     {
       "positive": false,
-      "regex": "^\\/(?:.+\\/)?[^\\/]*__[^\\/]*\\/.*$"
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*\\/.*$"
     }
   ]
 }

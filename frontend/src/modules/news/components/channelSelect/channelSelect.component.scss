@@ -5,8 +5,10 @@
   padding: 0px 8px!important;
 }
 
-.channelSelect_item:hover {
-  background-color: mat-color($surface-hover);
+.channelSelect_item {
+  &:hover {
+    background-color: mat-color($surface-hover);
+  }
 }
 
 .mat-button-toggle-group {

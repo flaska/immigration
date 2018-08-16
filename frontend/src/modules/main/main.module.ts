@@ -1,20 +1,20 @@
+import {NgModule} from '@angular/core';
 import {BrowserModule, BrowserTransferStateModule} from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-
-import { MainComponent } from './components/main.component';
-import {NewsModule} from '../news/news.module';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+
+import {MainComponent} from './components/main.component';
+import {NewsModule} from '../news/news.module';
 import {MaterialModule} from '../material/material.module';
-import { ServiceWorkerModule } from '@angular/service-worker';
-import { environment } from '../../environments/environment';
-import { RouterModule, Routes } from '@angular/router';
+import {ServiceWorkerModule} from '@angular/service-worker';
+import {environment} from '../../environments/environment';
+import {RouterModule, Routes} from '@angular/router';
 import {MainNewsComponent} from '../news/components/mainNews/mainNews.component';
 
 export let appRoutes: Routes = [
   { path: '', component: MainNewsComponent},
   { path: 'news/:channel/:scoring', component: MainNewsComponent},
-  { path: 'admin', loadChildren: '../admin/admin.module#AdminModule'},
-  { path: 'page', loadChildren: '../page/page.module#PageModule'},
+  // { path: 'admin', loadChildren: '../admin/admin.module#AdminModule'},
+  // { path: 'page', loadChildren: '../page/page.module#PageModule'},
 ];
 
 

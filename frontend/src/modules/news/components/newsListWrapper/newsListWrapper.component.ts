@@ -6,6 +6,7 @@ import {NewsChannel, Scoring} from '../../services/news.channel.enum';
 @Component({
   selector: 'news-list-wrapper',
   templateUrl: './newsListWrapper.component.html',
+  styleUrls: ['./newsListWrapper.component.scss'],
   providers: [NewsApiService]
 })
 export class NewsListWrapperComponent {
@@ -15,13 +16,10 @@ export class NewsListWrapperComponent {
   showLoading: boolean = false;
   isOffline: boolean = false;
 
-  private state;
-
   constructor(private newsApiService: NewsApiService){
   }
 
   ngOnChanges() {
-    this.newsItems = [];
     this.fetchNews(this.channel, this.scoring, 0);
   }
 
@@ -32,6 +30,7 @@ export class NewsListWrapperComponent {
         this.isOffline = true;
         return;
       }
+      if (from===0) this.newsItems = [];
       this.newsItems = this.newsItems.concat(result);
       this.showLoading = false;
       this.isOffline = false;

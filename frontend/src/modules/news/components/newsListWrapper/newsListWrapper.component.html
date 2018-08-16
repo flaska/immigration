@@ -1,6 +1,6 @@
 <div *ngIf="!isOffline">
   <mat-progress-bar *ngIf="showLoading" mode="indeterminate"></mat-progress-bar>
-  <news-list [newsItems]="newsItems" (fetchMore)="fetchMore()"></news-list>
+  <news-list [newsItems]="newsItems" (fetchMore)="fetchMore()"  [ngClass]="{'loading': showLoading}"></news-list>
   <mat-progress-bar *ngIf="showLoading && newsItems.length>0" mode="indeterminate"></mat-progress-bar>
 </div>
 <div *ngIf="isOffline" class="center">
