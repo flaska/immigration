@@ -1,4 +1,4 @@
-<a [href]="newsItem.url" target="_blank" rel="external" title="{{newsItem.title}}" rel="noopener" itemprop="url" (click)="tagManager(newsItem)">
+<a [href]="newsItem.url" target="_blank" title="{{newsItem.title}}" rel="noopener" itemprop="url" (click)="tagManager(newsItem)">
   <mat-card  itemscope itemtype="http://schema.org/NewsArticle" class="newsItem">
     <div class="newsItemThubnail float-right text-right">
       <img *ngIf="newsItem.img" [src]="newsItem.img" class="" alt="thumbnail" itemprop="thumbnailUrl image">
