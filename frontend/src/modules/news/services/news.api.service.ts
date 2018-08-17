@@ -5,11 +5,6 @@ import {APP_BASE_HREF} from '@angular/common';
 import {TransferState, makeStateKey} from '@angular/platform-browser';
 import {retry} from 'rxjs/operators';
 
-export class BlockedUrl{
-  date: Date;
-  url: string;
-}
-
 @Injectable({
   providedIn: 'root',
 })
