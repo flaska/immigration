@@ -7,7 +7,7 @@ a {
 }
 
 a:hover {
-  text-decoration: underline;
+  text-decoration: underline!important;
 }
 
 .newsItemThubnail{
@@ -20,6 +20,11 @@ a:hover {
   min-height: 115px;
 }
 
+.newsItemThubnail:hover {
+  filter: contrast(180%);
+  blur: 2px;
+}
+
 .empty_thumbnail{
   zoom: 2.5;
   margin-left: 5px;
@@ -30,9 +35,9 @@ img {
 }
 
 mat-card:hover {
-  background-color: mat-color($surface-hover);
+  //background-color: mat-color($surface-hover);
 }
 
 .newsItem {
-  margin-bottom: 15px;
+  margin-top: 15px;
 }

@@ -4,19 +4,17 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 import {MainComponent} from './components/main/main.component';
 import {NewsModule} from '../news/news.module';
-import {MaterialModule} from '../material/material.module';
 import {ServiceWorkerModule} from '@angular/service-worker';
 import {environment} from '../../environments/environment';
 import {RouterModule, Routes} from '@angular/router';
 import {MainNewsComponent} from '../news/components/mainNews/mainNews.component';
 import {NotFoundComponent} from './components/notFound/notFound.component';
+import {MatButtonModule} from '@angular/material';
 
 export let appRoutes: Routes = [
   { path: '', component: MainNewsComponent},
   { path: 'news/:channel/:scoring', component: MainNewsComponent},
   { path: '**',  component: NotFoundComponent },
-  // { path: 'admin', loadChildren: '../admin/admin.module#AdminModule'},
-  // { path: 'page', loadChildren: '../page/page.module#PageModule'},
 ];
 
 
@@ -30,9 +28,9 @@ export let appRoutes: Routes = [
     BrowserTransferStateModule,
     NewsModule,
     BrowserAnimationsModule,
-    MaterialModule,
     RouterModule.forRoot(appRoutes),
     ServiceWorkerModule.register('/ngsw-worker.js', { enabled: environment.production }),
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [MainComponent]
