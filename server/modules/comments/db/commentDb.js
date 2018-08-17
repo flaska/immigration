@@ -4,8 +4,14 @@ db.on('error', console.error.bind(console, 'MongoDB connection error. '))
 db.once('open', function() {
   console.log('Connected to MongoDB');
 });
-var BlockedUrl = db.model('BlockedUrl', mongoose.Schema({
-  url: String,
-  date: Date
-}, { collection: 'blockedUrls' }));
+var Comment = db.model('Comment', mongoose.Schema({
+  articleId: String,
+  userName: String,
+  date: String,
+  commentBody: String
+}, { collection: 'comments' }));
+
+exports.getCommentsByArticleId = function(articleId, cb){
+  Comment.find({articleId: articleId}).sort({date: 1}).exec(cb);
+};
 

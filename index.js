@@ -1,13 +1,14 @@
 const express = require('express'),
   compression = require('compression'),
   app = express(),
-  routes = require('./server/modules/news/newsRoutes'),
+  newsRoutes = require('./server/modules/news/newsRoutes'),
+  commentRoutes = require('./server/modules/comments/commentRoutes'),
   bodyParser = require('body-parser')
 ;
 app.use(compression());
 app.use(bodyParser.json());
-app.use('/api/news', routes);
-app.use('/api/comments', routes);
+app.use('/api/news', newsRoutes);
+app.use('/api/comments', commentRoutes);
 
 const webServerPort = 3001;
 
