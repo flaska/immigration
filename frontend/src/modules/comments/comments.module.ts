@@ -4,11 +4,15 @@ import {CommonModule} from "@angular/common";
 import {HttpClientModule} from '@angular/common/http';
 import {MaterialCommentsModule} from '../material/comments.material.module';
 import {MainCommentWrapperComponent} from './components/mainCommentWrapper/main.comment.wrapper.component';
+import {CommentListComponent} from './components/commentList/comment.list.component';
+import {CommentInputComponent} from './components/commentInput/commentInput.component';
 
 
 @NgModule({
   declarations: [
-    MainCommentWrapperComponent
+    MainCommentWrapperComponent,
+    CommentListComponent,
+    CommentInputComponent
   ],
   imports: [
     CommonModule,

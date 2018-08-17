@@ -1,2 +1,6 @@
-<button mat-raised-button color="accent" class="float-right">Comment</button>
+<button (click)="showHideComments()" mat-raised-button color="accent" class="float-right">Comment</button>
+<div *ngIf="commentsVisible">
+  <comment-list [articleId]="articleId"></comment-list>
+  <comment-input [articleId]="articleId"></comment-input>
+</div>
 <div class="clearfix"></div>
