@@ -11,7 +11,7 @@ app.use(bodyParser.json());
 app.use('/api/news', newsRoutes);
 app.use('/api/comments', commentRoutes);
 
-router.get('/api/getNews', function(req, res){
+app.get('/api/getNews', function(req, res){
   var newsItems = newsFetchService.getNewsItems(req.query.q, req.query.scoring, req.query.from);
   if (newsItems) res.send(newsItems);
   else res.status(404).send();
