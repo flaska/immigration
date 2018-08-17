@@ -32,6 +32,7 @@
     "compression": "^1.7.3",
     "core-js": "^2.5.7",
     "date-diff": "^0.2.0",
+    "ngx-cookie-service": "^1.0.10",
     "rxjs": "^6.2.2",
     "ts-loader": "^4.4.2",
     "zone.js": "^0.8.26"

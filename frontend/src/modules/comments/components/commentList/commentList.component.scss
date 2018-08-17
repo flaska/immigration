@@ -1,6 +1,6 @@
 @import "../../../../css/import/_component_import.scss";
 
-$comment-background: mat-color(mat-palette($mat-red, 200));
+$comment-background: mat-color(mat-palette($mat-gray, 200));
 
 .userComment {
   background-color: $comment-background;

@@ -6,6 +6,8 @@ import {MaterialCommentsModule} from '../material/comments.material.module';
 import {MainCommentWrapperComponent} from './components/mainCommentWrapper/main.comment.wrapper.component';
 import {CommentListComponent} from './components/commentList/commentList.component';
 import {CommentInputComponent} from './components/commentInput/commentInput.component';
+import {FormsModule} from '@angular/forms';
+import {CookieService} from 'ngx-cookie-service';
 
 
 @NgModule({
@@ -17,10 +19,11 @@ import {CommentInputComponent} from './components/commentInput/commentInput.comp
   imports: [
     CommonModule,
     HttpClientModule,
-    MaterialCommentsModule
+    MaterialCommentsModule,
+    FormsModule,
   ],
   exports: [MainCommentWrapperComponent],
-  providers: []
+  providers: [CookieService]
 })
 export class CommentsModule { }
 

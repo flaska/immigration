@@ -21,3 +21,9 @@ exports.getCommentsCountByArticleId = function(articleId, cb){
     cb(err, {count: count});
   });
 };
+
+
+exports.postComment = function(comment, cb){
+  var c = new Comment(comment);
+  c.save(cb);
+};

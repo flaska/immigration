@@ -1,1 +1,16 @@
 @import "../../../../css/import/_component_import.scss";
+
+$comment-background: mat-color(mat-palette($mat-red, 100));
+
+.commentInputWrapper {
+  background-color: $comment-background;
+  mat-form-field {
+    width: 100%;
+  }
+}
+
+.userName {
+  display: inline-block;
+  width: 220px!important;
+  zoom: 0.9;
+}

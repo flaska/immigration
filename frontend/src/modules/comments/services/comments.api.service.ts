@@ -14,6 +14,7 @@ export class CommentsApiService {
 
   private getCommentsUrl: string = '/api/comments/getComments?articleId=';
   private getCommentsCountUrl: string = '/api/comments/commentsCount?articleId=';
+  private postCommentUrl: string = '/api/comments/postComment';
 
   getComments(articleId: string): Observable<NewsComment[]>{
     return this.http.get<NewsComment[]>(this.getCommentsUrl + articleId).pipe(retry(3));
@@ -25,5 +26,9 @@ export class CommentsApiService {
 
   urlToArticleId(url: string): string{
     return url.replace(/[^A-z]/g,"");
+  }
+
+  postComment(comment: NewsComment): Observable<any>{
+    return this.http.post(this.postCommentUrl, comment);
   }
 }

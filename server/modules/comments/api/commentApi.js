@@ -8,3 +8,6 @@ exports.getCommentsCount = function(articleId, cb){
   commentDb.getCommentsCountByArticleId(articleId, cb);
 };
 
+exports.postComment = function(comment, cb){
+  commentDb.postComment(comment, cb);
+};

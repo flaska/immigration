@@ -12,4 +12,8 @@ router.get('/commentsCount', function(req, res){
   commentApi.getCommentsCount(req.query.articleId, genericResponseFactory(req, res));
 });
 
+router.post('/postComment', function(req, res){
+  commentApi.postComment(req.body, genericResponseFactory(req, res));
+});
+
 module.exports = router;
