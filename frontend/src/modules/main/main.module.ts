@@ -14,6 +14,8 @@ import {MatButtonModule} from '@angular/material';
 export let appRoutes: Routes = [
   { path: '', component: MainNewsComponent},
   { path: 'news/:channel/:scoring', component: MainNewsComponent},
+  { path: 'admin', loadChildren: '../admin/admin.module#AdminModule'},
+  { path: 'page', loadChildren: '../page/page.module#PageModule'},
   { path: '**',  component: NotFoundComponent },
 ];
 

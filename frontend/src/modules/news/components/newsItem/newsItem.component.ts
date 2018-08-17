@@ -26,3 +26,4 @@ export class NewsItemComponent implements OnInit{
     }
   }
 }
+

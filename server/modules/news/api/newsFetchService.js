@@ -1,5 +1,6 @@
 var request = require('request'),
-  parseString = require('xml2js').parseString
+  parseString = require('xml2js').parseString,
+  newsDb = require('../db/newsDb')
 ;
 
 var fetchedNews = {top: {}, new: {}};
@@ -39,6 +40,7 @@ function fetchNewsChannel(keyword, scoring){
       feeds = filterPernamentlyBlocked(feeds);
       feeds = filterOutHttp(feeds);
       fetchedNews[scoring][keyword] = feeds;
+      filterBlockedUrls(fetchedNews);
     });
   });
 }
@@ -102,4 +104,35 @@ exports.getNewsItems = function(q, scoring, from){
   if (from) f = parseInt(from);
   else f = 0;
   return fetchedNews[scoring][q].slice(f, f + 10);
+};
+
+function filterBlockedUrls(){
+  getBlockedFeeds(function(err, urls){
+    urls.forEach((url)=>{
+      removeUrl(url.url);
+    });
+  });
+}
+
+function removeUrl(url){
+  ['new', 'top'].forEach(function(scoring){
+    Object.keys(fetchedNews[scoring]).forEach((channelFeeds)=>{
+      var indexToDelete = null;
+      fetchedNews[scoring][channelFeeds].forEach((feed, i)=>{
+        if (feed.url==url) indexToDelete = i;
+      });
+      if (indexToDelete!=undefined) {
+        fetchedNews[scoring][channelFeeds].splice(indexToDelete,1);
+      }
+    });
+  })
+};
+
+exports.blockUrl = function(url, cb){
+  removeUrl(url);
+  newsDb.storeBlockedUrl(url, cb);
+};
+
+exports.getBlockedFeeds = getBlockedFeeds = function(cb){
+  newsDb.getBlockedUrls(cb);
 };

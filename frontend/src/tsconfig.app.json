@@ -6,7 +6,5 @@
     "types": []
   },
   "exclude": [
-    "**/admin/**",
-    "**/page/**"
   ]
 }
