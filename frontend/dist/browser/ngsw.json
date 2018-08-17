@@ -7,10 +7,12 @@
       "installMode": "prefetch",
       "updateMode": "prefetch",
       "urls": [
+        "/admin-admin-module-ngfactory.3201e4646a9b0ef90111.js",
         "/index.html",
-        "/main.8f72e779175289005119.js",
-        "/polyfills.9f773b75ffcda6bb2a95.js",
-        "/runtime.a66f828dca56eeb90e02.js",
+        "/main.584c29f09f475e8a5018.js",
+        "/page-page-module-ngfactory.8c077092cfb8f79b2513.js",
+        "/polyfills.a3d56dcf13b4276dc3fd.js",
+        "/runtime.69a2bc090ceff049f839.js",
         "/styles.e2ec66e40b2a45c83cab.css"
       ],
       "patterns": []
@@ -31,15 +33,17 @@
   ],
   "dataGroups": [],
   "hashTable": {
+    "/admin-admin-module-ngfactory.3201e4646a9b0ef90111.js": "c4d87e1bb443c72410c80bb2b402bc644da243e1",
     "/assets/favicon.png": "8578ecddb0b98f1cfd8ee5e4cdf1a2e4f8be99d0",
     "/assets/icons/icon192.png": "c14313a653b8bd3fbda3e81401418370502971ec",
     "/assets/icons/icon512.png": "044f91f1cbcebea72f4ef892c594587a32091f5a",
     "/assets/img/code-house.png": "8980038b742c6092f58fe4896581da234d9bd46f",
     "/assets/manifest.json": "5504362c4218fd2839be7bf6d67fd6aa5e214f72",
-    "/index.html": "c3ae9b6bee9965d4fc0ddc6ebddd1ba84327af77",
-    "/main.8f72e779175289005119.js": "4f45b41d4cde86a9df52a50df6fc66c3a7234bbe",
-    "/polyfills.9f773b75ffcda6bb2a95.js": "27aab6116a9bc7504a07d9d37fdd2d938187bafe",
-    "/runtime.a66f828dca56eeb90e02.js": "078e320cc6fdaf355836c3b1c52b059cdd33fc7e",
+    "/index.html": "e272f630182a43291826844501c3b6e08569d621",
+    "/main.584c29f09f475e8a5018.js": "bb6b093cf89248653f07a2ebdcbc57d845d0532c",
+    "/page-page-module-ngfactory.8c077092cfb8f79b2513.js": "a64d3a290909be3ed88563c672b9e3832beff1d5",
+    "/polyfills.a3d56dcf13b4276dc3fd.js": "a78eb8113cc6b44b50a282f0c386a00e794f9cae",
+    "/runtime.69a2bc090ceff049f839.js": "c3c614e73f3c0deef5574b0560dc1d1d5bf75e6e",
     "/styles.e2ec66e40b2a45c83cab.css": "c304b36d5f1070a107b923f606148a6c7e5245e2"
   },
   "navigationUrls": [

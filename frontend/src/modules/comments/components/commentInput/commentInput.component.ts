@@ -8,6 +8,7 @@ import {MatSnackBar} from '@angular/material';
 export class CommentInputComponent implements OnInit{
 
   @Input () articleId: string;
+  @Input () commentsCount: number;
   @Output() commentPosted: EventEmitter<any> = new EventEmitter<any>();
 
   comment: NewsComment;
