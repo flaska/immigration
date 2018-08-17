@@ -6,7 +6,8 @@ const express = require('express'),
 ;
 app.use(compression());
 app.use(bodyParser.json());
-app.use('/api', routes);
+app.use('/api/news', routes);
+app.use('/api/comments', routes);
 
 const webServerPort = 3001;
 

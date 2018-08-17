@@ -20,9 +20,7 @@ export class NewsApiService {
   }
 
   private serverUrl = '/';
-  private getUrl: string = 'api/getNews';
-  private blockAddr: string = 'api/blockUrl';
-  private blockedFeedsAddr: string = 'api/getBlockedUrls';
+  private getUrl: string = 'api/news/getNews';
 
   searchByTerm(term: string, scoring: string, from: number, cb: (error:any, result:NewsRecord[])=>void){
 
@@ -36,12 +34,4 @@ export class NewsApiService {
       cb(error, null);
     });
   }
-  //
-  // blockUrl(url: string, password: string):Observable<boolean>{
-  //   return this.http.post<boolean>(this.serverUrl + this.blockAddr, {url: url, password: password});
-  // }
-  //
-  // getBlockedFeeds():Observable<BlockedUrl[]>{
-  //   return this.http.get<BlockedUrl[]>(this.serverUrl + this.blockedFeedsAddr);
-  // }
 }
