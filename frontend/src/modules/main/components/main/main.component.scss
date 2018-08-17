@@ -1,0 +1,96 @@
+@import "../../../../css/import/_component_import.scss";
+
+#header {
+  background-color: mat-color(mat-palette($mat-gray,200));
+  box-shadow: 0 3px 1px -2px rgba(0,0,0,.2), 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12);
+  position: fixed;
+  width: 100%;
+  top:0px;
+  left:0px;
+  z-index: 100;
+}
+
+#footer a {
+  color: black!important;
+}
+
+#code-house-link:hover {
+  text-shadow: 0 0 20px black;
+}
+
+.fb-like {
+  margin-left: 5px;
+}
+
+
+#main_heading {
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  font-weight: 300;
+  font-size: 25px;
+  line-height: 52px;
+  margin-left: 10px;
+  margin-bottom: 0px;
+
+  @media(max-width: 360px){
+    font-size: 15px;
+  }
+
+  @media (min-width: 360px) and (max-width: 385px){
+    font-size: 17px;
+  }
+
+  @media(min-width: 385px) and (max-width: 400px){
+    font-size: 20px;
+  }
+
+  @media(min-width: 400px) and (max-width: 460px){
+    font-size: 21px;
+  }
+
+}
+
+.main_content_wrapper {
+  max-width: 800px;
+  margin: auto;
+  padding: 8px;
+}
+
+
+#footer {
+  text-align: center;
+  padding-bottom: 2rem;
+  padding-top: 1rem;
+  background-color: mat-color(mat-palette($mat-gray,200));
+  box-shadow: 0 -3px 1px -2px rgba(0,0,0,.2), 0 -2px 2px 0 rgba(0,0,0,.14), 0 -1px 5px 0 rgba(0,0,0,.12);
+}
+
+#content {
+  padding-bottom: 15px;
+  margin-top: 68px;
+}
+
+
+#code-house-logo {
+  width: 70px;
+}
+
+nav {
+  position: absolute;
+  right: 9px;
+  top: 8px;
+  a {
+    margin-left: 13px;
+  }
+  a[active]:hover {
+    background-color: mat-color($accent-hover);
+  }
+  a:not([active]):hover {
+    background-color: mat-color($primary-hover);
+  }
+  @media(max-width: 460px){
+    top: 11px;
+    .nav-link {
+      zoom: 0.85;
+    }
+  }
+}

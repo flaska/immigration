@@ -1,0 +1,1304 @@
+[
+  {
+    "name": "MainModule",
+    "file": "modules/main/main.module.ts",
+    "providers": [],
+    "declarations": [
+      {
+        "name": "MainComponent",
+        "file": "main/components/main.component.ts",
+        "selector": "app-root",
+        "providers": [],
+        "templateUrl": [
+          "main.component.html"
+        ],
+        "styleUrls": [
+          "main.component.scss"
+        ],
+        "__raw": [
+          {
+            "pos": 58,
+            "end": 82,
+            "flags": 0,
+            "kind": 269,
+            "name": {
+              "pos": 58,
+              "end": 70,
+              "flags": 0,
+              "escapedText": "selector"
+            },
+            "initializer": {
+              "pos": 71,
+              "end": 82,
+              "flags": 0,
+              "kind": 9,
+              "text": "app-root"
+            }
+          },
+          {
+            "pos": 83,
+            "end": 123,
+            "flags": 0,
+            "kind": 269,
+            "name": {
+              "pos": 83,
+              "end": 98,
+              "flags": 0,
+              "escapedText": "templateUrl"
+            },
+            "initializer": {
+              "pos": 99,
+              "end": 123,
+              "flags": 0,
+              "kind": 9,
+              "text": "./main.component.html"
+            }
+          },
+          {
+            "pos": 124,
+            "end": 164,
+            "flags": 0,
+            "kind": 269,
+            "name": {
+              "pos": 124,
+              "end": 137,
+              "flags": 0,
+              "escapedText": "styleUrls"
+            },
+            "initializer": {
+              "pos": 138,
+              "end": 164,
+              "flags": 0,
+              "kind": 182,
+              "elements": [
+                {
+                  "pos": 140,
+                  "end": 163,
+                  "flags": 0,
+                  "kind": 9,
+                  "text": "./main.component.scss"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    ],
+    "imports": [
+      {
+        "ns": "BrowserModule",
+        "name": "BrowserModule.withServerTransition(args)"
+      },
+      {
+        "name": "BrowserTransferStateModule"
+      },
+      {
+        "name": "NewsModule"
+      },
+      {
+        "name": "BrowserAnimationsModule"
+      },
+      {
+        "name": "MaterialModule"
+      },
+      {
+        "ns": "RouterModule",
+        "name": "RouterModule.forRoot(args)"
+      },
+      {
+        "ns": "ServiceWorkerModule",
+        "name": "ServiceWorkerModule.register(args)"
+      }
+    ],
+    "exports": [],
+    "bootstrap": [
+      {
+        "name": "MainComponent"
+      }
+    ],
+    "__raw": [
+      {
+        "pos": 954,
+        "end": 997,
+        "flags": 0,
+        "kind": 269,
+        "name": {
+          "pos": 954,
+          "end": 970,
+          "flags": 0,
+          "escapedText": "declarations"
+        },
+        "initializer": {
+          "pos": 971,
+          "end": 997,
+          "flags": 0,
+          "kind": 182,
+          "multiLine": true,
+          "elements": [
+            {
+              "pos": 973,
+              "end": 992,
+              "flags": 0,
+              "escapedText": "MainComponent"
+            }
+          ]
+        }
+      },
+      {
+        "pos": 998,
+        "end": 1323,
+        "flags": 0,
+        "kind": 269,
+        "name": {
+          "pos": 998,
+          "end": 1009,
+          "flags": 0,
+          "escapedText": "imports"
+        },
+        "initializer": {
+          "pos": 1010,
+          "end": 1323,
+          "flags": 0,
+          "kind": 182,
+          "multiLine": true,
+          "elements": [
+            {
+              "pos": 1012,
+              "end": 1087,
+              "flags": 0,
+              "kind": 186,
+              "expression": {
+                "pos": 1012,
+                "end": 1052,
+                "flags": 0,
+                "kind": 184,
+                "expression": {
+                  "pos": 1012,
+                  "end": 1031,
+                  "flags": 0,
+                  "escapedText": "BrowserModule"
+                },
+                "name": {
+                  "pos": 1032,
+                  "end": 1052,
+                  "flags": 0,
+                  "escapedText": "withServerTransition"
+                }
+              },
+              "arguments": [
+                {
+                  "pos": 1053,
+                  "end": 1086,
+                  "flags": 0,
+                  "kind": 183,
+                  "properties": [
+                    {
+                      "pos": 1054,
+                      "end": 1084,
+                      "flags": 0,
+                      "kind": 269,
+                      "name": {
+                        "pos": 1054,
+                        "end": 1060,
+                        "flags": 0,
+                        "escapedText": "appId"
+                      },
+                      "initializer": {
+                        "pos": 1061,
+                        "end": 1084,
+                        "flags": 0,
+                        "kind": 9,
+                        "text": "immigration-in-media"
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "pos": 1088,
+              "end": 1120,
+              "flags": 0,
+              "escapedText": "BrowserTransferStateModule"
+            },
+            {
+              "pos": 1121,
+              "end": 1137,
+              "flags": 0,
+              "escapedText": "NewsModule"
+            },
+            {
+              "pos": 1138,
+              "end": 1167,
+              "flags": 0,
+              "escapedText": "BrowserAnimationsModule"
+            },
+            {
+              "pos": 1168,
+              "end": 1188,
+              "flags": 0,
+              "escapedText": "MaterialModule"
+            },
+            {
+              "pos": 1189,
+              "end": 1226,
+              "flags": 0,
+              "kind": 186,
+              "expression": {
+                "pos": 1189,
+                "end": 1215,
+                "flags": 0,
+                "kind": 184,
+                "expression": {
+                  "pos": 1189,
+                  "end": 1207,
+                  "flags": 0,
+                  "escapedText": "RouterModule"
+                },
+                "name": {
+                  "pos": 1208,
+                  "end": 1215,
+                  "flags": 0,
+                  "escapedText": "forRoot"
+                }
+              },
+              "arguments": [
+                {
+                  "pos": 1216,
+                  "end": 1225,
+                  "flags": 0,
+                  "escapedText": "appRoutes"
+                }
+              ]
+            },
+            {
+              "pos": 1227,
+              "end": 1317,
+              "flags": 0,
+              "kind": 186,
+              "expression": {
+                "pos": 1227,
+                "end": 1261,
+                "flags": 0,
+                "kind": 184,
+                "expression": {
+                  "pos": 1227,
+                  "end": 1252,
+                  "flags": 0,
+                  "escapedText": "ServiceWorkerModule"
+                },
+                "name": {
+                  "pos": 1253,
+                  "end": 1261,
+                  "flags": 0,
+                  "escapedText": "register"
+                }
+              },
+              "arguments": [
+                {
+                  "pos": 1262,
+                  "end": 1279,
+                  "flags": 0,
+                  "kind": 9,
+                  "text": "/ngsw-worker.js"
+                },
+                {
+                  "pos": 1280,
+                  "end": 1316,
+                  "flags": 0,
+                  "kind": 183,
+                  "properties": [
+                    {
+                      "pos": 1282,
+                      "end": 1314,
+                      "flags": 0,
+                      "kind": 269,
+                      "name": {
+                        "pos": 1282,
+                        "end": 1290,
+                        "flags": 0,
+                        "escapedText": "enabled"
+                      },
+                      "initializer": {
+                        "pos": 1291,
+                        "end": 1314,
+                        "flags": 0,
+                        "kind": 184,
+                        "expression": {
+                          "pos": 1291,
+                          "end": 1303,
+                          "flags": 0,
+                          "escapedText": "environment"
+                        },
+                        "name": {
+                          "pos": 1304,
+                          "end": 1314,
+                          "flags": 0,
+                          "escapedText": "production"
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "pos": 1324,
+        "end": 1341,
+        "flags": 0,
+        "kind": 269,
+        "name": {
+          "pos": 1324,
+          "end": 1337,
+          "flags": 0,
+          "escapedText": "providers"
+        },
+        "initializer": {
+          "pos": 1338,
+          "end": 1341,
+          "flags": 0,
+          "kind": 182,
+          "elements": []
+        }
+      },
+      {
+        "pos": 1342,
+        "end": 1372,
+        "flags": 0,
+        "kind": 269,
+        "name": {
+          "pos": 1342,
+          "end": 1355,
+          "flags": 0,
+          "escapedText": "bootstrap"
+        },
+        "initializer": {
+          "pos": 1356,
+          "end": 1372,
+          "flags": 0,
+          "kind": 182,
+          "elements": [
+            {
+              "pos": 1358,
+              "end": 1371,
+              "flags": 0,
+              "escapedText": "MainComponent"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "MaterialModule",
+    "file": "modules/material/material.module.ts",
+    "providers": [],
+    "declarations": [],
+    "imports": [
+      {
+        "name": "MatButtonModule"
+      },
+      {
+        "name": "MatCardModule"
+      },
+      {
+        "name": "MatButtonToggleModule"
+      },
+      {
+        "name": "MatProgressBarModule"
+      }
+    ],
+    "exports": [
+      {
+        "name": "MatButtonModule"
+      },
+      {
+        "name": "MatCardModule"
+      },
+      {
+        "name": "MatButtonToggleModule"
+      },
+      {
+        "name": "MatProgressBarModule"
+      }
+    ],
+    "bootstrap": [],
+    "__raw": [
+      {
+        "pos": 263,
+        "end": 359,
+        "flags": 0,
+        "kind": 269,
+        "name": {
+          "pos": 263,
+          "end": 274,
+          "flags": 0,
+          "escapedText": "imports"
+        },
+        "initializer": {
+          "pos": 275,
+          "end": 359,
+          "flags": 0,
+          "kind": 182,
+          "elements": [
+            {
+              "pos": 277,
+              "end": 292,
+              "flags": 0,
+              "escapedText": "MatButtonModule"
+            },
+            {
+              "pos": 293,
+              "end": 307,
+              "flags": 0,
+              "escapedText": "MatCardModule"
+            },
+            {
+              "pos": 308,
+              "end": 330,
+              "flags": 0,
+              "escapedText": "MatButtonToggleModule"
+            },
+            {
+              "pos": 331,
+              "end": 352,
+              "flags": 0,
+              "escapedText": "MatProgressBarModule"
+            }
+          ]
+        }
+      },
+      {
+        "pos": 360,
+        "end": 453,
+        "flags": 0,
+        "kind": 269,
+        "name": {
+          "pos": 360,
+          "end": 371,
+          "flags": 0,
+          "escapedText": "exports"
+        },
+        "initializer": {
+          "pos": 372,
+          "end": 453,
+          "flags": 0,
+          "kind": 182,
+          "elements": [
+            {
+              "pos": 374,
+              "end": 389,
+              "flags": 0,
+              "escapedText": "MatButtonModule"
+            },
+            {
+              "pos": 390,
+              "end": 404,
+              "flags": 0,
+              "escapedText": "MatCardModule"
+            },
+            {
+              "pos": 405,
+              "end": 427,
+              "flags": 0,
+              "escapedText": "MatButtonToggleModule"
+            },
+            {
+              "pos": 428,
+              "end": 449,
+              "flags": 0,
+              "escapedText": "MatProgressBarModule"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "NewsModule",
+    "file": "modules/news/news.module.ts",
+    "providers": [
+      {
+        "name": "Title"
+      }
+    ],
+    "declarations": [
+      {
+        "name": "MainNewsComponent",
+        "file": "components/mainNews/mainNews.component.ts",
+        "selector": "main-news",
+        "providers": [],
+        "templateUrl": [
+          "mainNews.component.html"
+        ],
+        "styleUrls": [
+          "mainNews.component.scss"
+        ],
+        "__raw": [
+          {
+            "pos": 178,
+            "end": 199,
+            "flags": 0,
+            "kind": 269,
+            "name": {
+              "pos": 178,
+              "end": 186,
+              "flags": 0,
+              "escapedText": "selector"
+            },
+            "initializer": {
+              "pos": 187,
+              "end": 199,
+              "flags": 0,
+              "kind": 9,
+              "text": "main-news"
+            }
+          },
+          {
+            "pos": 200,
+            "end": 241,
+            "flags": 0,
+            "kind": 269,
+            "name": {
+              "pos": 200,
+              "end": 212,
+              "flags": 0,
+              "escapedText": "templateUrl"
+            },
+            "initializer": {
+              "pos": 213,
+              "end": 241,
+              "flags": 0,
+              "kind": 9,
+              "text": "./mainNews.component.html"
+            }
+          },
+          {
+            "pos": 242,
+            "end": 283,
+            "flags": 0,
+            "kind": 269,
+            "name": {
+              "pos": 242,
+              "end": 252,
+              "flags": 0,
+              "escapedText": "styleUrls"
+            },
+            "initializer": {
+              "pos": 253,
+              "end": 283,
+              "flags": 0,
+              "kind": 182,
+              "elements": [
+                {
+                  "pos": 255,
+                  "end": 282,
+                  "flags": 0,
+                  "kind": 9,
+                  "text": "./mainNews.component.scss"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "name": "NewsListComponent",
+        "file": "components/newsList/newsList.component.ts",
+        "selector": "news-list",
+        "providers": [
+          {
+            "name": "NewsApiService"
+          }
+        ],
+        "templateUrl": [
+          "newsList.component.html"
+        ],
+        "styleUrls": [
+          "newsList.component.scss"
+        ],
+        "__raw": [
+          {
+            "pos": 212,
+            "end": 237,
+            "flags": 0,
+            "kind": 269,
+            "name": {
+              "pos": 212,
+              "end": 224,
+              "flags": 0,
+              "escapedText": "selector"
+            },
+            "initializer": {
+              "pos": 225,
+              "end": 237,
+              "flags": 0,
+              "kind": 9,
+              "text": "news-list"
+            }
+          },
+          {
+            "pos": 238,
+            "end": 282,
+            "flags": 0,
+            "kind": 269,
+            "name": {
+              "pos": 238,
+              "end": 253,
+              "flags": 0,
+              "escapedText": "templateUrl"
+            },
+            "initializer": {
+              "pos": 254,
+              "end": 282,
+              "flags": 0,
+              "kind": 9,
+              "text": "./newsList.component.html"
+            }
+          },
+          {
+            "pos": 283,
+            "end": 327,
+            "flags": 0,
+            "kind": 269,
+            "name": {
+              "pos": 283,
+              "end": 296,
+              "flags": 0,
+              "escapedText": "styleUrls"
+            },
+            "initializer": {
+              "pos": 297,
+              "end": 327,
+              "flags": 0,
+              "kind": 182,
+              "elements": [
+                {
+                  "pos": 299,
+                  "end": 326,
+                  "flags": 0,
+                  "kind": 9,
+                  "text": "./newsList.component.scss"
+                }
+              ]
+            }
+          },
+          {
+            "pos": 328,
+            "end": 359,
+            "flags": 0,
+            "kind": 269,
+            "name": {
+              "pos": 328,
+              "end": 341,
+              "flags": 0,
+              "escapedText": "providers"
+            },
+            "initializer": {
+              "pos": 342,
+              "end": 359,
+              "flags": 0,
+              "kind": 182,
+              "elements": [
+                {
+                  "pos": 344,
+                  "end": 358,
+                  "flags": 0,
+                  "escapedText": "NewsApiService"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "name": "NewsListWrapperComponent",
+        "file": "components/newsListWrapper/newsListWrapper.component.ts",
+        "selector": "news-list-wrapper",
+        "providers": [
+          {
+            "name": "NewsApiService"
+          }
+        ],
+        "templateUrl": [
+          "newsListWrapper.component.html"
+        ],
+        "styleUrls": [],
+        "__raw": [
+          {
+            "pos": 262,
+            "end": 295,
+            "flags": 0,
+            "kind": 269,
+            "name": {
+              "pos": 262,
+              "end": 274,
+              "flags": 0,
+              "escapedText": "selector"
+            },
+            "initializer": {
+              "pos": 275,
+              "end": 295,
+              "flags": 0,
+              "kind": 9,
+              "text": "news-list-wrapper"
+            }
+          },
+          {
+            "pos": 296,
+            "end": 347,
+            "flags": 0,
+            "kind": 269,
+            "name": {
+              "pos": 296,
+              "end": 311,
+              "flags": 0,
+              "escapedText": "templateUrl"
+            },
+            "initializer": {
+              "pos": 312,
+              "end": 347,
+              "flags": 0,
+              "kind": 9,
+              "text": "./newsListWrapper.component.html"
+            }
+          },
+          {
+            "pos": 348,
+            "end": 379,
+            "flags": 0,
+            "kind": 269,
+            "name": {
+              "pos": 348,
+              "end": 361,
+              "flags": 0,
+              "escapedText": "providers"
+            },
+            "initializer": {
+              "pos": 362,
+              "end": 379,
+              "flags": 0,
+              "kind": 182,
+              "elements": [
+                {
+                  "pos": 364,
+                  "end": 378,
+                  "flags": 0,
+                  "escapedText": "NewsApiService"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "name": "NewsItemComponent",
+        "file": "components/newsItem/newsItem.component.ts",
+        "selector": "news-item",
+        "providers": [],
+        "templateUrl": [
+          "newsItem.component.html"
+        ],
+        "styleUrls": [
+          "newsItem.component.scss"
+        ],
+        "__raw": [
+          {
+            "pos": 181,
+            "end": 202,
+            "flags": 0,
+            "kind": 269,
+            "name": {
+              "pos": 181,
+              "end": 189,
+              "flags": 0,
+              "escapedText": "selector"
+            },
+            "initializer": {
+              "pos": 190,
+              "end": 202,
+              "flags": 0,
+              "kind": 9,
+              "text": "news-item"
+            }
+          },
+          {
+            "pos": 203,
+            "end": 244,
+            "flags": 0,
+            "kind": 269,
+            "name": {
+              "pos": 203,
+              "end": 215,
+              "flags": 0,
+              "escapedText": "templateUrl"
+            },
+            "initializer": {
+              "pos": 216,
+              "end": 244,
+              "flags": 0,
+              "kind": 9,
+              "text": "./newsItem.component.html"
+            }
+          },
+          {
+            "pos": 245,
+            "end": 286,
+            "flags": 0,
+            "kind": 269,
+            "name": {
+              "pos": 245,
+              "end": 255,
+              "flags": 0,
+              "escapedText": "styleUrls"
+            },
+            "initializer": {
+              "pos": 256,
+              "end": 286,
+              "flags": 0,
+              "kind": 182,
+              "elements": [
+                {
+                  "pos": 258,
+                  "end": 285,
+                  "flags": 0,
+                  "kind": 9,
+                  "text": "./newsItem.component.scss"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "name": "ChannelSelectComponent",
+        "file": "components/channelSelect/channelSelect.component.ts",
+        "selector": "channel-select",
+        "providers": [],
+        "templateUrl": [
+          "channelSelect.component.html"
+        ],
+        "styleUrls": [
+          "channelSelect.component.scss"
+        ],
+        "__raw": [
+          {
+            "pos": 85,
+            "end": 115,
+            "flags": 0,
+            "kind": 269,
+            "name": {
+              "pos": 85,
+              "end": 97,
+              "flags": 0,
+              "escapedText": "selector"
+            },
+            "initializer": {
+              "pos": 98,
+              "end": 115,
+              "flags": 0,
+              "kind": 9,
+              "text": "channel-select"
+            }
+          },
+          {
+            "pos": 116,
+            "end": 165,
+            "flags": 0,
+            "kind": 269,
+            "name": {
+              "pos": 116,
+              "end": 131,
+              "flags": 0,
+              "escapedText": "templateUrl"
+            },
+            "initializer": {
+              "pos": 132,
+              "end": 165,
+              "flags": 0,
+              "kind": 9,
+              "text": "./channelSelect.component.html"
+            }
+          },
+          {
+            "pos": 166,
+            "end": 215,
+            "flags": 0,
+            "kind": 269,
+            "name": {
+              "pos": 166,
+              "end": 179,
+              "flags": 0,
+              "escapedText": "styleUrls"
+            },
+            "initializer": {
+              "pos": 180,
+              "end": 215,
+              "flags": 0,
+              "kind": 182,
+              "elements": [
+                {
+                  "pos": 182,
+                  "end": 214,
+                  "flags": 0,
+                  "kind": 9,
+                  "text": "./channelSelect.component.scss"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    ],
+    "imports": [
+      {
+        "name": "CommonModule"
+      },
+      {
+        "name": "HttpClientModule"
+      },
+      {
+        "name": "MaterialModule"
+      }
+    ],
+    "exports": [
+      {
+        "name": "MainNewsComponent"
+      },
+      {
+        "name": "NewsListComponent"
+      },
+      {
+        "name": "NewsItemComponent"
+      }
+    ],
+    "bootstrap": [],
+    "__raw": [
+      {
+        "pos": 693,
+        "end": 848,
+        "flags": 0,
+        "kind": 269,
+        "name": {
+          "pos": 693,
+          "end": 709,
+          "flags": 0,
+          "escapedText": "declarations"
+        },
+        "initializer": {
+          "pos": 710,
+          "end": 848,
+          "flags": 0,
+          "kind": 182,
+          "multiLine": true,
+          "elements": [
+            {
+              "pos": 712,
+              "end": 735,
+              "flags": 0,
+              "escapedText": "MainNewsComponent"
+            },
+            {
+              "pos": 736,
+              "end": 759,
+              "flags": 0,
+              "escapedText": "NewsListComponent"
+            },
+            {
+              "pos": 760,
+              "end": 790,
+              "flags": 0,
+              "escapedText": "NewsListWrapperComponent"
+            },
+            {
+              "pos": 791,
+              "end": 814,
+              "flags": 0,
+              "escapedText": "NewsItemComponent"
+            },
+            {
+              "pos": 815,
+              "end": 843,
+              "flags": 0,
+              "escapedText": "ChannelSelectComponent"
+            }
+          ]
+        }
+      },
+      {
+        "pos": 849,
+        "end": 930,
+        "flags": 0,
+        "kind": 269,
+        "name": {
+          "pos": 849,
+          "end": 860,
+          "flags": 0,
+          "escapedText": "imports"
+        },
+        "initializer": {
+          "pos": 861,
+          "end": 930,
+          "flags": 0,
+          "kind": 182,
+          "multiLine": true,
+          "elements": [
+            {
+              "pos": 863,
+              "end": 881,
+              "flags": 0,
+              "escapedText": "CommonModule"
+            },
+            {
+              "pos": 882,
+              "end": 904,
+              "flags": 0,
+              "escapedText": "HttpClientModule"
+            },
+            {
+              "pos": 905,
+              "end": 925,
+              "flags": 0,
+              "escapedText": "MaterialModule"
+            }
+          ]
+        }
+      },
+      {
+        "pos": 931,
+        "end": 1001,
+        "flags": 0,
+        "kind": 269,
+        "name": {
+          "pos": 931,
+          "end": 942,
+          "flags": 0,
+          "escapedText": "exports"
+        },
+        "initializer": {
+          "pos": 943,
+          "end": 1001,
+          "flags": 0,
+          "kind": 182,
+          "elements": [
+            {
+              "pos": 945,
+              "end": 962,
+              "flags": 0,
+              "escapedText": "MainNewsComponent"
+            },
+            {
+              "pos": 963,
+              "end": 981,
+              "flags": 0,
+              "escapedText": "NewsListComponent"
+            },
+            {
+              "pos": 982,
+              "end": 1000,
+              "flags": 0,
+              "escapedText": "NewsItemComponent"
+            }
+          ]
+        }
+      },
+      {
+        "pos": 1002,
+        "end": 1024,
+        "flags": 0,
+        "kind": 269,
+        "name": {
+          "pos": 1002,
+          "end": 1015,
+          "flags": 0,
+          "escapedText": "providers"
+        },
+        "initializer": {
+          "pos": 1016,
+          "end": 1024,
+          "flags": 0,
+          "kind": 182,
+          "elements": [
+            {
+              "pos": 1018,
+              "end": 1023,
+              "flags": 0,
+              "escapedText": "Title"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "AppServerModule",
+    "file": "modules/server/app.server.module.ts",
+    "providers": [
+      {
+        "name": "{ provide: APP_BASE_HREF, useValue: 'http://localhost:3001' }"
+      }
+    ],
+    "declarations": [],
+    "imports": [
+      {
+        "name": "MainModule"
+      },
+      {
+        "name": "AngularServerModule"
+      },
+      {
+        "name": "ModuleMapLoaderModule"
+      },
+      {
+        "name": "ServerTransferStateModule"
+      }
+    ],
+    "exports": [],
+    "bootstrap": [
+      {
+        "name": "MainComponent"
+      }
+    ],
+    "__raw": [
+      {
+        "pos": 410,
+        "end": 531,
+        "flags": 0,
+        "kind": 269,
+        "name": {
+          "pos": 410,
+          "end": 421,
+          "flags": 0,
+          "escapedText": "imports"
+        },
+        "initializer": {
+          "pos": 422,
+          "end": 531,
+          "flags": 0,
+          "kind": 182,
+          "multiLine": true,
+          "elements": [
+            {
+              "pos": 424,
+              "end": 440,
+              "flags": 0,
+              "escapedText": "MainModule"
+            },
+            {
+              "pos": 441,
+              "end": 466,
+              "flags": 0,
+              "escapedText": "AngularServerModule"
+            },
+            {
+              "pos": 467,
+              "end": 494,
+              "flags": 0,
+              "escapedText": "ModuleMapLoaderModule"
+            },
+            {
+              "pos": 495,
+              "end": 526,
+              "flags": 0,
+              "escapedText": "ServerTransferStateModule"
+            }
+          ]
+        }
+      },
+      {
+        "pos": 532,
+        "end": 608,
+        "flags": 0,
+        "kind": 269,
+        "name": {
+          "pos": 532,
+          "end": 545,
+          "flags": 0,
+          "escapedText": "providers"
+        },
+        "initializer": {
+          "pos": 546,
+          "end": 608,
+          "flags": 0,
+          "kind": 182,
+          "elements": [
+            {
+              "pos": 548,
+              "end": 607,
+              "flags": 0,
+              "kind": 183,
+              "properties": [
+                {
+                  "pos": 549,
+                  "end": 571,
+                  "flags": 0,
+                  "kind": 269,
+                  "name": {
+                    "pos": 549,
+                    "end": 556,
+                    "flags": 0,
+                    "escapedText": "provide"
+                  },
+                  "initializer": {
+                    "pos": 557,
+                    "end": 571,
+                    "flags": 0,
+                    "escapedText": "APP_BASE_HREF"
+                  }
+                },
+                {
+                  "pos": 572,
+                  "end": 606,
+                  "flags": 0,
+                  "kind": 269,
+                  "name": {
+                    "pos": 572,
+                    "end": 581,
+                    "flags": 0,
+                    "escapedText": "useValue"
+                  },
+                  "initializer": {
+                    "pos": 582,
+                    "end": 606,
+                    "flags": 0,
+                    "kind": 9,
+                    "text": "http://localhost:3001"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "pos": 609,
+        "end": 641,
+        "flags": 0,
+        "kind": 269,
+        "name": {
+          "pos": 609,
+          "end": 622,
+          "flags": 0,
+          "escapedText": "bootstrap"
+        },
+        "initializer": {
+          "pos": 623,
+          "end": 641,
+          "flags": 0,
+          "kind": 182,
+          "elements": [
+            {
+              "pos": 625,
+              "end": 639,
+              "flags": 0,
+              "escapedText": "MainComponent"
+            }
+          ]
+        }
+      }
+    ]
+  }
+]

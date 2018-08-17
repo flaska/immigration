@@ -1,0 +1,27 @@
+<div id="header">
+  <a [routerLink]="['/']">
+    <h1 id="main_heading" class="">
+      <span class="primary-color">Immigration</span>
+      in
+      <span class="accent-color">Media</span>
+    </h1>
+  </a>
+  <nav>
+    <a mat-raised-button class="nav-link" active [routerLink]="['/']" color="accent">News</a>
+    <a mat-raised-button class="nav-link" href="https://forum.immigration.media/" color="primary" target="_blank" rel="noopener">Forum</a>
+  </nav>
+</div>
+
+<div class="main_content_wrapper" id="content">
+  <router-outlet></router-outlet>
+</div>
+
+<div id="footer">
+  <a href="http://www.codehouse.tech/" target="_blank" id="code-house-link" rel="noopener">
+    <img id="code-house-logo" src="/assets/img/code-house.png">
+    <br>
+    Provided by Code House, LLC | 2018<br>
+    <small>Creating awesome websites!</small>
+  </a>
+</div>
+
