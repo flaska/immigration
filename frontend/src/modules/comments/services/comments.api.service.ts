@@ -13,9 +13,14 @@ export class CommentsApiService {
   }
 
   private getCommentsUrl: string = '/api/comments/getComments?articleId=';
+  private getCommentsCountUrl: string = '/api/comments/getCommentsCount?articleId=';
 
   getComments(articleId: string): Observable<NewsComment[]>{
     return this.http.get<NewsComment[]>(this.getCommentsUrl + articleId).pipe(retry(3));
+  }
+
+  getCommentsCount(articleId: string): Observable<{count: number}>{
+    return this.http.get<{count: number}>(this.getCommentsCountUrl + articleId).pipe(retry(3));
   }
 
 }

@@ -1,4 +1,4 @@
-<button (click)="showHideComments()" mat-raised-button color="accent" class="showHideComments float-right">Comment</button>
+<button (click)="showHideComments()" mat-button color="accent" class="showHideComments float-right"> {{numComments}} comments</button>
 <div *ngIf="commentsVisible">
   <comment-list [articleId]="articleId"></comment-list>
   <comment-input [articleId]="articleId"></comment-input>

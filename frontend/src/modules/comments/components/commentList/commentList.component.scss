@@ -5,3 +5,7 @@ $comment-background: mat-color(mat-palette($mat-red, 200));
 .userComment {
   background-color: $comment-background;
 }
+
+.commentTime{
+  font-size: 12px;
+}

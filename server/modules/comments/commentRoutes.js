@@ -8,5 +8,8 @@ router.get('/getComments', function(req, res){
   commentApi.getComments(req.query.articleId, genericResponseFactory(req, res));
 });
 
+router.get('/commentsCount', function(req, res){
+  commentApi.getCommentsCount(req.query.articleId, genericResponseFactory(req, res));
+});
 
 module.exports = router;
