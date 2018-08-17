@@ -1,25 +1,10 @@
-var express = require('express'),
-  router = express.Router(),
-  newsFetchService = require('./news/newsFetchService'),
-  blogService = require('./blog/blogService'),
-  sponsored = require('./sponsored/sponsored')
+const router = require('express').Router(),
+  newsFetchService = require('./api/newsFetchService'),
+  genericResponseFactory = require('../../shared/shared').genericResponseFactory
 ;
-
-
-function genericResponseFactory(req, res){
-  return function genericResponse(err, result) {
-    if (err) {
-      console.log(err);
-      return res.status(500).send(err);
-    }
-    if (result===null) return res.status(400).send("No result returned.");
-    res.send(result);
-  }
-};
 
 router.get('/getNews', function(req, res){
   var newsItems = newsFetchService.getNewsItems(req.query.q, req.query.scoring, req.query.from);
-  // if (req.query.q === 'all topics' && req.query.scoring === 'new' && req.query.from == '0') sponsored.addSponsored(newsItems);
   if (newsItems) res.send(newsItems);
   else res.status(404).send();
 });

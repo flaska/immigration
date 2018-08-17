@@ -1,7 +1,7 @@
 const express = require('express'),
   compression = require('compression'),
   app = express(),
-  routes = require('./server/routes'),
+  routes = require('./server/modules/news/newsRoutes'),
   bodyParser = require('body-parser')
 ;
 app.use(compression());
