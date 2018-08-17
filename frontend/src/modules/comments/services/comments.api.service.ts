@@ -13,7 +13,7 @@ export class CommentsApiService {
   }
 
   private getCommentsUrl: string = '/api/comments/getComments?articleId=';
-  private getCommentsCountUrl: string = '/api/comments/getCommentsCount?articleId=';
+  private getCommentsCountUrl: string = '/api/comments/commentsCount?articleId=';
 
   getComments(articleId: string): Observable<NewsComment[]>{
     return this.http.get<NewsComment[]>(this.getCommentsUrl + articleId).pipe(retry(3));
@@ -23,4 +23,7 @@ export class CommentsApiService {
     return this.http.get<{count: number}>(this.getCommentsCountUrl + articleId).pipe(retry(3));
   }
 
+  urlToArticleId(url: string): string{
+    return url.replace(/[^A-z]/g,"");
+  }
 }

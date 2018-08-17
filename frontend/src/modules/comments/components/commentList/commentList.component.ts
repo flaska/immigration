@@ -19,7 +19,7 @@ export class CommentListComponent implements OnInit{
   }
 
   ngOnInit() {
-    this.commentsApi.getComments('xxx').subscribe(comments=>{
+    this.commentsApi.getComments(this.articleId).subscribe(comments=>{
       this.comments = comments;
       this.comments = this.comments.map(c=>{
         c.dateDiff = this.dateDiff.diff(c.date);

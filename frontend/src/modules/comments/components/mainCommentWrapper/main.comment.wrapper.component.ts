@@ -4,7 +4,9 @@ import {CommentsApiService} from '../../services/comments.api.service';
 @Component({selector: 'main-comment-wrapper', templateUrl: './main.comment.wrapper.component.html', styleUrls: ['./main.comment.wrapper.component.scss']})
 export class MainCommentWrapperComponent implements OnInit{
 
-  @Input () articleId: string;
+  @Input () url: string;
+
+  private articleId: string;
 
   commentsCount: number = 0;
   commentsVisible: boolean = false;
@@ -16,6 +18,7 @@ export class MainCommentWrapperComponent implements OnInit{
   }
 
   ngOnInit() {
+    this.articleId = this.commentApi.urlToArticleId(this.url);
     this.commentApi.getCommentsCount(this.articleId).subscribe(result=>{
       this.commentsCount = result.count;
     });
