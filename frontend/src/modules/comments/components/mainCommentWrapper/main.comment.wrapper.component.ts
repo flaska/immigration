@@ -19,8 +19,16 @@ export class MainCommentWrapperComponent implements OnInit{
 
   ngOnInit() {
     this.articleId = this.commentApi.urlToArticleId(this.url);
+    this.getCommentsCount();
+  }
+
+  getCommentsCount(){
     this.commentApi.getCommentsCount(this.articleId).subscribe(result=>{
       this.commentsCount = result.count;
     });
+  }
+
+  reloadComments(){
+    this.ngOnInit();
   }
 }

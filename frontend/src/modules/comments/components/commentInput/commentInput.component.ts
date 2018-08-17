@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {NewsComment} from '../../schemas/comment.schema';
 import {CookieService} from 'ngx-cookie-service';
 import {CommentsApiService} from '../../services/comments.api.service';
@@ -8,6 +8,7 @@ import {MatSnackBar} from '@angular/material';
 export class CommentInputComponent implements OnInit{
 
   @Input () articleId: string;
+  @Output() commentPosted: EventEmitter<any> = new EventEmitter<any>();
 
   comment: NewsComment;
 
@@ -32,6 +33,7 @@ export class CommentInputComponent implements OnInit{
       this.snackBar.open('Comment saved. Yay!', 'Close', {
         duration: 3000,
       });
+      this.commentPosted.emit();
     });
     this.cookieService.set('userName', this.comment.userName);
   }

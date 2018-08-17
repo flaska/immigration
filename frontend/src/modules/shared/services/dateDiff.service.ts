@@ -5,7 +5,7 @@ import {Injectable} from '@angular/core';
   providedIn: 'root',
 })
 export class DateDiff {
-  diff(postDate: string): string{
+  diff(postDate: Date): string{
     var dd;
     try {
      dd = new DateDiffExternal(new Date(), new Date(postDate));
