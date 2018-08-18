@@ -4,7 +4,7 @@ const express = require('express'),
   newsRoutes = require('./server/modules/news/newsRoutes'),
   commentRoutes = require('./server/modules/comments/commentRoutes'),
   bodyParser = require('body-parser'),
-  newsFetchService = require('./news/api/newsFetchService')
+  newsFetchService = require('./server/modules/news/api/newsFetchService')
 ;
 app.use(compression());
 app.use(bodyParser.json());
