@@ -1,7 +1,15 @@
 <mat-card class="commentInputWrapper">
-  <p *ngIf="commentsCount===0" class="beTheFirstToComment">Be the first to comment</p>
+  <strong  class="beTheFirstToComment">Express yourself...</strong>
+  <strong *ngIf="commentsCount===0" class="beTheFirstToComment"> Be the first to comment</strong>
+
   <mat-form-field class="example-full-width">
-    <textarea [(ngModel)]="comment.commentBody" minRows="4" matInput placeholder="Your comment..."></textarea>
+    <textarea [(ngModel)]="comment.commentBody"
+              matInput
+              cdkTextareaAutosize
+              #autosize="cdkTextareaAutosize"
+              cdkAutosizeMinRows="2"
+              cdkAutosizeMaxRows="16"
+              placeholder="Your comment..."></textarea>
   </mat-form-field>
 
   <button [disabled]="comment?.commentBody?.length==0" (click)="postComment()" mat-raised-button color="accent" class="float-right">Post</button>
