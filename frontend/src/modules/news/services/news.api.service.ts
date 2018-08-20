@@ -4,6 +4,7 @@ import {NewsRecord} from '../schemas/news.record.schema';
 import {APP_BASE_HREF} from '@angular/common';
 import {TransferState, makeStateKey} from '@angular/platform-browser';
 import {retry} from 'rxjs/operators';
+import {Observable} from 'rxjs';
 
 export class BlockedUrl{
   date: Date;
@@ -20,9 +21,9 @@ export class NewsApiService {
   }
 
   private serverUrl = '/';
-  private getUrl: string = 'api/getNews';
-  private blockAddr: string = 'api/blockUrl';
-  private blockedFeedsAddr: string = 'api/getBlockedUrls';
+  private getUrl: string = 'api/news/getNews';
+  private blockAddr: string = 'api/news/blockUrl';
+  private blockedFeedsAddr: string = 'api/news/getBlockedUrls';
 
   searchByTerm(term: string, scoring: string, from: number, cb: (error:any, result:NewsRecord[])=>void){
 
@@ -36,12 +37,12 @@ export class NewsApiService {
       cb(error, null);
     });
   }
-  //
-  // blockUrl(url: string, password: string):Observable<boolean>{
-  //   return this.http.post<boolean>(this.serverUrl + this.blockAddr, {url: url, password: password});
-  // }
-  //
-  // getBlockedFeeds():Observable<BlockedUrl[]>{
-  //   return this.http.get<BlockedUrl[]>(this.serverUrl + this.blockedFeedsAddr);
-  // }
+
+  blockUrl(url: string, password: string):Observable<boolean>{
+    return this.http.post<boolean>(this.serverUrl + this.blockAddr, {url: url, password: password});
+  }
+
+  getBlockedFeeds():Observable<BlockedUrl[]>{
+    return this.http.get<BlockedUrl[]>(this.serverUrl + this.blockedFeedsAddr);
+  }
 }

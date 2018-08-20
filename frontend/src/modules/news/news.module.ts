@@ -5,10 +5,11 @@ import {Title} from '@angular/platform-browser';
 import {NewsItemComponent} from './components/newsItem/newsItem.component';
 import {NewsListComponent} from './components/newsList/newsList.component';
 import {HttpClientModule} from '@angular/common/http';
-import {MaterialModule} from '../material/material.module';
 import {MainNewsComponent} from './components/mainNews/mainNews.component';
 import {ChannelSelectComponent} from './components/channelSelect/channelSelect.component';
 import {NewsListWrapperComponent} from './components/newsListWrapper/newsListWrapper.component';
+import {MaterialNewsModule} from '../material/material.news.module';
+import {CommentsModule} from '../comments/comments.module';
 
 
 
@@ -23,7 +24,9 @@ import {NewsListWrapperComponent} from './components/newsListWrapper/newsListWra
   imports: [
     CommonModule,
     HttpClientModule,
-    MaterialModule
+    MaterialNewsModule,
+
+    CommentsModule
   ],
   exports: [MainNewsComponent, NewsListComponent, NewsItemComponent],
   providers: [Title]

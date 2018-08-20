@@ -4,10 +4,5 @@ export class NewsRecord{
   date: string;
   source: string;
   img: string;
-  // dateDiff?: {
-  //   days: number;
-  //   hours: number;
-  //   minutes: number;
-  // };
   dateDiff?:string;
 }

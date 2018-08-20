@@ -1,0 +1,6 @@
+<button (click)="showHideComments()" mat-button color="primary" class="showHideComments"> {{commentsCount}} comments</button>
+<div *ngIf="commentsVisible">
+  <comment-list [articleId]="articleId" [commentsCount]="commentsCount"></comment-list>
+  <comment-input [articleId]="articleId" [commentsCount]="commentsCount" (commentPosted)="reloadComments()"></comment-input>
+</div>
+<div class="clearfix"></div>

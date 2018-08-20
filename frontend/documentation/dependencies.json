@@ -394,7 +394,7 @@
   },
   {
     "name": "MaterialModule",
-    "file": "modules/material/material.module.ts",
+    "file": "modules/material/material.news.module.ts",
     "providers": [],
     "declarations": [],
     "imports": [

@@ -25,26 +25,27 @@
 
 #main_heading {
   font-family: Roboto, "Helvetica Neue", sans-serif;
-  font-weight: 300;
-  font-size: 25px;
+  font-weight: 400;
   line-height: 52px;
   margin-left: 10px;
   margin-bottom: 0px;
 
+  font-size: 25px;
+
   @media(max-width: 360px){
-    font-size: 15px;
-  }
-
-  @media (min-width: 360px) and (max-width: 385px){
-    font-size: 17px;
-  }
-
-  @media(min-width: 385px) and (max-width: 400px){
     font-size: 20px;
   }
 
+  @media (min-width: 360px) and (max-width: 385px){
+    font-size: 23px;
+  }
+
+  @media(min-width: 385px) and (max-width: 400px){
+    font-size: 23px;
+  }
+
   @media(min-width: 400px) and (max-width: 460px){
-    font-size: 21px;
+    font-size: 24px;
   }
 
 }
@@ -81,12 +82,7 @@ nav {
   a {
     margin-left: 13px;
   }
-  a[active]:hover {
-    background-color: mat-color($accent-hover);
-  }
-  a:not([active]):hover {
-    background-color: mat-color($primary-hover);
-  }
+  .nav-link {}
   @media(max-width: 460px){
     top: 11px;
     .nav-link {

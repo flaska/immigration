@@ -1,0 +1,8 @@
+
+<mat-card *ngFor="let comment of comments" class="userComment" [ngClass]="{'myComment': comment.userName === userName}">
+  <strong>{{comment.userName}}</strong>
+  {{comment.commentBody}}
+
+  <span class="quiet commentTime"> [{{comment.dateDiff}}]</span>
+</mat-card>
+

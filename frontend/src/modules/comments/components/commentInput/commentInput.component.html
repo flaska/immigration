@@ -1,0 +1,23 @@
+<mat-card class="commentInputWrapper">
+  <strong  class="beTheFirstToComment">Express yourself...</strong>
+  <strong *ngIf="commentsCount===0" class="beTheFirstToComment"> Be the first to comment</strong>
+
+  <mat-form-field class="example-full-width">
+    <textarea [(ngModel)]="comment.commentBody"
+              matInput
+              cdkTextareaAutosize
+              #autosize="cdkTextareaAutosize"
+              cdkAutosizeMinRows="2"
+              cdkAutosizeMaxRows="16"
+              placeholder="Your comment..."></textarea>
+  </mat-form-field>
+
+  <button [disabled]="comment?.commentBody?.length==0" (click)="postComment()" mat-raised-button color="accent" class="float-right">Post</button>
+
+  Posting as
+  <mat-form-field class="userName">
+    <input matInput placeholder="Your name" [(ngModel)]="comment.userName" >
+  </mat-form-field>
+  <div class="clearfix"></div>
+
+</mat-card>
