@@ -1,5 +1,14 @@
 @import "../../../../css/import/_component_import.scss";
 
+:host {
+  position: relative;
+  display: block;
+  min-height: 30px;
+  font-size: 17px;
+}
+
 .showHideComments{
   z-index: 10;
+  position: absolute;
+  right: 0px;
 }

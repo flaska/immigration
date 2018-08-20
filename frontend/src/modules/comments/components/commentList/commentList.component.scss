@@ -1,11 +1,15 @@
 @import "../../../../css/import/_component_import.scss";
 
-$comment-background: mat-color(mat-palette($mat-gray, 200));
+$comment-background: mat-color(mat-palette($mat-gray, 100));
 
 .userComment {
   background-color: $comment-background;
+  padding: 17px;
 }
 
 .commentTime{
   font-size: 12px;
+  position: absolute;
+  bottom: 5px;
+  right: 20px;
 }

@@ -1,5 +1,5 @@
 <mat-card class="commentInputWrapper">
-  <p *ngIf="commentsCount===0">Be the first to comment</p>
+  <p *ngIf="commentsCount===0" class="beTheFirstToComment">Be the first to comment</p>
   <mat-form-field class="example-full-width">
     <textarea [(ngModel)]="comment.commentBody" minRows="4" matInput placeholder="Your comment..."></textarea>
   </mat-form-field>
@@ -8,7 +8,7 @@
 
   Posting as
   <mat-form-field class="userName">
-    <input matInput placeholder="Name" [(ngModel)]="comment.userName" >
+    <input matInput placeholder="Your name" [(ngModel)]="comment.userName" >
   </mat-form-field>
   <div class="clearfix"></div>
 
