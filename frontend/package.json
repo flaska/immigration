@@ -7,7 +7,7 @@
     "buildpush": "npm run build && git add ./dist && git commit -a -m 'x' && git push heroku-qa && git push origin master",
     "build": "ng build --prod && npm run build:server && npm run webpack:server",
     "build:server": "ng run immigration:server",
-    "webpack:server": "webpack --config webpack.server.config.js --progress --colors",
+    "webpack": "webpack --config webpack.server.config.js --progress --colors",
     "stats": "ng build --prod --stats-json && webpack-bundle-analyzer dist/browser/stats.json",
     "tree": "ngd"
   },
@@ -32,6 +32,7 @@
     "compression": "^1.7.3",
     "core-js": "^2.5.7",
     "date-diff": "^0.2.0",
+    "express-http-proxy": "^1.2.0",
     "ngx-cookie-service": "^1.0.10",
     "rxjs": "^6.2.2",
     "ts-loader": "^4.4.2",

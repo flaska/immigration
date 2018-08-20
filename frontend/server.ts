@@ -45,17 +45,19 @@ app.set('views', join(DIST_FOLDER, 'browser'));
 
 app.get('/api/*', function(req, res) {
   var url = 'http://localhost:3001'+ req.url;
-  var r = null;
-  if(req.method === 'POST') {
-    r = request.post({uri: url, json: req.body});
-  } else {
-    r = request(url);
-  }
+  var r = request(url);
   req.pipe(r).pipe(res);
+});
+
+app.post('/api/*', function(req, res) {
+  var url = 'http://localhost:3001'+ req.url;
+  var r = request.post({url: url, body: req.body, json: true});
+  r.pipe(res);
 });
 
 app.get('*.*', express.static(join(DIST_FOLDER, 'browser')));
 app.get('*', (req, res) => {
+  console.log('hit index');
   res.render('index', { req });
 });
 
