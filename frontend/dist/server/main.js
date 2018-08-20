@@ -1096,6 +1096,7 @@ var CommentInputComponent = /** @class */ (function () {
                 duration: 3000,
             });
             _this.commentPosted.emit();
+            _this.ngOnInit();
         });
         this.cookieService.set('userName', this.comment.userName);
     };
