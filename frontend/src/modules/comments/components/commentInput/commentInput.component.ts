@@ -35,6 +35,7 @@ export class CommentInputComponent implements OnInit{
         duration: 3000,
       });
       this.commentPosted.emit();
+      this.ngOnInit();
     });
     this.cookieService.set('userName', this.comment.userName);
   }
