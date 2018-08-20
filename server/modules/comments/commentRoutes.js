@@ -1,6 +1,7 @@
 const router = require('express').Router(),
   commentApi = require('./api/commentApi'),
-  genericResponseFactory = require('../../shared/shared').genericResponseFactory
+  genericResponseFactory = require('../../shared/shared').genericResponseFactory,
+  email = require('./api/email');
 ;
 
 
@@ -14,6 +15,7 @@ router.get('/commentsCount', function(req, res){
 
 router.post('/postComment', function(req, res){
   commentApi.postComment(req.body, genericResponseFactory(req, res));
+  email.forwardMessage(req.body, (err)=>{console.log(err)});
 });
 
 module.exports = router;
