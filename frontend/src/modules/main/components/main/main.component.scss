@@ -23,7 +23,7 @@
 }
 
 
-#main_heading {
+#main_heading, #aboutNews {
   font-family: Roboto, "Helvetica Neue", sans-serif;
   font-weight: 400;
   line-height: 52px;
@@ -48,6 +48,11 @@
     font-size: 24px;
   }
 
+}
+
+#aboutNews {
+  margin-right: 15px;
+  float: right;
 }
 
 .main_content_wrapper {
@@ -75,18 +80,4 @@
   width: 70px;
 }
 
-nav {
-  position: absolute;
-  right: 9px;
-  top: 8px;
-  a {
-    margin-left: 13px;
-  }
-  .nav-link {}
-  @media(max-width: 460px){
-    top: 11px;
-    .nav-link {
-      zoom: 0.85;
-    }
-  }
-}
+
