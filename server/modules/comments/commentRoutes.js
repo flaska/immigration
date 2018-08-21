@@ -9,8 +9,12 @@ router.get('/getComments', function(req, res){
   commentApi.getComments(req.query.articleId, genericResponseFactory(req, res));
 });
 
-router.get('/commentsCount', function(req, res){
-  commentApi.getCommentsCount(req.query.articleId, genericResponseFactory(req, res));
+// router.get('/commentsCount', function(req, res){
+//   commentApi.getCommentsCount(req.query.articleId, genericResponseFactory(req, res));
+// });
+
+router.post('/commentsCount', function(req, res){
+  commentApi.getCommentsCount(req.body.articles, genericResponseFactory(req, res));
 });
 
 router.post('/postComment', function(req, res){

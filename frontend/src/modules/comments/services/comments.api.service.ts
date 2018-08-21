@@ -20,9 +20,9 @@ export class CommentsApiService {
     return this.http.get<NewsComment[]>(this.getCommentsUrl + articleId).pipe(retry(3));
   }
 
-  getCommentsCount(articleId: string): Observable<{count: number}>{
-    return this.http.get<{count: number}>(this.getCommentsCountUrl + articleId).pipe(retry(3));
-  }
+  // getCommentsCount(articleId: string): Observable<{count: number}>{
+  //   return this.http.get<{count: number}>(this.getCommentsCountUrl + articleId).pipe(retry(3));
+  // }
 
   urlToArticleId(url: string): string{
     return url.replace(/[^A-z]/g,"");

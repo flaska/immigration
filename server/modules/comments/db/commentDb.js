@@ -16,10 +16,8 @@ exports.getCommentsByArticleId = function(articleId, cb){
 };
 
 
-exports.getCommentsCountByArticleId = function(articleId, cb){
-  Comment.count({articleId: articleId}).exec((err, count)=>{
-    cb(err, {count: count});
-  });
+exports.getIndividualCommentsCountByArticleId = function(articleId, cb){
+  Comment.count({articleId: articleId}).exec(cb);
 };
 
 
