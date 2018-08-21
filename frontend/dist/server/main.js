@@ -1252,6 +1252,7 @@ var i14 = __webpack_require__(/*! ../commentInput/commentInput.component */ "./s
 var i15 = __webpack_require__(/*! @angular/material/snack-bar */ "@angular/material/snack-bar");
 var i16 = __webpack_require__(/*! @angular/common */ "@angular/common");
 var i17 = __webpack_require__(/*! ./main.comment.wrapper.component */ "./src/modules/comments/components/mainCommentWrapper/main.comment.wrapper.component.ts");
+var i18 = __webpack_require__(/*! ../../services/commentsCount.service */ "./src/modules/comments/services/commentsCount.service.ts");
 var styles_MainCommentWrapperComponent = [i0.styles];
 var RenderType_MainCommentWrapperComponent = i1.ɵcrt({ encapsulation: 0, styles: styles_MainCommentWrapperComponent, data: {} });
 exports.RenderType_MainCommentWrapperComponent = RenderType_MainCommentWrapperComponent;
@@ -1262,12 +1263,12 @@ function View_MainCommentWrapperComponent_1(_l) { return i1.ɵvid(0, [(_l()(), i
         var pd_0 = (_co.reloadComments() !== false);
         ad = (pd_0 && ad);
     } return ad; }, i13.View_CommentInputComponent_0, i13.RenderType_CommentInputComponent)), i1.ɵdid(8, 114688, null, 0, i14.CommentInputComponent, [i8.CommentsApiService, i12.CookieService, i15.MatSnackBar], { articleId: [0, "articleId"], commentsCount: [1, "commentsCount"] }, { commentPosted: "commentPosted" })], function (_ck, _v) { var _co = _v.component; var currVal_2 = "accent"; _ck(_v, 2, 0, currVal_2); var currVal_3 = _co.articleId; var currVal_4 = _co.commentsCount; _ck(_v, 6, 0, currVal_3, currVal_4); var currVal_5 = _co.articleId; var currVal_6 = _co.commentsCount; _ck(_v, 8, 0, currVal_5, currVal_6); }, function (_ck, _v) { var currVal_0 = (i1.ɵnov(_v, 2).disabled || null); var currVal_1 = (i1.ɵnov(_v, 2)._animationMode === "NoopAnimations"); _ck(_v, 1, 0, currVal_0, currVal_1); }); }
-function View_MainCommentWrapperComponent_0(_l) { return i1.ɵvid(0, [(_l()(), i1.ɵeld(0, 0, null, null, 2, "button", [["class", "showHideComments"], ["color", "primary"], ["mat-button", ""]], [[8, "disabled", 0], [2, "_mat-animation-noopable", null]], [[null, "click"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("click" === en)) {
+function View_MainCommentWrapperComponent_0(_l) { return i1.ɵvid(0, [(_l()(), i1.ɵeld(0, 0, null, null, 3, "button", [["class", "showHideComments"], ["color", "primary"], ["mat-button", ""]], [[8, "disabled", 0], [2, "_mat-animation-noopable", null]], [[null, "click"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("click" === en)) {
         var pd_0 = (_co.showHideComments() !== false);
         ad = (pd_0 && ad);
-    } return ad; }, i2.View_MatButton_0, i2.RenderType_MatButton)), i1.ɵdid(1, 180224, null, 0, i3.MatButton, [i1.ElementRef, i4.Platform, i5.FocusMonitor, [2, i6.ANIMATION_MODULE_TYPE]], { color: [0, "color"] }, null), (_l()(), i1.ɵted(2, 0, [" ", " comments"])), (_l()(), i1.ɵand(16777216, null, null, 1, null, View_MainCommentWrapperComponent_1)), i1.ɵdid(4, 16384, null, 0, i16.NgIf, [i1.ViewContainerRef, i1.TemplateRef], { ngIf: [0, "ngIf"] }, null), (_l()(), i1.ɵeld(5, 0, null, null, 0, "div", [["class", "clearfix"]], null, null, null, null, null))], function (_ck, _v) { var _co = _v.component; var currVal_2 = "primary"; _ck(_v, 1, 0, currVal_2); var currVal_4 = _co.commentsVisible; _ck(_v, 4, 0, currVal_4); }, function (_ck, _v) { var _co = _v.component; var currVal_0 = (i1.ɵnov(_v, 1).disabled || null); var currVal_1 = (i1.ɵnov(_v, 1)._animationMode === "NoopAnimations"); _ck(_v, 0, 0, currVal_0, currVal_1); var currVal_3 = _co.commentsCount; _ck(_v, 2, 0, currVal_3); }); }
+    } return ad; }, i2.View_MatButton_0, i2.RenderType_MatButton)), i1.ɵdid(1, 180224, null, 0, i3.MatButton, [i1.ElementRef, i4.Platform, i5.FocusMonitor, [2, i6.ANIMATION_MODULE_TYPE]], { color: [0, "color"] }, null), (_l()(), i1.ɵted(2, 0, [" ", " comments"])), i1.ɵpid(131072, i16.AsyncPipe, [i1.ChangeDetectorRef]), (_l()(), i1.ɵand(16777216, null, null, 1, null, View_MainCommentWrapperComponent_1)), i1.ɵdid(5, 16384, null, 0, i16.NgIf, [i1.ViewContainerRef, i1.TemplateRef], { ngIf: [0, "ngIf"] }, null), (_l()(), i1.ɵeld(6, 0, null, null, 0, "div", [["class", "clearfix"]], null, null, null, null, null))], function (_ck, _v) { var _co = _v.component; var currVal_2 = "primary"; _ck(_v, 1, 0, currVal_2); var currVal_4 = _co.commentsVisible; _ck(_v, 5, 0, currVal_4); }, function (_ck, _v) { var _co = _v.component; var currVal_0 = (i1.ɵnov(_v, 1).disabled || null); var currVal_1 = (i1.ɵnov(_v, 1)._animationMode === "NoopAnimations"); _ck(_v, 0, 0, currVal_0, currVal_1); var currVal_3 = i1.ɵunv(_v, 2, 0, i1.ɵnov(_v, 3).transform(_co.commentsCount)); _ck(_v, 2, 0, currVal_3); }); }
 exports.View_MainCommentWrapperComponent_0 = View_MainCommentWrapperComponent_0;
-function View_MainCommentWrapperComponent_Host_0(_l) { return i1.ɵvid(0, [(_l()(), i1.ɵeld(0, 0, null, null, 1, "main-comment-wrapper", [], null, null, null, View_MainCommentWrapperComponent_0, RenderType_MainCommentWrapperComponent)), i1.ɵdid(1, 114688, null, 0, i17.MainCommentWrapperComponent, [i8.CommentsApiService], null, null)], function (_ck, _v) { _ck(_v, 1, 0); }, null); }
+function View_MainCommentWrapperComponent_Host_0(_l) { return i1.ɵvid(0, [(_l()(), i1.ɵeld(0, 0, null, null, 1, "main-comment-wrapper", [], null, null, null, View_MainCommentWrapperComponent_0, RenderType_MainCommentWrapperComponent)), i1.ɵdid(1, 114688, null, 0, i17.MainCommentWrapperComponent, [i8.CommentsApiService, i18.CommentsCountService], null, null)], function (_ck, _v) { _ck(_v, 1, 0); }, null); }
 exports.View_MainCommentWrapperComponent_Host_0 = View_MainCommentWrapperComponent_Host_0;
 var MainCommentWrapperComponentNgFactory = i1.ɵccf("main-comment-wrapper", i17.MainCommentWrapperComponent, View_MainCommentWrapperComponent_Host_0, { url: "url" }, {}, []);
 exports.MainCommentWrapperComponentNgFactory = MainCommentWrapperComponentNgFactory;
@@ -1309,10 +1310,13 @@ exports.styles = styles;
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = __webpack_require__(/*! @angular/core */ "@angular/core");
 var comments_api_service_1 = __webpack_require__(/*! ../../services/comments.api.service */ "./src/modules/comments/services/comments.api.service.ts");
+var commentsCount_service_1 = __webpack_require__(/*! ../../services/commentsCount.service */ "./src/modules/comments/services/commentsCount.service.ts");
+var rxjs_1 = __webpack_require__(/*! rxjs */ "rxjs");
 var MainCommentWrapperComponent = /** @class */ (function () {
-    function MainCommentWrapperComponent(commentApi) {
+    function MainCommentWrapperComponent(commentApi, commentCountService) {
         this.commentApi = commentApi;
-        this.commentsCount = 0;
+        this.commentCountService = commentCountService;
+        this.commentsCount = rxjs_1.of(0);
         this.commentsVisible = false;
     }
     MainCommentWrapperComponent.prototype.showHideComments = function () {
@@ -1320,13 +1324,7 @@ var MainCommentWrapperComponent = /** @class */ (function () {
     };
     MainCommentWrapperComponent.prototype.ngOnInit = function () {
         this.articleId = this.commentApi.urlToArticleId(this.url);
-        this.getCommentsCount();
-    };
-    MainCommentWrapperComponent.prototype.getCommentsCount = function () {
-        var _this = this;
-        this.commentApi.getCommentsCount(this.articleId).subscribe(function (result) {
-            _this.commentsCount = result.count;
-        });
+        this.commentsCount = this.commentCountService.registerArticleId(this.articleId);
     };
     MainCommentWrapperComponent.prototype.reloadComments = function () {
         this.ngOnInit();
@@ -1383,9 +1381,9 @@ var CommentsApiService = /** @class */ (function () {
     CommentsApiService.prototype.getComments = function (articleId) {
         return this.http.get(this.getCommentsUrl + articleId).pipe(operators_1.retry(3));
     };
-    CommentsApiService.prototype.getCommentsCount = function (articleId) {
-        return this.http.get(this.getCommentsCountUrl + articleId).pipe(operators_1.retry(3));
-    };
+    // getCommentsCount(articleId: string): Observable<{count: number}>{
+    //   return this.http.get<{count: number}>(this.getCommentsCountUrl + articleId).pipe(retry(3));
+    // }
     CommentsApiService.prototype.urlToArticleId = function (url) {
         return url.replace(/[^A-z]/g, "");
     };
@@ -1396,6 +1394,72 @@ var CommentsApiService = /** @class */ (function () {
     return CommentsApiService;
 }());
 exports.CommentsApiService = CommentsApiService;
+
+
+/***/ }),
+
+/***/ "./src/modules/comments/services/commentsCount.service.ts":
+/*!****************************************************************!*\
+  !*** ./src/modules/comments/services/commentsCount.service.ts ***!
+  \****************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+var http_1 = __webpack_require__(/*! @angular/common/http */ "@angular/common/http");
+var operators_1 = __webpack_require__(/*! rxjs/operators */ "rxjs/operators");
+var platform_browser_1 = __webpack_require__(/*! @angular/platform-browser */ "@angular/platform-browser");
+var rxjs_1 = __webpack_require__(/*! rxjs */ "rxjs");
+var i0 = __webpack_require__(/*! @angular/core */ "@angular/core");
+var i1 = __webpack_require__(/*! @angular/common/http */ "@angular/common/http");
+var i2 = __webpack_require__(/*! @angular/common */ "@angular/common");
+var i3 = __webpack_require__(/*! @angular/platform-browser */ "@angular/platform-browser");
+var CommentsCountService = /** @class */ (function () {
+    function CommentsCountService(http, origin, transferState) {
+        this.http = http;
+        this.transferState = transferState;
+        this.registeredArticlesForBulk = [];
+        this.articleCounts = {};
+        this.observables = {};
+        this.serverUrl = '/';
+        this.commentsCountUrl = 'api/comments/commentsCount';
+        if (origin)
+            this.serverUrl = origin + this.serverUrl;
+    }
+    CommentsCountService.prototype.resolveObservables = function (commentCounts) {
+        var _this = this;
+        commentCounts.forEach(function (res) {
+            _this.observables[res.articleId].next(res.commentsCount);
+        });
+    };
+    CommentsCountService.prototype.registerArticleId = function (articleId) {
+        var _this = this;
+        this.registeredArticlesForBulk.push(articleId);
+        this.observables[articleId] = rxjs_1.Observable.create(function (observer) {
+            _this.observables[articleId] = observer;
+        });
+        if (!this.timeoutWaiting) {
+            this.timeoutWaiting = setTimeout(function () {
+                var articleCounts = _this.transferState.get(platform_browser_1.makeStateKey(_this.registeredArticlesForBulk.join('')), null);
+                if (articleCounts) {
+                    _this.articleCounts = articleCounts;
+                    return;
+                }
+                _this.http.post(_this.serverUrl + _this.commentsCountUrl, { articles: _this.registeredArticlesForBulk }).pipe(operators_1.retry(3)).subscribe(function (result) {
+                    _this.resolveObservables(result);
+                    _this.transferState.set(platform_browser_1.makeStateKey(_this.registeredArticlesForBulk.join('')), _this.articleCounts);
+                });
+                _this.timeoutWaiting = null;
+            }, 100);
+        }
+        return this.observables[articleId];
+    };
+    CommentsCountService.ngInjectableDef = i0.defineInjectable({ factory: function CommentsCountService_Factory() { return new CommentsCountService(i0.inject(i1.HttpClient), i0.inject(i2.APP_BASE_HREF, 8), i0.inject(i3.TransferState)); }, token: CommentsCountService, providedIn: "root" });
+    return CommentsCountService;
+}());
+exports.CommentsCountService = CommentsCountService;
 
 
 /***/ }),
@@ -1887,8 +1951,9 @@ var i4 = __webpack_require__(/*! @angular/common */ "@angular/common");
 var i5 = __webpack_require__(/*! ../../../comments/components/mainCommentWrapper/main.comment.wrapper.component.ngfactory */ "./src/modules/comments/components/mainCommentWrapper/main.comment.wrapper.component.ngfactory.js");
 var i6 = __webpack_require__(/*! ../../../comments/components/mainCommentWrapper/main.comment.wrapper.component */ "./src/modules/comments/components/mainCommentWrapper/main.comment.wrapper.component.ts");
 var i7 = __webpack_require__(/*! ../../../comments/services/comments.api.service */ "./src/modules/comments/services/comments.api.service.ts");
-var i8 = __webpack_require__(/*! ../../../shared/services/dateDiff.service */ "./src/modules/shared/services/dateDiff.service.ts");
-var i9 = __webpack_require__(/*! ./newsItem.component */ "./src/modules/news/components/newsItem/newsItem.component.ts");
+var i8 = __webpack_require__(/*! ../../../comments/services/commentsCount.service */ "./src/modules/comments/services/commentsCount.service.ts");
+var i9 = __webpack_require__(/*! ../../../shared/services/dateDiff.service */ "./src/modules/shared/services/dateDiff.service.ts");
+var i10 = __webpack_require__(/*! ./newsItem.component */ "./src/modules/news/components/newsItem/newsItem.component.ts");
 var styles_NewsItemComponent = [i0.styles];
 var RenderType_NewsItemComponent = i1.ɵcrt({ encapsulation: 0, styles: styles_NewsItemComponent, data: {} });
 exports.RenderType_NewsItemComponent = RenderType_NewsItemComponent;
@@ -1900,11 +1965,11 @@ function View_NewsItemComponent_0(_l) { return i1.ɵvid(0, [(_l()(), i1.ɵeld(0,
     } return ad; }, null, null)), (_l()(), i1.ɵand(16777216, null, null, 1, null, View_NewsItemComponent_1)), i1.ɵdid(6, 16384, null, 0, i4.NgIf, [i1.ViewContainerRef, i1.TemplateRef], { ngIf: [0, "ngIf"] }, null), (_l()(), i1.ɵand(16777216, null, null, 1, null, View_NewsItemComponent_2)), i1.ɵdid(8, 16384, null, 0, i4.NgIf, [i1.ViewContainerRef, i1.TemplateRef], { ngIf: [0, "ngIf"] }, null), (_l()(), i1.ɵeld(9, 0, null, null, 2, "div", [["itemprop", "publisher"], ["itemscope", ""], ["itemtype", "http://schema.org/Organization"]], null, null, null, null, null)), (_l()(), i1.ɵeld(10, 0, null, null, 1, "span", [["itemprop", "name"]], null, null, null, null, null)), (_l()(), i1.ɵted(11, null, ["", ""])), (_l()(), i1.ɵeld(12, 0, null, null, 1, "div", [["class", "quiet"], ["itemprop", "datePublished"]], null, null, null, null, null)), (_l()(), i1.ɵted(13, null, [" ", " "])), (_l()(), i1.ɵeld(14, 0, null, 0, 3, "div", [], null, null, null, null, null)), (_l()(), i1.ɵeld(15, 0, null, null, 2, "a", [["itemprop", "url"], ["rel", "noopener"], ["target", "_blank"]], [[8, "href", 4], [8, "title", 0]], [[null, "click"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("click" === en)) {
         var pd_0 = (_co.tagManager(_co.newsItem) !== false);
         ad = (pd_0 && ad);
-    } return ad; }, null, null)), (_l()(), i1.ɵeld(16, 0, null, null, 1, "span", [["itemprop", "headline"]], null, null, null, null, null)), (_l()(), i1.ɵted(17, null, ["", ""])), (_l()(), i1.ɵeld(18, 0, null, 0, 0, "div", [["class", "clearfix"]], null, null, null, null, null)), (_l()(), i1.ɵeld(19, 0, null, null, 1, "main-comment-wrapper", [], null, null, null, i5.View_MainCommentWrapperComponent_0, i5.RenderType_MainCommentWrapperComponent)), i1.ɵdid(20, 114688, null, 0, i6.MainCommentWrapperComponent, [i7.CommentsApiService], { url: [0, "url"] }, null)], function (_ck, _v) { var _co = _v.component; var currVal_2 = _co.newsItem.img; _ck(_v, 6, 0, currVal_2); var currVal_3 = !_co.newsItem.img; _ck(_v, 8, 0, currVal_3); var currVal_9 = _co.newsItem.url; _ck(_v, 20, 0, currVal_9); }, function (_ck, _v) { var _co = _v.component; var currVal_0 = _co.newsItem.url; var currVal_1 = i1.ɵinlineInterpolate(1, "", _co.newsItem.title, ""); _ck(_v, 4, 0, currVal_0, currVal_1); var currVal_4 = _co.newsItem.source; _ck(_v, 11, 0, currVal_4); var currVal_5 = _co.newsItem.dateDiff; _ck(_v, 13, 0, currVal_5); var currVal_6 = _co.newsItem.url; var currVal_7 = i1.ɵinlineInterpolate(1, "", _co.newsItem.title, ""); _ck(_v, 15, 0, currVal_6, currVal_7); var currVal_8 = _co.newsItem.title; _ck(_v, 17, 0, currVal_8); }); }
+    } return ad; }, null, null)), (_l()(), i1.ɵeld(16, 0, null, null, 1, "span", [["itemprop", "headline"]], null, null, null, null, null)), (_l()(), i1.ɵted(17, null, ["", ""])), (_l()(), i1.ɵeld(18, 0, null, 0, 0, "div", [["class", "clearfix"]], null, null, null, null, null)), (_l()(), i1.ɵeld(19, 0, null, null, 1, "main-comment-wrapper", [], null, null, null, i5.View_MainCommentWrapperComponent_0, i5.RenderType_MainCommentWrapperComponent)), i1.ɵdid(20, 114688, null, 0, i6.MainCommentWrapperComponent, [i7.CommentsApiService, i8.CommentsCountService], { url: [0, "url"] }, null)], function (_ck, _v) { var _co = _v.component; var currVal_2 = _co.newsItem.img; _ck(_v, 6, 0, currVal_2); var currVal_3 = !_co.newsItem.img; _ck(_v, 8, 0, currVal_3); var currVal_9 = _co.newsItem.url; _ck(_v, 20, 0, currVal_9); }, function (_ck, _v) { var _co = _v.component; var currVal_0 = _co.newsItem.url; var currVal_1 = i1.ɵinlineInterpolate(1, "", _co.newsItem.title, ""); _ck(_v, 4, 0, currVal_0, currVal_1); var currVal_4 = _co.newsItem.source; _ck(_v, 11, 0, currVal_4); var currVal_5 = _co.newsItem.dateDiff; _ck(_v, 13, 0, currVal_5); var currVal_6 = _co.newsItem.url; var currVal_7 = i1.ɵinlineInterpolate(1, "", _co.newsItem.title, ""); _ck(_v, 15, 0, currVal_6, currVal_7); var currVal_8 = _co.newsItem.title; _ck(_v, 17, 0, currVal_8); }); }
 exports.View_NewsItemComponent_0 = View_NewsItemComponent_0;
-function View_NewsItemComponent_Host_0(_l) { return i1.ɵvid(0, [(_l()(), i1.ɵeld(0, 0, null, null, 2, "news-item", [], null, null, null, View_NewsItemComponent_0, RenderType_NewsItemComponent)), i1.ɵprd(512, null, i8.DateDiff, i8.DateDiff, []), i1.ɵdid(2, 114688, null, 0, i9.NewsItemComponent, [i8.DateDiff], null, null)], function (_ck, _v) { _ck(_v, 2, 0); }, null); }
+function View_NewsItemComponent_Host_0(_l) { return i1.ɵvid(0, [(_l()(), i1.ɵeld(0, 0, null, null, 2, "news-item", [], null, null, null, View_NewsItemComponent_0, RenderType_NewsItemComponent)), i1.ɵprd(512, null, i9.DateDiff, i9.DateDiff, []), i1.ɵdid(2, 114688, null, 0, i10.NewsItemComponent, [i9.DateDiff], null, null)], function (_ck, _v) { _ck(_v, 2, 0); }, null); }
 exports.View_NewsItemComponent_Host_0 = View_NewsItemComponent_Host_0;
-var NewsItemComponentNgFactory = i1.ɵccf("news-item", i9.NewsItemComponent, View_NewsItemComponent_Host_0, { newsItem: "newsItem" }, {}, []);
+var NewsItemComponentNgFactory = i1.ɵccf("news-item", i10.NewsItemComponent, View_NewsItemComponent_Host_0, { newsItem: "newsItem" }, {}, []);
 exports.NewsItemComponentNgFactory = NewsItemComponentNgFactory;
 
 
@@ -2886,6 +2951,17 @@ module.exports = require("ngx-cookie-service");
 /***/ (function(module, exports) {
 
 module.exports = require("ngx-cookie-service/cookie-service/cookie.service");
+
+/***/ }),
+
+/***/ "rxjs":
+/*!***********************!*\
+  !*** external "rxjs" ***!
+  \***********************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("rxjs");
 
 /***/ }),
 
