@@ -24,3 +24,12 @@ $comment-background: mat-color(mat-palette($mat-gray, 200));
 .expressYourself{
   padding-right: 80px;
 }
+
+.savePost{
+  position: relative;
+  top: 20px;
+
+  @media(max-width: 440px) {
+    top: 30px;
+  }
+}

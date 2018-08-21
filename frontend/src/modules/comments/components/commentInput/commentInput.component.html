@@ -14,7 +14,7 @@
               placeholder="Your comment..."></textarea>
   </mat-form-field>
 
-  <button [disabled]="comment?.commentBody?.length==0" (click)="postComment()" mat-raised-button color="accent" class="float-right">Post</button>
+  <button [disabled]="comment?.commentBody?.length==0" (click)="postComment()" mat-raised-button color="accent" class="float-right savePost">Post</button>
 
   Posting as
   <mat-form-field class="userName">
