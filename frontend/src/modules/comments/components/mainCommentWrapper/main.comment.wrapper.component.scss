@@ -7,8 +7,22 @@
   font-size: 17px;
 }
 
-.showHideComments{
+.commentWrapperContent{
+  position: relative;
+  //top: 0px;
   z-index: 10;
+}
+
+
+.showHideComments{
+  z-index: 5;
   position: absolute;
   right: 0px;
+}
+
+.closeComments {
+  position: absolute;
+  z-index: 15;
+  right: 9px;
+  top: 9px;
 }

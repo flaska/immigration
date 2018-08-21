@@ -1,6 +1,8 @@
 <mat-card class="commentInputWrapper">
-  <strong  class="beTheFirstToComment">Express yourself...</strong>
-  <strong *ngIf="commentsCount===0" class="beTheFirstToComment"> Be the first to comment</strong>
+  <div class="expressYourself">
+    <strong  class="beTheFirstToComment">Express yourself...</strong>
+    <strong *ngIf="commentsCount===0" class="beTheFirstToComment"> Be the first to comment</strong>
+  </div>
 
   <mat-form-field class="example-full-width">
     <textarea [(ngModel)]="comment.commentBody"
