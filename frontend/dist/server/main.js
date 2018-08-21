@@ -1444,7 +1444,7 @@ var CommentsCountService = /** @class */ (function () {
                 var articleCounts = _this.transferState.get(platform_browser_1.makeStateKey(_this.registeredArticlesForBulk.join('')), null);
                 if (articleCounts) {
                     _this.resolveObservables(articleCounts);
-                    console.log('bypassed article counts');
+                    _this.timeoutWaiting = null;
                     return;
                 }
                 _this.http.post(_this.serverUrl + _this.commentsCountUrl, { articles: _this.registeredArticlesForBulk }).pipe(operators_1.retry(3)).subscribe(function (result) {
