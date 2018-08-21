@@ -1421,7 +1421,6 @@ var CommentsCountService = /** @class */ (function () {
         this.http = http;
         this.transferState = transferState;
         this.registeredArticlesForBulk = [];
-        this.articleCounts = {};
         this.observables = {};
         this.serverUrl = '/';
         this.commentsCountUrl = 'api/comments/commentsCount';
@@ -1444,12 +1443,13 @@ var CommentsCountService = /** @class */ (function () {
             this.timeoutWaiting = setTimeout(function () {
                 var articleCounts = _this.transferState.get(platform_browser_1.makeStateKey(_this.registeredArticlesForBulk.join('')), null);
                 if (articleCounts) {
-                    _this.articleCounts = articleCounts;
+                    _this.resolveObservables(articleCounts);
+                    console.log('bypassed article counts');
                     return;
                 }
                 _this.http.post(_this.serverUrl + _this.commentsCountUrl, { articles: _this.registeredArticlesForBulk }).pipe(operators_1.retry(3)).subscribe(function (result) {
                     _this.resolveObservables(result);
-                    _this.transferState.set(platform_browser_1.makeStateKey(_this.registeredArticlesForBulk.join('')), _this.articleCounts);
+                    _this.transferState.set(platform_browser_1.makeStateKey(_this.registeredArticlesForBulk.join('')), result);
                 });
                 _this.timeoutWaiting = null;
             }, 100);

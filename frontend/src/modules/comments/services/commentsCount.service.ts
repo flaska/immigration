@@ -5,13 +5,14 @@ import {makeStateKey, TransferState} from '@angular/platform-browser';
 import {APP_BASE_HREF} from '@angular/common';
 import {Observable} from 'rxjs';
 
+interface commentCountRecord {articleId: string, commentsCount: number}
+
 @Injectable({
   providedIn: 'root',
 })
 export class CommentsCountService {
 
   registeredArticlesForBulk: string[] = [];
-  articleCounts = {};
   timeoutWaiting: any;
   observables: object = {};
 
@@ -36,14 +37,15 @@ export class CommentsCountService {
 
     if (!this.timeoutWaiting) {
       this.timeoutWaiting = setTimeout(() => {
-        let articleCounts = this.transferState.get(makeStateKey(this.registeredArticlesForBulk.join('')), null as {});
+        let articleCounts = this.transferState.get(makeStateKey(this.registeredArticlesForBulk.join('')), null as commentCountRecord[]);
         if (articleCounts) {
-          this.articleCounts = articleCounts;
+          this.resolveObservables(articleCounts);
+          this.timeoutWaiting = null;
           return;
         }
-        this.http.post<{articleId: string, commentsCount: number}[]>(this.serverUrl + this.commentsCountUrl, {articles: this.registeredArticlesForBulk}).pipe(retry(3)).subscribe((result)=>{
+        this.http.post<commentCountRecord[]>(this.serverUrl + this.commentsCountUrl, {articles: this.registeredArticlesForBulk}).pipe(retry(3)).subscribe((result)=>{
           this.resolveObservables(result);
-          this.transferState.set(makeStateKey(this.registeredArticlesForBulk.join('')), this.articleCounts as {});
+          this.transferState.set(makeStateKey(this.registeredArticlesForBulk.join('')), result as commentCountRecord[]);
         });
         this.timeoutWaiting = null;
       }, 100);

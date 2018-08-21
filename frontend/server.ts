@@ -60,7 +60,6 @@ app.get('*.*', express.static(join(DIST_FOLDER, 'browser'), {
   maxAge: "10d"
 }));
 app.get('*', (req, res) => {
-  console.log('hit index');
   res.render('index', { req });
 });
 
