@@ -11,6 +11,7 @@ var Thread = db.model('Thread', mongoose.Schema({
   name: String,
   lastPostDate: Date,
   postsCount: Number,
+  views: Number,
 }, { collection: 'threads' }));
 
 var Post = db.model('Post', mongoose.Schema({

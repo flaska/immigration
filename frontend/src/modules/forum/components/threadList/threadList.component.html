@@ -1,7 +1,6 @@
-<mat-card *ngFor="let thread of threadList | async">
-  <div class="threadLastPostDate">
-    Last reply<br>
-    [{{thread.lastPostDate}}]
-  </div>
+<mat-card *ngFor="let thread of threadList | async" class="thread">
   <div class="threadName">{{thread.name}}</div>
+  <info-property [propertyName]="'Posts'">{{thread.postsCount}}</info-property>
+  <info-property [propertyName]="'Views'">{{thread.views}}</info-property>
+  <info-property [propertyName]="'Last Post'">{{thread.lastPostDate | date}}</info-property>
 </mat-card>

@@ -6,6 +6,7 @@ import {ThreadListComponent} from './components/threadList/threadList.component'
 import {ForumApiService} from './services/forum.api.service';
 import {MaterialForumModule} from '../material/material.forum.module';
 import {ThreadViewComponent} from './components/threadView/threadView.component';
+import {InfoPropertyComponent} from './components/infoProperty/infoProperty.component';
 
 export let routes: Routes = [
   { path: 'list', component: ThreadListComponent},
@@ -15,7 +16,8 @@ export let routes: Routes = [
 @NgModule({
   declarations: [
     ThreadListComponent,
-    ThreadViewComponent
+    ThreadViewComponent,
+    InfoPropertyComponent
   ],
   imports: [
     CommonModule,

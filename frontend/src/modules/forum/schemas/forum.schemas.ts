@@ -5,6 +5,7 @@ export class ForumThread {
   name: string;
   lastPostDate: Date;
   postsCount: number;
+  views: number;
 }
 
 export class ForumPost {
