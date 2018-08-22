@@ -23,7 +23,7 @@
 }
 
 
-#main_heading, #aboutNews {
+#main_heading, .nav-link {
   font-family: Roboto, "Helvetica Neue", sans-serif;
   font-weight: 400;
   line-height: 52px;
@@ -50,7 +50,7 @@
 
 }
 
-#aboutNews {
+.nav-link {
   margin-right: 15px;
   float: right;
 }
