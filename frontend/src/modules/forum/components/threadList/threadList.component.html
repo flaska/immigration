@@ -1,3 +1,7 @@
 <mat-card *ngFor="let thread of threadList | async">
-  {{thread.name}}
+  <div class="threadLastPostDate">
+    Last reply<br>
+    [{{thread.lastPostDate}}]
+  </div>
+  <div class="threadName">{{thread.name}}</div>
 </mat-card>

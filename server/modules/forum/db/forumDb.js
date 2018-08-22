@@ -5,12 +5,16 @@ db.once('open', function() {
   console.log('Connected to MongoDB');
 });
 var Thread = db.model('Thread', mongoose.Schema({
+  id: String,
   userName: String,
   dateCreated: Date,
-  name: String
+  name: String,
+  lastPostDate: Date,
+  postsCount: Number,
 }, { collection: 'threads' }));
 
 var Post = db.model('Post', mongoose.Schema({
+  threadId: String,
   userName: String,
   datePosted: Date,
   content: String,

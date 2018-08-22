@@ -1,0 +1,7 @@
+@import "../../../../css/import/_component_import.scss";
+
+.threadLastPostDate{
+  float: right;
+  color: mat-color(mat-palette($mat-gray, 400));
+  font-size: 15px;
+}

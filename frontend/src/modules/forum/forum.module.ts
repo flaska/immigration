@@ -5,14 +5,17 @@ import {RouterModule, Routes} from '@angular/router';
 import {ThreadListComponent} from './components/threadList/threadList.component';
 import {ForumApiService} from './services/forum.api.service';
 import {MaterialForumModule} from '../material/material.forum.module';
+import {ThreadViewComponent} from './components/threadView/threadView.component';
 
 export let routes: Routes = [
   { path: 'list', component: ThreadListComponent},
+  { path: 'thread/view/:threadId', component: ThreadViewComponent},
 ];
 
 @NgModule({
   declarations: [
-    ThreadListComponent
+    ThreadListComponent,
+    ThreadViewComponent
   ],
   imports: [
     CommonModule,
