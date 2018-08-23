@@ -7,6 +7,7 @@ import {ForumApiService} from './services/forum.api.service';
 import {MaterialForumModule} from '../material/material.forum.module';
 import {ThreadViewComponent} from './components/threadView/threadView.component';
 import {InfoPropertyComponent} from './components/infoProperty/infoProperty.component';
+import {ForumPostComponent} from './components/forumPost/forumPost.component';
 
 export let routes: Routes = [
   { path: 'list', component: ThreadListComponent},
@@ -17,6 +18,7 @@ export let routes: Routes = [
   declarations: [
     ThreadListComponent,
     ThreadViewComponent,
+    ForumPostComponent,
     InfoPropertyComponent
   ],
   imports: [

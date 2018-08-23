@@ -3,8 +3,8 @@ const router = require('express').Router(),
   genericResponseFactory = require('../../shared/shared').genericResponseFactory
 ;
 
-router.get('/getThreadList', function(req, res){
-  forumService.getThreadList(genericResponseFactory(req, res));
+router.get('/thread', function(req, res){
+  forumService.getThread(req.query, genericResponseFactory(req, res));
 });
 
 module.exports = router;

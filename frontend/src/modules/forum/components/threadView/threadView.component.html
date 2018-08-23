@@ -1,7 +1,3 @@
-<!--<mat-card *ngFor="let thread of threadList | async">-->
-  <!--<div class="threadLastPostDate">-->
-    <!--Last reply<br>-->
-    <!--[{{thread.lastPostDate}}]-->
-  <!--</div>-->
-  <!--<div class="threadName">{{thread.name}}</div>-->
-<!--</mat-card>-->
+<mat-card>
+  <h1>{{thread.name | async}}</h1>
+</mat-card>

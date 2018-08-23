@@ -22,7 +22,10 @@ export class ThreadViewComponent implements OnInit{
 
   ngOnInit(){
     this.threadId = this.route.snapshot.paramMap.get('threadId');
-    console.log(this.threadId);
+    this.thread = this.forumService.getThreadById(this.threadId);
+    this.thread.subscribe(r=>{
+      console.log(r);
+    })
   }
 
 }

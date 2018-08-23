@@ -1,5 +1,9 @@
 <mat-card *ngFor="let thread of threadList | async" class="thread">
-  <div class="threadName">{{thread.name}}</div>
+  <div class="threadName">
+    <a [routerLink]="['/forum/thread/view/',thread.id]">
+      {{thread.name}}
+    </a>
+  </div>
   <info-property [propertyName]="'Posts'">{{thread.postsCount}}</info-property>
   <info-property [propertyName]="'Views'">{{thread.views}}</info-property>
   <info-property [propertyName]="'Last Post'">{{thread.lastPostDate | date}}</info-property>

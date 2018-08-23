@@ -14,10 +14,14 @@ export class ForumApiService {
   }
 
   private serverUrl = '/';
-  private threadListUrl: string = 'api/forum/getThreadList';
+  private threadUrl: string = 'api/forum/thread';
+
+  getThreadById(id: string):Observable<ForumThread>{
+    return this.http.get<ForumThread>(this.serverUrl + this.threadUrl + '?id=' + id).pipe(retry(3));
+  }
 
   getThreadList():Observable<ForumThread>{
-    return this.http.get<ForumThread>(this.serverUrl + this.threadListUrl).pipe(retry(3));
+    return this.http.get<ForumThread>(this.serverUrl + this.threadUrl).pipe(retry(3));
   }
 
 }

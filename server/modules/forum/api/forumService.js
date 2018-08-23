@@ -1,6 +1,6 @@
 var forumDb = require('../db/forumDb')
 ;
 
-exports.getThreadList = function(cb){
-  forumDb.getThreadList(cb);
+exports.getThread = function(query, cb){
+  forumDb.getThread(query, cb);
 };
