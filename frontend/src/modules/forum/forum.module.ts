@@ -13,7 +13,6 @@ import {ThreadListComponent} from './components/threadList/threadList.component'
 import {ThreadViewComponent} from './components/threadView/threadView.component';
 import {InfoPropertyComponent} from './components/infoProperty/infoProperty.component';
 import {ThreadOverviewComponent} from './components/threadOverview/threadOverview.component';
-import {ForumBreadcrumbComponent} from './components/forumPost/forumBreadcrumb.component';
 import {ForumPostComponent} from './components/forumBreadcrumb/forumPost.component';
 
 export let routes: Routes = [

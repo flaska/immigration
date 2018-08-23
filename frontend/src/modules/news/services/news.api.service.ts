@@ -4,7 +4,8 @@ import {NewsRecord} from '../schemas/news.record.schema';
 import {APP_BASE_HREF} from '@angular/common';
 import {TransferState, makeStateKey} from '@angular/platform-browser';
 import {retry} from 'rxjs/operators';
-import {Observable} from 'rxjs';
+import {Observable, of} from 'rxjs';
+import {map} from 'rxjs/internal/operators';
 
 export class BlockedUrl{
   date: Date;
@@ -25,17 +26,15 @@ export class NewsApiService {
   private blockAddr: string = 'api/news/blockUrl';
   private blockedFeedsAddr: string = 'api/news/getBlockedUrls';
 
-  searchByTerm(term: string, scoring: string, from: number, cb: (error:any, result:NewsRecord[])=>void){
+  searchByTerm(term: string, scoring: string, from: number): Observable<NewsRecord[]>{
 
     var cachedState = this.transferState.get(makeStateKey(term+scoring+from), null as NewsRecord[]);
-    if (cachedState) return cb(null, cachedState);
+    if (cachedState) return of(cachedState);
 
-    this.http.get<NewsRecord[]>(this.serverUrl + this.getUrl + '?q=' + term + '&from=' + from + '&scoring=' + scoring).pipe(retry(3)).subscribe((result)=>{
+    return this.http.get<NewsRecord[]>(this.serverUrl + this.getUrl + '?q=' + term + '&from=' + from + '&scoring=' + scoring).pipe(retry(3), map((result)=>{
       this.transferState.set(makeStateKey(term+scoring+from), result as NewsRecord[]);
-      cb(null, result);
-    },error => {
-      cb(error, null);
-    });
+      return result;
+    }));
   }
 
   blockUrl(url: string, password: string):Observable<boolean>{

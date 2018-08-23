@@ -25,16 +25,26 @@ export class NewsListWrapperComponent {
 
   fetchNews(channel: NewsChannel, scoring: Scoring, from: number){
     this.showLoading = true;
-    this.newsApiService.searchByTerm(channel, scoring, from, (err: any, result: NewsRecord[])=>{
-      if (err) {
-        this.isOffline = true;
-        return;
-      }
+    // this.newsApiService.searchByTerm(channel, scoring, from, (err: any, result: NewsRecord[])=>{
+    //   if (err) {
+    //     this.isOffline = true;
+    //     return;
+    //   }
+    //   if (from===0) this.newsItems = [];
+    //   this.newsItems = this.newsItems.concat(result);
+    //   this.showLoading = false;
+    //   this.isOffline = false;
+    // });
+
+    this.newsApiService.searchByTerm(channel, scoring, from).subscribe(result=>{
       if (from===0) this.newsItems = [];
       this.newsItems = this.newsItems.concat(result);
       this.showLoading = false;
       this.isOffline = false;
+    }, err=>{
+        this.isOffline = true;
     });
+
   }
 
   fetchMore(){
