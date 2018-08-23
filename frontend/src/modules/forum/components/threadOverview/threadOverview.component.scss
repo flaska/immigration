@@ -1,0 +1,25 @@
+@import "../../../../css/import/_component_import.scss";
+
+:host{
+  position: relative;
+  padding-right: 250px;
+  display: block;
+}
+
+info-property {
+  top: 0px;
+  position: absolute;
+  text-align: right;
+  border-left: 1px solid mat-color(mat-palette($mat-gray, 100));
+  padding-left: 10px;
+  padding-right: 10px;
+  &:nth-of-type(1){
+    right: 160px;
+  }
+  &:nth-of-type(2){
+    right: 100px;
+  }
+  &:nth-of-type(3){
+    right: 10px;
+  }
+}

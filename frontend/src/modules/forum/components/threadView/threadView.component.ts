@@ -17,15 +17,12 @@ export class ThreadViewComponent implements OnInit{
   thread: Observable<ForumThread>;
 
   constructor(private forumService: ForumApiService, private route: ActivatedRoute){
-
+    this.threadId = this.route.snapshot.paramMap.get('threadId');
+    this.thread = this.forumService.getThreadById(this.threadId);
   }
 
   ngOnInit(){
-    this.threadId = this.route.snapshot.paramMap.get('threadId');
-    this.thread = this.forumService.getThreadById(this.threadId);
-    this.thread.subscribe(r=>{
-      console.log(r);
-    })
+
   }
 
 }

@@ -1,0 +1,10 @@
+<span *ngIf="thread">
+  <div class="threadName">
+    <a [routerLink]="['/forum/thread/view/',thread.id]">
+      {{thread.title}}
+    </a>
+  </div>
+  <info-property [propertyName]="'Posts'">{{thread.postsCount}}</info-property>
+  <info-property [propertyName]="'Views'">{{thread.views}}</info-property>
+  <info-property [propertyName]="'Last Post'">{{thread.lastPostDate | date}}</info-property>
+</span>
