@@ -1,3 +1,5 @@
-<mat-card *ngFor="let thread of threadList | async">
+<!--<forum-bread-crumb [path]="['Topics']"></forum-bread-crumb>-->
+
+<span *ngFor="let thread of threadList | async">
   <thread-overview [thread]="thread"></thread-overview>
-</mat-card>
+</span>

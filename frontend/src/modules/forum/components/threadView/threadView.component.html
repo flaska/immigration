@@ -1,3 +1,10 @@
-<mat-card>
-  <thread-overview [thread]="thread | async"></thread-overview>
-</mat-card>
+<!--<forum-bread-crumb *ngIf="(thread | async).topic" [path]="['Topics', thread.topic | async]"></forum-bread-crumb>-->
+
+<thread-overview [thread]="thread | async"></thread-overview>
+
+<mat-divider></mat-divider>
+
+<span *ngFor="let post of postList | async">
+  <forum-post [post]="post"></forum-post>
+</span>
+

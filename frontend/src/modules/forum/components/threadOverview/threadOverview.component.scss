@@ -1,13 +1,17 @@
 @import "../../../../css/import/_component_import.scss";
 
-:host{
+.thread {
+  margin: 10px 0px;
+}
+
+mat-card{
   position: relative;
   padding-right: 250px;
   display: block;
 }
 
 info-property {
-  top: 0px;
+  top: 16px;
   position: absolute;
   text-align: right;
   border-left: 1px solid mat-color(mat-palette($mat-gray, 100));

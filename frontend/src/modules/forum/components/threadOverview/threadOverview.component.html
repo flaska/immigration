@@ -1,4 +1,4 @@
-<span *ngIf="thread">
+<mat-card *ngIf="thread" class="thread">
   <div class="threadName">
     <a [routerLink]="['/forum/thread/view/',thread.id]">
       {{thread.title}}
@@ -7,4 +7,4 @@
   <info-property [propertyName]="'Posts'">{{thread.postsCount}}</info-property>
   <info-property [propertyName]="'Views'">{{thread.views}}</info-property>
   <info-property [propertyName]="'Last Post'">{{thread.lastPostDate | date}}</info-property>
-</span>
+</mat-card>

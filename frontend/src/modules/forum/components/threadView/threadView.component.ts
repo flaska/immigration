@@ -19,6 +19,7 @@ export class ThreadViewComponent implements OnInit{
   constructor(private forumService: ForumApiService, private route: ActivatedRoute){
     this.threadId = this.route.snapshot.paramMap.get('threadId');
     this.thread = this.forumService.getThreadById(this.threadId);
+    this.postList = this.forumService.getPostListByThreadId(this.threadId);
   }
 
   ngOnInit(){
