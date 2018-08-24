@@ -13,7 +13,7 @@ var Thread = db.model('Thread', mongoose.Schema({
   lastPostDate: Date,
   postsCount: Number,
   views: Number,
-  votes: Number
+  likes: Number
 }, { collection: 'threads' }));
 
 var Post = db.model('Post', mongoose.Schema({
@@ -21,7 +21,7 @@ var Post = db.model('Post', mongoose.Schema({
   userName: String,
   datePosted: Date,
   content: String,
-  votes: Number
+  likes: Number
 }, { collection: 'posts' }));
 
 exports.getThread = function(query, cb){

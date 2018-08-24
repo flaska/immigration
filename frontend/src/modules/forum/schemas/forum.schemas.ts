@@ -6,7 +6,7 @@ export class ForumThread {
   lastPostDate: Date;
   postsCount: number;
   views: number;
-  votes: number;
+  likes: number;
 }
 
 export class ForumPost {
@@ -14,5 +14,5 @@ export class ForumPost {
   userName: string;
   datePosted: Date;
   content: string;
-  votes: number;
+  likes: number;
 }
