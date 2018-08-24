@@ -16,6 +16,7 @@ import {ThreadOverviewComponent} from './components/threadOverview/threadOvervie
 import {ForumPostComponent} from './components/forumBreadcrumb/forumPost.component';
 import {ForumBreadcrumbComponent} from './components/forumPost/forumBreadcrumb.component';
 import {InfoPropertyListComponent} from './components/infoPropertyList/infoPropertyList.component';
+import {FloatingActionButtonComponent} from './components/floatingActionButton/floatingActionButton.component';
 
 export let routes: Routes = [
   { path: '', component: ThreadListComponent},
@@ -30,7 +31,8 @@ export let routes: Routes = [
     ForumPostComponent,
     ForumBreadcrumbComponent,
     InfoPropertyListComponent,
-    InfoPropertyComponent
+    InfoPropertyComponent,
+    FloatingActionButtonComponent
   ],
   imports: [
     CommonModule,

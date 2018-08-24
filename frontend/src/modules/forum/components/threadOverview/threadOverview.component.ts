@@ -8,4 +8,5 @@ import {ForumThread} from '../../schemas/forum.schemas';
 })
 export class ThreadOverviewComponent {
   @Input() thread: ForumThread;
+  @Input() fullMode: boolean = false;
 }

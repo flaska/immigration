@@ -7,4 +7,18 @@
 mat-card{
   position: relative;
   display: block;
+  background-color: mat-color(mat-palette($mat-blue, 100))!important;
 }
+
+a:hover {
+  text-decoration: underline;
+}
+hr {
+  border: 0;
+  height: 1px;
+  background: mat-color(mat-palette($mat-gray, 500));
+  margin: 20px -10px 18px;
+}
+
+
+

@@ -3,6 +3,7 @@ export class ForumThread {
   userName: string;
   dateCreated: Date;
   title: string;
+  content: string;
   lastPostDate: Date;
   postsCount: number;
   views: number;

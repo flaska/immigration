@@ -10,6 +10,7 @@ var Thread = db.model('Thread', mongoose.Schema({
   userName: String,
   dateCreated: Date,
   title: String,
+  content: String,
   lastPostDate: Date,
   postsCount: Number,
   views: Number,

@@ -1,13 +1,8 @@
-
 <div *ngIf="thread | async as thread">
-
   <forum-breadcrumb  [path]="[{title: 'Topics', url: '/forum'}, {title: thread.title}]"></forum-breadcrumb>
-
-  <thread-overview [thread]="thread"></thread-overview>
-
+  <thread-overview [thread]="thread" [fullMode]="true"></thread-overview>
 </div>
 
-<span *ngFor="let post of postList | async">
-  <forum-post [post]="post"></forum-post>
-</span>
+<forum-post *ngFor="let post of postList | async" [post]="post"></forum-post>
 
+<floating-action-button [action]="'add'"></floating-action-button>
