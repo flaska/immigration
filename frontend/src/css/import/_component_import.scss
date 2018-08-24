@@ -13,3 +13,5 @@ $on-background: mat-palette($mat-gray, 900);
 $surface:  mat-palette($mat-gray, 50);
 $surface-hover: mat-palette($mat-gray, 100);
 $on-surface: mat-palette($mat-gray, 900);
+
+$add-post-bg:  mat-color(mat-palette($mat-gray, 100))!important;

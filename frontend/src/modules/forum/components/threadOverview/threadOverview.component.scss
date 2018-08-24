@@ -11,7 +11,7 @@
 mat-card{
   position: relative;
   display: block;
-  background-color: mat-color(mat-palette($mat-gray, 100))!important;
+  background-color: $add-post-bg;
 }
 
 a:hover {

@@ -1,0 +1,17 @@
+<floating-action-button [action]="'add'" (click)="writingPost=true" *ngIf="!writingPost"></floating-action-button>
+
+<mat-card (click)="writingPost=true" *ngIf="writingPost">
+  <mat-form-field id="postInput">
+    <textarea
+      matInput
+      placeholder="Your comment..."
+      cdkTextareaAutosize
+      #autosize="cdkTextareaAutosize"
+      cdkAutosizeMinRows="3"
+      cdkAutosizeMaxRows="16"
+    ></textarea>
+  </mat-form-field>
+
+  <button mat-raised-button color="accent" id="sendPost">Send</button>
+  <div class="clearfix"></div>
+</mat-card>

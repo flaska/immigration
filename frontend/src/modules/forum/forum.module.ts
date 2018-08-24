@@ -17,6 +17,7 @@ import {ForumPostComponent} from './components/forumBreadcrumb/forumPost.compone
 import {ForumBreadcrumbComponent} from './components/forumPost/forumBreadcrumb.component';
 import {InfoPropertyListComponent} from './components/infoPropertyList/infoPropertyList.component';
 import {FloatingActionButtonComponent} from './components/floatingActionButton/floatingActionButton.component';
+import {AddPostInputComponent} from './components/addPostInput/addPostInput.component';
 
 export let routes: Routes = [
   { path: '', component: ThreadListComponent},
@@ -29,6 +30,7 @@ export let routes: Routes = [
     ThreadViewComponent,
     ThreadOverviewComponent,
     ForumPostComponent,
+    AddPostInputComponent,
     ForumBreadcrumbComponent,
     InfoPropertyListComponent,
     InfoPropertyComponent,

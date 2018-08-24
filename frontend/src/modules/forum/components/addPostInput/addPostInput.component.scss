@@ -1,0 +1,14 @@
+@import "../../../../css/import/_component_import.scss";
+
+
+#postInput{
+  width: 100%;
+}
+
+#sendPost{
+  float:right;
+}
+
+mat-card{
+  background-color: $add-post-bg;
+}
