@@ -1,6 +1,8 @@
 <div id="header">
-  <h2 class="nav-link" >Forum</h2>
-  <h2 class="nav-link" >News</h2>
+  <nav>
+    <a class="nav-link" [routerLink]="['/forum']">Forum</a>
+    <a class="nav-link" [routerLink]="['/']" >News</a>
+  </nav>
   <a [routerLink]="['/']">
     <h1 id="main_heading" class="">
       <span class="primary-color">Immigration</span>

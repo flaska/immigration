@@ -1,4 +1,4 @@
-<!--<forum-bread-crumb [path]="['Topics']"></forum-bread-crumb>-->
+<forum-breadcrumb [path]="[{title: 'Topics'}]"></forum-breadcrumb>
 
 <span *ngFor="let thread of threadList | async">
   <thread-overview [thread]="thread"></thread-overview>

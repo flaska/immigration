@@ -14,9 +14,11 @@ import {ThreadViewComponent} from './components/threadView/threadView.component'
 import {InfoPropertyComponent} from './components/infoProperty/infoProperty.component';
 import {ThreadOverviewComponent} from './components/threadOverview/threadOverview.component';
 import {ForumPostComponent} from './components/forumBreadcrumb/forumPost.component';
+import {ForumBreadcrumbComponent} from './components/forumPost/forumBreadcrumb.component';
+import {InfoPropertyListComponent} from './components/infoPropertyList/infoPropertyList.component';
 
 export let routes: Routes = [
-  { path: 'list', component: ThreadListComponent},
+  { path: '', component: ThreadListComponent},
   { path: 'thread/view/:threadId', component: ThreadViewComponent},
 ];
 
@@ -26,7 +28,8 @@ export let routes: Routes = [
     ThreadViewComponent,
     ThreadOverviewComponent,
     ForumPostComponent,
-    // ForumBreadcrumbComponent,
+    ForumBreadcrumbComponent,
+    InfoPropertyListComponent,
     InfoPropertyComponent
   ],
   imports: [

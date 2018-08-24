@@ -1,8 +1,11 @@
-<!--<forum-bread-crumb *ngIf="(thread | async).topic" [path]="['Topics', thread.topic | async]"></forum-bread-crumb>-->
 
-<thread-overview [thread]="thread | async"></thread-overview>
+<div *ngIf="thread | async as thread">
 
-<mat-divider></mat-divider>
+  <forum-breadcrumb  [path]="[{title: 'Topics', url: '/forum'}, {title: thread.title}]"></forum-breadcrumb>
+
+  <thread-overview [thread]="thread"></thread-overview>
+
+</div>
 
 <span *ngFor="let post of postList | async">
   <forum-post [post]="post"></forum-post>
