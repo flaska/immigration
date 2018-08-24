@@ -13,6 +13,7 @@ var Thread = db.model('Thread', mongoose.Schema({
   lastPostDate: Date,
   postsCount: Number,
   views: Number,
+  votes: Number
 }, { collection: 'threads' }));
 
 var Post = db.model('Post', mongoose.Schema({

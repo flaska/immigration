@@ -1,3 +1,10 @@
 <mat-card class="forumPost">
+
+  <info-property-list>
+    <info-property [propertyName]="'User'">{{post.userName}}</info-property>
+    <info-property [propertyName]="'Date'">{{post.datePosted | date}}</info-property>
+    <info-property [propertyName]="'Votes'">{{post.votes}}</info-property>
+  </info-property-list>
+
   {{post.content}}
 </mat-card>
