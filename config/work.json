@@ -1,0 +1,25 @@
+{
+  "database":{
+    "news": {
+      "uri": "mongodb://localhost:27017/immtest",
+      "opts": {
+        "user": null,
+        "pass": null
+      }
+    },
+    "comments": {
+      "uri": "mongodb://localhost:27017/immtest",
+      "opts": {
+        "user": null,
+        "pass": null
+      }
+    },
+    "forum":{
+      "uri": "mongodb://localhost:27017/fortest",
+      "opts": {
+        "user": null,
+        "pass": null
+      }
+    }
+  }
+}

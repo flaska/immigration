@@ -1,0 +1,25 @@
+{
+  "database":{
+    "news": {
+      "uri": "mongodb://ds133601.mlab.com:33601/immigrationinmedia",
+      "opts": {
+        "user": "immigrationInMedia",
+        "pass": "heslo86"
+      }
+    },
+    "comments": {
+      "uri": "mongodb://ds133601.mlab.com:33601/immigrationinmedia",
+      "opts": {
+        "user": "immigrationInMedia",
+        "pass": "heslo86"
+      }
+    },
+    "forum":{
+      "uri": "mongodb://ds121345.mlab.com:21345/immigration-forum",
+      "opts": {
+        "user": "forum",
+        "pass": "30recycled"
+      }
+    }
+  }
+}

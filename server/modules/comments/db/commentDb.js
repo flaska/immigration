@@ -1,5 +1,6 @@
-var mongoose = require('mongoose');
-var db = mongoose.createConnection('mongodb://immigrationInMedia:heslo86@ds133601.mlab.com:33601/immigrationinmedia');
+var mongoose = require('mongoose'),
+  config = require('config');
+var db = mongoose.createConnection(config.database.comments.uri, config.database.comments.opts);
 db.on('error', console.error.bind(console, 'MongoDB connection error. '))
 db.once('open', function() {
   console.log('Connected to MongoDB');

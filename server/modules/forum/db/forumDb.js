@@ -1,6 +1,6 @@
-const mongoose = require('mongoose')
-;
-var db = mongoose.createConnection('mongodb://forum:30recycled@ds121345.mlab.com:21345/immigration-forum');
+const mongoose = require('mongoose'),
+  config = require('config');
+var db = mongoose.createConnection(config.database.forum.uri, config.database.forum.opts);
 db.on('error', console.error.bind(console, 'MongoDB connection error. '))
 db.once('open', function() {
   console.log('Connected to MongoDB');
