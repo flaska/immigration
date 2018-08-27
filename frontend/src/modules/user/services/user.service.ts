@@ -23,7 +23,8 @@ export class UserService {
   }
 
   getUserName(): string{
-      if (this.cookieService.get('userName')) return this.cookieService.get('userName');
+      let cookieUserName = this.cookieService.get('userName');
+      if (!!cookieUserName) return cookieUserName;
       else {
         let animals = ['Fox', 'Cat', 'Zebra', 'Giraffe', 'Elephant'];
         return "Anonymous " + animals[this.random(5)-1];
