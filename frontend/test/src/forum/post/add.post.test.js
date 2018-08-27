@@ -1,5 +1,8 @@
 var main = require('../../shared/main');
 
+const postContent = 'Well, my case was a little bit faster!';
+const userName = 'Rashid';
+
 describe('Add Post to Thread', function() {
   it('Should view current Posts', function () {
     browser.get('/forum/thread/view/ismylaw');
@@ -12,11 +15,22 @@ describe('Add Post to Thread', function() {
 
   it('Should be able submit post', function(){
     click('#test_addPost');
-    typeText('#test_postContentInput', 'Well, my case was a little bit faster!');
+    typeText('#test_postContentInput', postContent);
+    text('Anonymous');
     clearText('#test_userName', 30);
-    typeText('#test_userName', "Rashid");
+    typeText('#test_userName', userName);
     click('#sendPost');
     text('Post saved.');
+  });
+
+  it('Should hide add post form', function(){
+    noTexts(['Posting as', 'Send']);
+    texts([postContent, userName]);
+  });
+
+  it('Should remember username', function(){
+    click('#test_addPost');
+    text('add-post-input','Rashid');
   });
 
 
