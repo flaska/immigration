@@ -7,7 +7,7 @@ import {MainCommentWrapperComponent} from './components/mainCommentWrapper/main.
 import {CommentListComponent} from './components/commentList/commentList.component';
 import {CommentInputComponent} from './components/commentInput/commentInput.component';
 import {FormsModule} from '@angular/forms';
-import {CookieService} from 'ngx-cookie-service';
+import {CommentsApiService} from './services/comments.api.service';
 
 
 @NgModule({
@@ -23,7 +23,7 @@ import {CookieService} from 'ngx-cookie-service';
     FormsModule,
   ],
   exports: [MainCommentWrapperComponent],
-  providers: [CookieService]
+  providers: [CommentsApiService]
 })
 export class CommentsModule { }
 

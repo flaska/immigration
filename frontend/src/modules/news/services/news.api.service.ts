@@ -12,9 +12,7 @@ export class BlockedUrl{
   url: string;
 }
 
-@Injectable({
-  providedIn: 'root',
-})
+@Injectable()
 export class NewsApiService {
 
   constructor(private http: HttpClient, @Optional() @Inject(APP_BASE_HREF) origin: string,  private transferState: TransferState) {

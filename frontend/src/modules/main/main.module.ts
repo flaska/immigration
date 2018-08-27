@@ -10,6 +10,7 @@ import {RouterModule, Routes} from '@angular/router';
 import {MainNewsComponent} from '../news/components/mainNews/mainNews.component';
 import {NotFoundComponent} from './components/notFound/notFound.component';
 import {MatButtonModule} from '@angular/material';
+import {UserModule} from '../user/user.module';
 
 export let appRoutes: Routes = [
   { path: '', component: MainNewsComponent},
@@ -29,10 +30,11 @@ export let appRoutes: Routes = [
   imports: [
     BrowserModule.withServerTransition({ appId: 'immigration-in-media' }),
     BrowserTransferStateModule,
-    NewsModule,
     BrowserAnimationsModule,
     RouterModule.forRoot(appRoutes),
     ServiceWorkerModule.register('/ngsw-worker.js', { enabled: environment.production }),
+    NewsModule,
+    UserModule,
     MatButtonModule
   ],
   providers: [],

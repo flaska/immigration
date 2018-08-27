@@ -6,9 +6,7 @@ import {map, retry} from 'rxjs/internal/operators';
 import {APP_BASE_HREF} from '@angular/common';
 import {TransferState} from '@angular/platform-browser';
 
-@Injectable({
-  providedIn: 'root',
-})
+@Injectable()
 export class ForumApiService {
 
   constructor(private http: HttpClient, @Optional() @Inject(APP_BASE_HREF) origin: string,  private transferState: TransferState) {

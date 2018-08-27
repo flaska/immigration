@@ -1,9 +1,7 @@
 import {default as DateDiffExternal} from 'date-diff';
 import {Injectable} from '@angular/core';
 
-@Injectable({
-  providedIn: 'root',
-})
+@Injectable()
 export class DateDiff {
   diff(postDate: any): string{
     var dd;

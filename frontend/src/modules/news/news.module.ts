@@ -10,6 +10,7 @@ import {ChannelSelectComponent} from './components/channelSelect/channelSelect.c
 import {NewsListWrapperComponent} from './components/newsListWrapper/newsListWrapper.component';
 import {MaterialNewsModule} from '../material/material.news.module';
 import {CommentsModule} from '../comments/comments.module';
+import {UserModule} from '../user/user.module';
 
 
 
@@ -29,7 +30,7 @@ import {CommentsModule} from '../comments/comments.module';
     CommentsModule
   ],
   exports: [MainNewsComponent, NewsListComponent, NewsItemComponent],
-  providers: [Title]
+  providers: [Title, UserModule]
 })
 export class NewsModule { }
 

@@ -7,9 +7,7 @@ import {Observable} from 'rxjs';
 
 interface commentCountRecord {articleId: string, commentsCount: number}
 
-@Injectable({
-  providedIn: 'root',
-})
+@Injectable()
 export class CommentsCountService {
 
   registeredArticlesForBulk: string[] = [];

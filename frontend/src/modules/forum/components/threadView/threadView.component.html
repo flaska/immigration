@@ -5,4 +5,4 @@
 
 <forum-post *ngFor="let post of postList | async" [post]="post"></forum-post>
 
-<add-post-input></add-post-input>
+<add-post-input [threadId]="threadId"></add-post-input>

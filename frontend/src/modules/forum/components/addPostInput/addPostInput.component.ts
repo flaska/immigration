@@ -1,4 +1,6 @@
 import {Component, Input} from '@angular/core';
+import {ActivatedRoute} from '@angular/router';
+import {ForumApiService} from '../../services/forum.api.service';
 
 
 @Component({
@@ -9,7 +11,14 @@ import {Component, Input} from '@angular/core';
 export class AddPostInputComponent {
   @Input() threadId: string;
   writingPost: boolean = false;
+  postContent: string;
 
+  constructor(private forumService: ForumApiService){
 
+  }
+
+  submitPost(){
+
+  }
 }
 

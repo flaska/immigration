@@ -18,6 +18,7 @@ import {ForumBreadcrumbComponent} from './components/forumPost/forumBreadcrumb.c
 import {InfoPropertyListComponent} from './components/infoPropertyList/infoPropertyList.component';
 import {FloatingActionButtonComponent} from './components/floatingActionButton/floatingActionButton.component';
 import {AddPostInputComponent} from './components/addPostInput/addPostInput.component';
+import {FormsModule} from '@angular/forms';
 
 export let routes: Routes = [
   { path: '', component: ThreadListComponent},
@@ -40,7 +41,8 @@ export let routes: Routes = [
     CommonModule,
     HttpClientModule,
     RouterModule.forChild(routes),
-    MaterialForumModule
+    MaterialForumModule,
+    FormsModule
   ],
   exports: [],
   providers: [ForumApiService]

@@ -3,7 +3,12 @@ import {CommentsApiService} from '../../services/comments.api.service';
 import {CommentsCountService} from '../../services/commentsCount.service';
 import {Observable, of} from 'rxjs';
 
-@Component({selector: 'main-comment-wrapper', templateUrl: './main.comment.wrapper.component.html', styleUrls: ['./main.comment.wrapper.component.scss']})
+@Component({
+  selector: 'main-comment-wrapper',
+  templateUrl: './main.comment.wrapper.component.html',
+  styleUrls: ['./main.comment.wrapper.component.scss'],
+  providers: [CommentsCountService]
+})
 export class MainCommentWrapperComponent implements OnInit{
 
   @Input () url: string;
