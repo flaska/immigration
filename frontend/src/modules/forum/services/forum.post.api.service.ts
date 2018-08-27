@@ -16,8 +16,8 @@ export class ForumPostApiService {
   private serverUrl = '/';
   private postUrl: string = 'api/forum/post';
 
-  getPostListByThreadId(threadId: string):Observable<ForumPost>{
-    return this.http.get<ForumPost>(this.serverUrl + this.postUrl + '?threadId=' + threadId).pipe(retry(3));
+  getPostListByThreadId(threadId: string):Observable<ForumPost[]>{
+    return this.http.get<ForumPost[]>(this.serverUrl + this.postUrl + '?threadId=' + threadId).pipe(retry(3));
   }
 
   submitPost(post: ForumPost): Observable<ForumPost>{

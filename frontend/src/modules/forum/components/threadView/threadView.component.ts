@@ -14,17 +14,26 @@ import {ForumThreadApiService} from '../../services/forum.thread.api.service';
 export class ThreadViewComponent implements OnInit{
 
   threadId: string;
-  postList: Observable<ForumPost>;
+  posts: ForumPost[];
   thread: Observable<ForumThread>;
 
   constructor(private forumThreadService: ForumThreadApiService, private forumPostService: ForumPostApiService, private route: ActivatedRoute){
     this.threadId = this.route.snapshot.paramMap.get('threadId');
     this.thread = this.forumThreadService.getThreadById(this.threadId);
-    this.postList = this.forumPostService.getPostListByThreadId(this.threadId);
+    this.getPosts(this.threadId);
   }
 
   ngOnInit(){
+  }
 
+  newPostAdded(post){
+    this.posts.push(post);
+  }
+
+  getPosts(threadId: string){
+    this.forumPostService.getPostListByThreadId(threadId).subscribe(posts=>{
+      this.posts = posts;
+    })
   }
 
 }

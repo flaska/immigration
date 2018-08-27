@@ -4,7 +4,7 @@
   <mat-form-field id="postInput">
     <textarea
       matInput
-      [(ngModel)]="postContent"
+      [(ngModel)]="post.content"
       placeholder="Your comment..."
       cdkTextareaAutosize
       #autosize="cdkTextareaAutosize"
@@ -15,7 +15,7 @@
   </mat-form-field>
 
   Posting as
-  <mat-form-field class="userName">
+  <mat-form-field class="post.userName">
     <input matInput placeholder="Your name" [(ngModel)]="userName" id="test_userName">
   </mat-form-field>
 
