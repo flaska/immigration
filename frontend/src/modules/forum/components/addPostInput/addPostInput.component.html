@@ -1,4 +1,4 @@
-<floating-action-button [action]="'add'" (click)="writingPost=true" *ngIf="!writingPost"></floating-action-button>
+<floating-action-button [action]="'add'" (click)="writingPost=true" *ngIf="!writingPost" id="test_addPost"></floating-action-button>
 
 <mat-card (click)="writingPost=true" *ngIf="writingPost">
   <mat-form-field id="postInput">
@@ -10,12 +10,13 @@
       #autosize="cdkTextareaAutosize"
       cdkAutosizeMinRows="3"
       cdkAutosizeMaxRows="16"
+      id="test_postContentInput"
     ></textarea>
   </mat-form-field>
 
   Posting as
   <mat-form-field class="userName">
-    <input matInput placeholder="Your name" [(ngModel)]="userName" >
+    <input matInput placeholder="Your name" [(ngModel)]="userName" id="test_userName">
   </mat-form-field>
 
   <button mat-raised-button color="accent" id="sendPost" (click)="submitPost()">Send</button>

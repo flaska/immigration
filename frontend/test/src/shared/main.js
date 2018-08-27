@@ -26,18 +26,17 @@ global.typeText = function(css, text){
   element(by.css(css)).sendKeys(text);
 };
 
+global.clearText = function (css, length) {
+  for (var i=0; i++; i<length){
+    element(by.css(css)).sendKeys(protractor.Key.BACK_SPACE);
+  }
+};
+
 global.clicks = function(clicks){
   clicks.forEach((c)=>{
     click(c);
     browser.sleep(700);
   });
-};
-
-global.editField = function(field, value){
-  click(field);
-  element(by.css(field + ' .form-control')).sendKeys(value);
-  click(field + ' #inline-editor-button-save');
-  text(value);
 };
 
 global.texts = function(texts){

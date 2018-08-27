@@ -159,12 +159,30 @@ app.controller('ScreenshotReportController', function ($scope) {
 
     var results =[
     {
+        "description": "Should view current Posts|Add Post to Thread",
+        "passed": true,
+        "pending": false,
+        "os": "Windows NT",
+        "sessionId": "710e297b64f77f5a72f506c033734ae9",
+        "instanceId": 15116,
+        "browser": {
+            "name": "chrome",
+            "version": "68.0.3440.106"
+        },
+        "message": "Passed.",
+        "trace": "",
+        "browserLogs": [],
+        "screenShotFile": "Should_view_current_Posts_Add_Post_to_Thread.png",
+        "timestamp": 1535405006270,
+        "duration": 2839
+    },
+    {
         "description": "Should see list of threads|Thread List",
         "passed": true,
         "pending": false,
         "os": "Windows NT",
-        "sessionId": "4ea70d2913b3c943b4ccd1b0f45203e4",
-        "instanceId": 6088,
+        "sessionId": "9d3b08c0e9a5a36dba094009d672b2a3",
+        "instanceId": 16892,
         "browser": {
             "name": "chrome",
             "version": "68.0.3440.106"
@@ -173,8 +191,44 @@ app.controller('ScreenshotReportController', function ($scope) {
         "trace": "",
         "browserLogs": [],
         "screenShotFile": "Should_see_list_of_threads_Thread_List.png",
-        "timestamp": 1535403065932,
-        "duration": 2941
+        "timestamp": 1535405006270,
+        "duration": 3329
+    },
+    {
+        "description": "Should be able submit post|Add Post to Thread",
+        "passed": true,
+        "pending": false,
+        "os": "Windows NT",
+        "sessionId": "710e297b64f77f5a72f506c033734ae9",
+        "instanceId": 15116,
+        "browser": {
+            "name": "chrome",
+            "version": "68.0.3440.106"
+        },
+        "message": "Passed.",
+        "trace": "",
+        "browserLogs": [],
+        "screenShotFile": "Should_be_able_submit_post_Add_Post_to_Thread.png",
+        "timestamp": 1535405009441,
+        "duration": 1148
+    },
+    {
+        "description": "Should navigate to thread view|Thread List",
+        "passed": true,
+        "pending": false,
+        "os": "Windows NT",
+        "sessionId": "9d3b08c0e9a5a36dba094009d672b2a3",
+        "instanceId": 16892,
+        "browser": {
+            "name": "chrome",
+            "version": "68.0.3440.106"
+        },
+        "message": "Passed.",
+        "trace": "",
+        "browserLogs": [],
+        "screenShotFile": "Should_navigate_to_thread_view_Thread_List.png",
+        "timestamp": 1535405009958,
+        "duration": 846
     }
 ];
 

@@ -26,11 +26,11 @@ var Post = db.model('Post', mongoose.Schema({
 }, { collection: 'posts' }));
 
 exports.getThread = function(query, cb){
-  Thread.find(query).exec(cb);
+  Thread.find(query).sort({lastPostDate: -1}).exec(cb);
 };
 
 exports.getPost = function(query, cb){
-  Post.find(query).exec(cb);
+  Post.find(query).sort({lastPostDate: 1}).exec(cb);
 };
 
 exports.savePost = function(post, cb){
