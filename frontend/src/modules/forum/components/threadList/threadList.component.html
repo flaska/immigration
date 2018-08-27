@@ -1,7 +1,7 @@
 <forum-breadcrumb [path]="[{title: 'Topics'}]"></forum-breadcrumb>
 
-<span *ngFor="let thread of threadList | async">
-  <thread-overview [thread]="thread"></thread-overview>
+<span *ngFor="let thread of threadList | async; let i = index;">
+  <thread-overview [thread]="thread" class="test_thread_{{i}}"></thread-overview>
 </span>
 
 <floating-action-button [action]="'add'"></floating-action-button>

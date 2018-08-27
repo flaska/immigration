@@ -9,7 +9,10 @@
     "build:server": "ng run immigration:server",
     "webpack": "webpack --config webpack.server.config.js --progress --colors",
     "stats": "ng build --prod --stats-json && webpack-bundle-analyzer dist/browser/stats.json",
-    "tree": "ngd"
+    "test": "npm run test:clean && protractor test/conf/protractor.conf.js",
+    "test:clean": "rm -r test/report/beauty",
+    "test:data:load": "sh test/scripts/load.data.sh",
+    "test:data:dump": "sh test/scripts/dump.data.sh"
   },
   "private": true,
   "dependencies": {
@@ -34,6 +37,7 @@
     "date-diff": "^0.2.0",
     "express-http-proxy": "^1.2.0",
     "ngx-cookie-service": "^1.0.10",
+    "protractor-beautiful-reporter": "^1.2.4",
     "rxjs": "^6.2.2",
     "ts-loader": "^4.4.2",
     "zone.js": "^0.8.26"
