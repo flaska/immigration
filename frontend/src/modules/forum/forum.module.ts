@@ -6,8 +6,6 @@ import {RouterModule, Routes} from '@angular/router';
 
 import {MaterialForumModule} from '../material/material.forum.module';
 
-import {ForumApiService} from './services/forum.api.service';
-
 import {ThreadListComponent} from './components/threadList/threadList.component';
 
 import {ThreadViewComponent} from './components/threadView/threadView.component';
@@ -19,6 +17,8 @@ import {InfoPropertyListComponent} from './components/infoPropertyList/infoPrope
 import {FloatingActionButtonComponent} from './components/floatingActionButton/floatingActionButton.component';
 import {AddPostInputComponent} from './components/addPostInput/addPostInput.component';
 import {FormsModule} from '@angular/forms';
+import {ForumThreadApiService} from './services/forum.thread.api.service';
+import {ForumPostApiService} from './services/forum.post.api.service';
 
 export let routes: Routes = [
   { path: '', component: ThreadListComponent},
@@ -45,6 +45,6 @@ export let routes: Routes = [
     FormsModule
   ],
   exports: [],
-  providers: [ForumApiService]
+  providers: [ForumThreadApiService, ForumPostApiService]
 })
 export class ForumModule { }

@@ -13,6 +13,11 @@
     ></textarea>
   </mat-form-field>
 
+  Posting as
+  <mat-form-field class="userName">
+    <input matInput placeholder="Your name" [(ngModel)]="userName" >
+  </mat-form-field>
+
   <button mat-raised-button color="accent" id="sendPost" (click)="submitPost()">Send</button>
   <div class="clearfix"></div>
 </mat-card>

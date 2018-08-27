@@ -32,3 +32,9 @@ exports.getThread = function(query, cb){
 exports.getPost = function(query, cb){
   Post.find(query).exec(cb);
 };
+
+exports.savePost = function(post, cb){
+  const p = new Post(post);
+  p.save(cb);
+};
+

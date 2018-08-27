@@ -1,7 +1,8 @@
 import {Component, OnInit} from '@angular/core';
-import {ForumApiService} from '../../services/forum.api.service';
 import {Observable} from 'rxjs';
+
 import {ForumThread} from '../../schemas/forum.schemas';
+import {ForumThreadApiService} from '../../services/forum.thread.api.service';
 
 
 @Component({
@@ -13,12 +14,12 @@ export class ThreadListComponent implements OnInit{
 
   threadList: Observable<ForumThread>;
 
-  constructor(private forumService: ForumApiService){
+  constructor(private forumThreadService: ForumThreadApiService){
 
   }
 
   ngOnInit(){
-    this.threadList = this.forumService.getThreadList();
+    this.threadList = this.forumThreadService.getThreadList();
   }
 
 }

@@ -8,3 +8,7 @@ exports.getThread = function(query, cb){
 exports.getPost = function(query, cb){
   forumDb.getPost(query, cb);
 };
+
+exports.savePost = function(post, cb){
+  forumDb.savePost(post, cb);
+};

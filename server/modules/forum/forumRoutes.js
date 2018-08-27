@@ -11,4 +11,8 @@ router.get('/post', function(req, res){
   forumService.getPost(req.query, genericResponseFactory(req, res));
 });
 
+router.post('/post', function(req, res){
+  forumService.savePost(req.body, genericResponseFactory(req, res));
+});
+
 module.exports = router;

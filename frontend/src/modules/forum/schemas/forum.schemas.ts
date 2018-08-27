@@ -16,4 +16,10 @@ export class ForumPost {
   datePosted: Date;
   content: string;
   likes: number;
+
+  constructor(post: ForumPost){
+    Object.keys(post).forEach(k=>{
+      this[k] = post[k];
+    });
+  }
 }

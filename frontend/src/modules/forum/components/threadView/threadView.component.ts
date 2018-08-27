@@ -1,8 +1,9 @@
-import {Component, Input, OnInit} from '@angular/core';
-import {ForumApiService} from '../../services/forum.api.service';
+import {Component, OnInit} from '@angular/core';
 import {Observable} from 'rxjs';
 import {ForumPost, ForumThread} from '../../schemas/forum.schemas';
 import {ActivatedRoute} from '@angular/router';
+import {ForumPostApiService} from '../../services/forum.post.api.service';
+import {ForumThreadApiService} from '../../services/forum.thread.api.service';
 
 
 @Component({
@@ -16,10 +17,10 @@ export class ThreadViewComponent implements OnInit{
   postList: Observable<ForumPost>;
   thread: Observable<ForumThread>;
 
-  constructor(private forumService: ForumApiService, private route: ActivatedRoute){
+  constructor(private forumThreadService: ForumThreadApiService, private forumPostService: ForumPostApiService, private route: ActivatedRoute){
     this.threadId = this.route.snapshot.paramMap.get('threadId');
-    this.thread = this.forumService.getThreadById(this.threadId);
-    this.postList = this.forumService.getPostListByThreadId(this.threadId);
+    this.thread = this.forumThreadService.getThreadById(this.threadId);
+    this.postList = this.forumPostService.getPostListByThreadId(this.threadId);
   }
 
   ngOnInit(){
