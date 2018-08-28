@@ -19,6 +19,7 @@ import {AddPostInputComponent} from './components/addPostInput/addPostInput.comp
 import {FormsModule} from '@angular/forms';
 import {ForumThreadApiService} from './services/forum.thread.api.service';
 import {ForumPostApiService} from './services/forum.post.api.service';
+import {AddThreadInputComponent} from './components/addThreadInput/addThreadInput.component';
 
 export let routes: Routes = [
   { path: '', component: ThreadListComponent},
@@ -32,6 +33,7 @@ export let routes: Routes = [
     ThreadOverviewComponent,
     ForumPostComponent,
     AddPostInputComponent,
+    AddThreadInputComponent,
     ForumBreadcrumbComponent,
     InfoPropertyListComponent,
     InfoPropertyComponent,

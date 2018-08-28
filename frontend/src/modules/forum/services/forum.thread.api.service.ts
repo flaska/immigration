@@ -20,9 +20,12 @@ export class ForumThreadApiService {
     return this.http.get<ForumThread>(this.serverUrl + this.threadUrl + '?id=' + id).pipe(retry(3), map(res=>res[0]));
   }
 
-  //transfer state only here and test cache
   getThreadList():Observable<ForumThread>{
     return this.http.get<ForumThread>(this.serverUrl + this.threadUrl).pipe(retry(3));
+  }
+
+  submitThread(newThread: ForumThread):Observable<ForumThread>{
+    return this.http.post<ForumThread>(this.serverUrl + this.threadUrl, newThread).pipe(retry(3));
   }
 
 }

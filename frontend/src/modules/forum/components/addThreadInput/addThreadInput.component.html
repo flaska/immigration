@@ -1,0 +1,29 @@
+<floating-action-button [action]="'add'" (click)="writingPost=true" *ngIf="!writingPost" id="test_newThread"></floating-action-button>
+
+<mat-card (click)="writingPost=true" *ngIf="writingPost">
+
+  <mat-form-field class="full-width">
+    <input matInput placeholder="Heading..." value="Sushi" [(ngModel)]="thread.title">
+  </mat-form-field>
+
+  <mat-form-field id="postInput" class="full-width">
+    <textarea
+      matInput
+      [(ngModel)]="thread.content"
+      placeholder="Full content..."
+      cdkTextareaAutosize
+      #autosize="cdkTextareaAutosize"
+      cdkAutosizeMinRows="3"
+      cdkAutosizeMaxRows="16"
+      id="test_postContentInput"
+    ></textarea>
+  </mat-form-field>
+
+  Posting as
+  <mat-form-field class="post.userName">
+    <input matInput placeholder="Your name" [(ngModel)]="thread.userName" id="test_userName">
+  </mat-form-field>
+
+  <button mat-raised-button color="accent" id="sendPost" class="float-right" (click)="submitThread()">Send</button>
+  <div class="clearfix"></div>
+</mat-card>

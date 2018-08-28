@@ -24,10 +24,7 @@ export class AddPostInputComponent implements OnInit{
 
   ngOnInit(){
     this.post = new ForumPost({
-      content: null,
       threadId: this.threadId,
-      likes: 0,
-      datePosted: new Date(),
       userName: this.userService.getUserName()
     });
   }
