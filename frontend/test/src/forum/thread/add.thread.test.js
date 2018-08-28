@@ -16,7 +16,7 @@ describe('Add New Thread', function() {
   it('Should have create Thread form', function(){
     click('#test_newThread');
     typeText('#test_threadTitleInput', threadTitle);
-    typeText('#test_threadContentInput', threadContent);
+    typeText('.ngx-editor-textarea', threadContent);
 
     let cachedUserName = element(by.css('#test_userName')).getAttribute('value');
     expect(cachedUserName).toContain('Anonymous');

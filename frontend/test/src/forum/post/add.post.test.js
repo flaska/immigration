@@ -19,7 +19,7 @@ describe('Add Post to Thread', function() {
 
   it('Should be able submit post', function(){
     click('#test_addPost');
-    typeText('#test_postContentInput', postContent);
+    typeText('.ngx-editor-textarea', postContent);
 
     let cachedUserName = element(by.css('#test_userName')).getAttribute('value');
     expect(cachedUserName).toContain('Anonymous');
