@@ -15,11 +15,14 @@ export class ThreadListComponent implements OnInit{
   threadList: Observable<ForumThread>;
 
   constructor(private forumThreadService: ForumThreadApiService){
-
   }
 
   ngOnInit(){
     this.threadList = this.forumThreadService.getThreadList();
+  }
+
+  threadAdded(){
+    this.ngOnInit();
   }
 
 }

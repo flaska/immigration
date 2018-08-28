@@ -14,19 +14,19 @@ export class AddThreadInputComponent implements OnInit{
   @Output() threadAdded: EventEmitter<ForumThread> = new EventEmitter<ForumThread>();
 
   writingPost: boolean = false;
-  thread: ForumThread;
+  thread: ForumThread = new ForumThread({userName: this.userService.getUserName()});
 
   constructor(private forumThreadService: ForumThreadApiService, public snackBar: MatSnackBar, private userService: UserService){
-    this.thread = new ForumThread({userName: this.userService.getUserName()});
   }
 
   ngOnInit(){
-
+    this.thread = new ForumThread({userName: this.userService.getUserName()});
+    this.writingPost = false;
   }
 
   submitThread(){
     this.forumThreadService.submitThread(this.thread).subscribe((post)=>{
-      this.snackBar.open('Post saved. Yay!', 'Close', {
+      this.snackBar.open('Thread saved. Yay!', 'Close', {
         duration: 3000,
       });
       this.userService.setUserName(this.thread.userName);

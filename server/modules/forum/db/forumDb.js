@@ -29,6 +29,11 @@ exports.getThread = function(query, cb){
   Thread.find(query).sort({lastPostDate: -1}).exec(cb);
 };
 
+exports.saveThread = function(thread, cb){
+  const t = new Thread(thread);
+  t.save(cb);
+};
+
 exports.getPost = function(query, cb){
   Post.find(query).sort({lastPostDate: 1}).exec(cb);
 };

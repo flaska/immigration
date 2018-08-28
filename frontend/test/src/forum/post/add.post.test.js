@@ -21,9 +21,7 @@ describe('Add Post to Thread', function() {
     expect(cachedUserName).toContain('Anonymous');
     expect(cachedUserName).not.toContain('Rashid');
 
-    console.log(cachedUserName);
-
-    clearText('#test_userName', 30);
+    clearText('#test_userName');
     typeText('#test_userName', userName);
     click('#sendPost');
     text('Post saved.');

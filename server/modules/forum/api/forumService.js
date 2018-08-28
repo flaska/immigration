@@ -5,6 +5,10 @@ exports.getThread = function(query, cb){
   forumDb.getThread(query, cb);
 };
 
+exports.saveThread = function(thread, cb){
+  forumDb.saveThread(thread, cb);
+};
+
 exports.getPost = function(query, cb){
   forumDb.getPost(query, cb);
 };
