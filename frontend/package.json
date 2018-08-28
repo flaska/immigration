@@ -51,7 +51,7 @@
     "@types/jasminewd2": "~2.0.3",
     "@types/node": "~10.7.1",
     "codelyzer": "~4.4.4",
-    "protractor": "~5.4.0",
+    "protractor": "^5.4.0",
     "ts-node": "~7.0.1",
     "tslint": "~5.11.0",
     "typescript": "^2.7.2",

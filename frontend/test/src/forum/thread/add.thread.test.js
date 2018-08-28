@@ -40,7 +40,7 @@ describe('Add New Thread', function() {
   });
 
   it('Should be able to view the thread', function(){
-    click('.test_thread_0 .threadName a');
+    clickByLinkText(threadTitle);
     texts([
       'Forum > Topics > ' + threadTitle,
       threadContent,

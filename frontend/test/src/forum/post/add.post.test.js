@@ -29,7 +29,7 @@ describe('Add Post to Thread', function() {
     typeText('#test_userName', userName);
     click('#sendPost');
     text('Post saved.');
-    textIn('#test_infoPropertyValue_Posts', 3);
+    textIn('.test_infoPropertyValue_Posts', 3);
     textIn('.test_infoPropertyValue_Last_Post', getCurrentDate());
   });
 
@@ -47,7 +47,7 @@ describe('Add Post to Thread', function() {
   it('Should keep data after refresh', function(){
     browser.get('/forum/thread/view/ismylaw');
     texts([postContent, userName]);
-    textIn('#test_infoPropertyValue_Posts', 3);
+    textIn('.test_infoPropertyValue_Posts', 3);
     textIn('.test_infoPropertyValue_Last_Post', getCurrentDate());
   });
 

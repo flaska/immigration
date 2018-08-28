@@ -63,3 +63,7 @@ global.getCurrentDate = function () {
     var year = date.getFullYear();
     return monthNames[monthIndex] + ' ' + day  + ', ' + year;
 };
+
+global.clickByLinkText = function(linkText){
+  element(by.linkText(linkText)).click();
+};
