@@ -7,14 +7,14 @@
       "installMode": "prefetch",
       "updateMode": "prefetch",
       "urls": [
-        "/admin-admin-module-ngfactory.801eec6cac79455af152.js",
-        "/forum-forum-module-ngfactory.c69dd378df7d758ea1e7.js",
+        "/admin-admin-module-ngfactory.1424a145fcdb0f2010ae.js",
+        "/forum-forum-module-ngfactory.69336c47d1fc52b895ec.js",
         "/index.html",
-        "/main.264c63a7e8da53db589a.js",
-        "/page-page-module-ngfactory.9f319221626ce11bcc0d.js",
+        "/main.78ec7c2647df36a9ced5.js",
+        "/page-page-module-ngfactory.d99358af3e4b67fe8e01.js",
         "/polyfills.f4a90428e6a07940b7dc.js",
-        "/runtime.79dba73f1c03c1df67a8.js",
-        "/styles.dc8ba3cb09f43410f5da.css"
+        "/runtime.7751a7c45f15a0363126.js",
+        "/styles.c4296a0cdcff63c76091.css"
       ],
       "patterns": []
     },
@@ -34,19 +34,19 @@
   ],
   "dataGroups": [],
   "hashTable": {
-    "/admin-admin-module-ngfactory.801eec6cac79455af152.js": "f07f5f6d062f1369de222bb988bf20d67decdf2d",
+    "/admin-admin-module-ngfactory.1424a145fcdb0f2010ae.js": "cd675614924dcd0bdfb5aedbf1771e3f53f033d9",
     "/assets/favicon.png": "8578ecddb0b98f1cfd8ee5e4cdf1a2e4f8be99d0",
     "/assets/icons/icon192.png": "c14313a653b8bd3fbda3e81401418370502971ec",
     "/assets/icons/icon512.png": "044f91f1cbcebea72f4ef892c594587a32091f5a",
     "/assets/img/code-house.png": "8980038b742c6092f58fe4896581da234d9bd46f",
     "/assets/manifest.json": "5504362c4218fd2839be7bf6d67fd6aa5e214f72",
-    "/forum-forum-module-ngfactory.c69dd378df7d758ea1e7.js": "2bc94514df472521950fc401e221719bfe23e9b4",
-    "/index.html": "b3818469364e696f9b598d998790fe110b1e5d0b",
-    "/main.264c63a7e8da53db589a.js": "869e914ae20685b713e48ffe3c81341d5518b699",
-    "/page-page-module-ngfactory.9f319221626ce11bcc0d.js": "a481fe4b98e80999c77591b67814807feaf176e5",
+    "/forum-forum-module-ngfactory.69336c47d1fc52b895ec.js": "3b7d84a953dc32916b0d92bbb2600ed5cce4b6a6",
+    "/index.html": "3bdc261aa49cafde8ff13871e9182c449e184d15",
+    "/main.78ec7c2647df36a9ced5.js": "033e44c0254da6ddac4eacf1605e02d5f6d37c0d",
+    "/page-page-module-ngfactory.d99358af3e4b67fe8e01.js": "dcb3093dc25c0e36cf45033df951c89434d24c0c",
     "/polyfills.f4a90428e6a07940b7dc.js": "5ebbf2d6f84b840ab0324eff5a4f509863daecca",
-    "/runtime.79dba73f1c03c1df67a8.js": "fdfc862e411c3e6eb874be88eee5e8b6af6e4597",
-    "/styles.dc8ba3cb09f43410f5da.css": "3445edf71d5e67b030674b55f8250c6167fa50c2"
+    "/runtime.7751a7c45f15a0363126.js": "034290f1dfce7386c4f674bd06e65735864139f8",
+    "/styles.c4296a0cdcff63c76091.css": "c8c3c62b21525092152c9c12978e04c8481df025"
   },
   "navigationUrls": [
     {
