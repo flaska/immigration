@@ -3,14 +3,14 @@
 <mat-card (click)="writingPost=true" *ngIf="writingPost">
 
   <mat-form-field class="full-width">
-    <input matInput placeholder="Heading..." value="Sushi" [(ngModel)]="thread.title">
+    <input matInput placeholder="Heading" value="Sushi" [(ngModel)]="thread.title">
   </mat-form-field>
 
   <mat-form-field id="postInput" class="full-width">
     <textarea
       matInput
       [(ngModel)]="thread.content"
-      placeholder="Full content..."
+      placeholder="Content"
       cdkTextareaAutosize
       #autosize="cdkTextareaAutosize"
       cdkAutosizeMinRows="3"

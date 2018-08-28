@@ -16,7 +16,12 @@ describe('Add Post to Thread', function() {
   it('Should be able submit post', function(){
     click('#test_addPost');
     typeText('#test_postContentInput', postContent);
-    text('Anonymous');
+
+    let cachedUserName = element(by.css('#test_userName')).getAttribute('value');
+    expect(cachedUserName).toContain('Anonymous');
+
+    console.log(cachedUserName);
+
     clearText('#test_userName', 30);
     typeText('#test_userName', userName);
     click('#sendPost');

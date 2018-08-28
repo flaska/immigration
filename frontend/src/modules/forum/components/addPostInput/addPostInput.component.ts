@@ -15,7 +15,6 @@ export class AddPostInputComponent implements OnInit{
   @Output() postAdded: EventEmitter<ForumPost> = new EventEmitter<ForumPost>();
 
   writingPost: boolean = false;
-
   post: ForumPost;
 
   constructor(private forumPostService: ForumPostApiService, public snackBar: MatSnackBar, private userService: UserService){
@@ -27,6 +26,7 @@ export class AddPostInputComponent implements OnInit{
       threadId: this.threadId,
       userName: this.userService.getUserName()
     });
+    this.writingPost = false;
   }
 
   submitPost(){
