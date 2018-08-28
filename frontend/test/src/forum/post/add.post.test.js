@@ -11,6 +11,10 @@ describe('Add Post to Thread', function() {
       'My case is taking so long ... is it lawyers fault?',
       'No, it is usual these days to wait for a year or two.',
     ]);
+    textIn('.test_infoPropertyValue_Posts', 2);
+    textIn('.test_infoPropertyValue_Last_Post', 'Jan 3, 2018');
+
+
   });
 
   it('Should be able submit post', function(){
@@ -25,6 +29,8 @@ describe('Add Post to Thread', function() {
     typeText('#test_userName', userName);
     click('#sendPost');
     text('Post saved.');
+    textIn('#test_infoPropertyValue_Posts', 3);
+    textIn('.test_infoPropertyValue_Last_Post', getCurrentDate());
   });
 
   it('Should hide add post form', function(){
@@ -38,5 +44,11 @@ describe('Add Post to Thread', function() {
     expect(cachedUserName).toEqual('Rashid');
   });
 
+  it('Should keep data after refresh', function(){
+    browser.get('/forum/thread/view/ismylaw');
+    texts([postContent, userName]);
+    textIn('#test_infoPropertyValue_Posts', 3);
+    textIn('.test_infoPropertyValue_Last_Post', getCurrentDate());
+  });
 
 });

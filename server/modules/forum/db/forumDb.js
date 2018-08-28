@@ -43,6 +43,8 @@ exports.savePost = function(post, cb){
   p.save(cb);
 };
 
-exports.increasePostCount = function(threadId){
-  Thread.findOneAndUpdate({id: threadId}, { $inc: { postsCount: 1 }}).exec();
+exports.updateThread = function(threadId){
+  Thread.findOneAndUpdate({id: threadId}, { $inc: { postsCount: 1 }}).exec(function(){
+    Thread.findOneAndUpdate({id: threadId}, { $set: { lastPostDate: new Date() }}).exec();
+  });
 };

@@ -49,3 +49,17 @@ global.noTexts  = function(texts, where){
     noText(t, where);
   });
 };
+
+global.getCurrentDate = function () {
+    var monthNames = [
+      "Jan", "Feb", "Mar",
+      "Apr", "May", "Jun", "Jul",
+      "Aug", "Sep", "Oct",
+      "Nov", "Dec"
+    ];
+    var date = new Date();
+    var day = date.getDate();
+    var monthIndex = date.getMonth();
+    var year = date.getFullYear();
+    return monthNames[monthIndex] + ' ' + day  + ', ' + year;
+};

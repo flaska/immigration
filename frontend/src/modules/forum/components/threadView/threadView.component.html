@@ -3,6 +3,9 @@
   <thread-overview [thread]="thread" [fullMode]="true"></thread-overview>
 </div>
 
-<forum-post *ngFor="let post of posts" [post]="post"></forum-post>
+<div *ngIf="!loadingPosts">
+  <forum-post *ngFor="let post of posts" [post]="post"></forum-post>
+</div>
+<mat-spinner *ngIf="loadingPosts" class="center-box"></mat-spinner>
 
 <add-post-input [threadId]="threadId" (postAdded)="newPostAdded($event)"></add-post-input>

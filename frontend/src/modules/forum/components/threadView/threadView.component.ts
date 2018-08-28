@@ -16,6 +16,7 @@ export class ThreadViewComponent implements OnInit{
   threadId: string;
   posts: ForumPost[];
   thread: ForumThread;
+  loadingPosts: boolean = true;
 
   constructor(private forumThreadService: ForumThreadApiService, private forumPostService: ForumPostApiService, private route: ActivatedRoute){
     this.threadId = this.route.snapshot.paramMap.get('threadId');
@@ -24,6 +25,7 @@ export class ThreadViewComponent implements OnInit{
     });
     this.forumPostService.getPostListByThreadId(this.threadId).subscribe(posts=>{
       this.posts = posts;
+      this.loadingPosts = false;
     })
   }
 
@@ -33,6 +35,7 @@ export class ThreadViewComponent implements OnInit{
   newPostAdded(post){
     this.posts.push(post);
     this.thread.postsCount++;
+    this.thread.lastPostDate = new Date();
   }
 
 

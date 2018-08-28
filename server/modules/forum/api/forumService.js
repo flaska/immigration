@@ -17,6 +17,6 @@ exports.getPost = function(query, cb){
 
 exports.savePost = function(post, cb){
   forumDb.savePost(post, cb);
-  forumDb.increasePostCount(post.threadId);
+  forumDb.updateThread(post.threadId);
   email.forwardMessage(post, (err)=>{console.log(err)});
 };
