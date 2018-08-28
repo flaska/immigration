@@ -25,6 +25,7 @@ export class AddThreadInputComponent implements OnInit{
   }
 
   submitThread(){
+    this.thread.id = this.thread.title.replace(/[^A-z0-9]/g,'-');
     this.forumThreadService.submitThread(this.thread).subscribe((post)=>{
       this.snackBar.open('Thread saved. Yay!', 'Close', {
         duration: 3000,
@@ -33,6 +34,10 @@ export class AddThreadInputComponent implements OnInit{
       this.threadAdded.emit(post);
       this.ngOnInit();
     });
+  }
+
+  canSubmit():boolean{
+    return this.thread.content.length>10 && this.thread.title.length>10;
   }
 }
 

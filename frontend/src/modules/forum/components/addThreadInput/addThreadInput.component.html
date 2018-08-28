@@ -24,6 +24,6 @@
     <input matInput placeholder="Your name" [(ngModel)]="thread.userName" id="test_userName">
   </mat-form-field>
 
-  <button mat-raised-button color="accent" id="sendPost" class="float-right" (click)="submitThread()">Send</button>
+  <button mat-raised-button color="accent" id="sendPost" class="float-right" (click)="submitThread()" [disabled]="!canSubmit()">Send</button>
   <div class="clearfix"></div>
 </mat-card>

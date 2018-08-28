@@ -1,5 +1,6 @@
 const commentDb = require('../db/commentDb'),
-  async = require('async');
+  async = require('async'),
+  email = require('../../../shared/email')
 ;
 
 exports.getComments = function(articleId, cb){
@@ -22,4 +23,5 @@ exports.getCommentsCount = function(articles, cb){
 
 exports.postComment = function(comment, cb){
   commentDb.postComment(comment, cb);
+  email.forwardMessage(comment, (err)=>{console.log(err)});
 };

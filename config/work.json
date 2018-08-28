@@ -1,4 +1,5 @@
 {
+  "environment": "development",
   "database":{
     "news": {
       "uri": "mongodb://localhost:27017/immtest",

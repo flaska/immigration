@@ -1,4 +1,5 @@
 {
+  "environment": "production",
   "database":{
     "news": {
       "uri": "mongodb://ds133601.mlab.com:33601/immigrationinmedia",

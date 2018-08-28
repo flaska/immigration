@@ -1,4 +1,4 @@
-<div *ngIf="thread | async as thread">
+<div *ngIf="thread">
   <forum-breadcrumb  [path]="[{title: 'Topics', url: '/forum'}, {title: thread.title}]"></forum-breadcrumb>
   <thread-overview [thread]="thread" [fullMode]="true"></thread-overview>
 </div>

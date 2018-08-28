@@ -1,11 +1,11 @@
 export class ForumThread {
-  id: string = Math.random().toString(36).substring(2);
+  id: string = null;
   userName: string = null;
   dateCreated: Date = new Date();
-  title: string = null;
-  content: string = null;
+  title: string = '';
+  content: string = '';
   lastPostDate: Date = new Date();
-  postsCount: number = 0;
+  postsCount: number = 1;
   views: number = 0;
   likes: number = 0;
 

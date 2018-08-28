@@ -29,9 +29,7 @@ export class BlockResourceComponent implements OnInit{
   }
 
   blockUrl(){
-    console.log(1);
     this.newsApiService.blockUrl(this.url, this.password).subscribe(()=>{
-      console.log(1);
       this.snackBar.open("URL Blocked", "Close", {
         duration: 3000,
       });
