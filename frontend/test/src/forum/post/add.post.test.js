@@ -19,6 +19,7 @@ describe('Add Post to Thread', function() {
 
     let cachedUserName = element(by.css('#test_userName')).getAttribute('value');
     expect(cachedUserName).toContain('Anonymous');
+    expect(cachedUserName).not.toContain('Rashid');
 
     console.log(cachedUserName);
 
@@ -35,7 +36,8 @@ describe('Add Post to Thread', function() {
 
   it('Should remember username', function(){
     click('#test_addPost');
-    text('add-post-input','Rashid');
+    let cachedUserName = element(by.css('#test_userName')).getAttribute('value');
+    expect(cachedUserName).toEqual('Rashid');
   });
 
 

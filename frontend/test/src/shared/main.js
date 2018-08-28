@@ -26,10 +26,8 @@ global.typeText = function(css, text){
   element(by.css(css)).sendKeys(text);
 };
 
-global.clearText = function (css, length) {
-  for (var i=0; i++; i<length){
-    element(by.css(css)).sendKeys(protractor.Key.BACK_SPACE);
-  }
+global.clearText = function(css) {
+  element(by.css(css)).clear();
 };
 
 global.clicks = function(clicks){
