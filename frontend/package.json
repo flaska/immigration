@@ -36,9 +36,12 @@
     "core-js": "^2.5.7",
     "date-diff": "^0.2.0",
     "express-http-proxy": "^1.2.0",
+    "ngx-bootstrap": "^3.0.1",
     "ngx-cookie-service": "^1.0.10",
+    "ngx-editor": "^3.3.0",
     "protractor-beautiful-reporter": "^1.2.4",
     "rxjs": "^6.2.2",
+    "rxjs-compat": "^6.2.2",
     "ts-loader": "^4.4.2",
     "zone.js": "^0.8.26"
   },

@@ -6,18 +6,22 @@
     <input matInput placeholder="Title" [(ngModel)]="thread.title"  id="test_threadTitleInput">
   </mat-form-field>
 
-  <mat-form-field class="full-width">
-    <textarea
-      matInput
-      id="test_threadContentInput"
-      [(ngModel)]="thread.content"
-      placeholder="Content"
-      cdkTextareaAutosize
-      #autosize="cdkTextareaAutosize"
-      cdkAutosizeMinRows="3"
-      cdkAutosizeMaxRows="16"
-    ></textarea>
-  </mat-form-field>
+  <!--<mat-form-field class="full-width">-->
+    <!--<textarea-->
+      <!--matInput-->
+      <!--id="test_threadContentInput"-->
+      <!--[(ngModel)]="thread.content"-->
+      <!--placeholder="Content"-->
+      <!--cdkTextareaAutosize-->
+      <!--#autosize="cdkTextareaAutosize"-->
+      <!--cdkAutosizeMinRows="3"-->
+      <!--cdkAutosizeMaxRows="16"-->
+    <!--&gt;</textarea>-->
+  <!--</mat-form-field>-->
+
+  <app-ngx-editor [placeholder]="'What is on your mind?'" [spellcheck]="true" [(ngModel)]="thread.content" [minHeight]="300"></app-ngx-editor>
+
+  <br>
 
   Posting as
   <mat-form-field class="post.userName">

@@ -4,6 +4,9 @@ import {CommonModule} from "@angular/common";
 import {HttpClientModule} from '@angular/common/http';
 import {RouterModule, Routes} from '@angular/router';
 
+
+import { NgxEditorModule } from 'ngx-editor'
+
 import {MaterialForumModule} from '../material/material.forum.module';
 
 import {ThreadListComponent} from './components/threadList/threadList.component';
@@ -20,6 +23,8 @@ import {FormsModule} from '@angular/forms';
 import {ForumThreadApiService} from './services/forum.thread.api.service';
 import {ForumPostApiService} from './services/forum.post.api.service';
 import {AddThreadInputComponent} from './components/addThreadInput/addThreadInput.component';
+
+
 
 export let routes: Routes = [
   { path: '', component: ThreadListComponent},
@@ -44,7 +49,10 @@ export let routes: Routes = [
     HttpClientModule,
     RouterModule.forChild(routes),
     MaterialForumModule,
-    FormsModule
+    FormsModule,
+
+    NgxEditorModule,
+    // FroalaEditorModule.forRoot(), FroalaViewModule.forRoot()
   ],
   exports: [],
   providers: [ForumThreadApiService, ForumPostApiService]

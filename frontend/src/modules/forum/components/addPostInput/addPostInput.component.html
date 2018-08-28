@@ -1,19 +1,9 @@
 <floating-action-button [action]="'add'" (click)="writingPost=true" *ngIf="!writingPost" id="test_addPost"></floating-action-button>
 
 <mat-card (click)="writingPost=true" *ngIf="writingPost">
-  <mat-form-field id="postInput">
-    <textarea
-      matInput
-      [(ngModel)]="post.content"
-      placeholder="Your comment..."
-      cdkTextareaAutosize
-      #autosize="cdkTextareaAutosize"
-      cdkAutosizeMinRows="3"
-      cdkAutosizeMaxRows="16"
-      id="test_postContentInput"
-    ></textarea>
-  </mat-form-field>
+  <app-ngx-editor [placeholder]="'Your comment...'" [spellcheck]="true" [(ngModel)]="post.content" [minHeight]="300"></app-ngx-editor>
 
+  <br>
   Posting as
   <mat-form-field class="post.userName">
     <input matInput placeholder="Your name" [(ngModel)]="post.userName" id="test_userName">
@@ -22,3 +12,4 @@
   <button mat-raised-button color="accent" id="sendPost" (click)="submitPost()">Send</button>
   <div class="clearfix"></div>
 </mat-card>
+

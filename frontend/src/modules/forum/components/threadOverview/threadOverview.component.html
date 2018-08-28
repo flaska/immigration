@@ -13,9 +13,6 @@
   </div>
 
   <hr *ngIf="fullMode"/>
-
-  <div *ngIf="fullMode">
-    {{thread.content}}
-  </div>
+  <div *ngIf="fullMode" [innerHTML]="thread.content"></div>
 
 </mat-card>
