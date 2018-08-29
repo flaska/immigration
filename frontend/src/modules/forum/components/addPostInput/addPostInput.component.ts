@@ -3,6 +3,7 @@ import {ForumPostApiService} from '../../services/forum.post.api.service';
 import {MatSnackBar} from '@angular/material';
 import {ForumPost} from '../../schemas/forum.schemas';
 import {UserService} from '../../../user/services/user.service';
+import {NgxEditorConfig} from '../../../shared/config/ngx.editor.config';
 
 
 @Component({
@@ -16,6 +17,7 @@ export class AddPostInputComponent implements OnInit{
 
   writingPost: boolean = false;
   post: ForumPost;
+  ngxEditorConfig = NgxEditorConfig;
 
   constructor(private forumPostService: ForumPostApiService, public snackBar: MatSnackBar, private userService: UserService){
 

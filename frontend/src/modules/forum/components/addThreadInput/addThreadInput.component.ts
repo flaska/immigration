@@ -3,7 +3,7 @@ import {MatSnackBar} from '@angular/material';
 import {ForumThread} from '../../schemas/forum.schemas';
 import {UserService} from '../../../user/services/user.service';
 import {ForumThreadApiService} from '../../services/forum.thread.api.service';
-
+import {NgxEditorConfig} from '../../../shared/config/ngx.editor.config';
 
 @Component({
   selector: 'add-thread-input',
@@ -12,9 +12,9 @@ import {ForumThreadApiService} from '../../services/forum.thread.api.service';
 })
 export class AddThreadInputComponent implements OnInit{
   @Output() threadAdded: EventEmitter<ForumThread> = new EventEmitter<ForumThread>();
-
   writingPost: boolean = false;
   thread: ForumThread = new ForumThread({userName: this.userService.getUserName()});
+  ngxEditorConfig = NgxEditorConfig;
 
   constructor(private forumThreadService: ForumThreadApiService, public snackBar: MatSnackBar, private userService: UserService){
   }
