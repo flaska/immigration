@@ -3015,27 +3015,33 @@ var i0 = __webpack_require__(/*! ./threadList.component.scss.shim.ngstyle */ "./
 var i1 = __webpack_require__(/*! @angular/core */ "@angular/core");
 var i2 = __webpack_require__(/*! ../threadOverview/threadOverview.component.ngfactory */ "./src/modules/forum/components/threadOverview/threadOverview.component.ngfactory.js");
 var i3 = __webpack_require__(/*! ../threadOverview/threadOverview.component */ "./src/modules/forum/components/threadOverview/threadOverview.component.ts");
-var i4 = __webpack_require__(/*! ../forumPost/forumBreadcrumb.component.ngfactory */ "./src/modules/forum/components/forumPost/forumBreadcrumb.component.ngfactory.js");
-var i5 = __webpack_require__(/*! ../forumPost/forumBreadcrumb.component */ "./src/modules/forum/components/forumPost/forumBreadcrumb.component.ts");
-var i6 = __webpack_require__(/*! @angular/common */ "@angular/common");
-var i7 = __webpack_require__(/*! ../addThreadInput/addThreadInput.component.ngfactory */ "./src/modules/forum/components/addThreadInput/addThreadInput.component.ngfactory.js");
-var i8 = __webpack_require__(/*! ../addThreadInput/addThreadInput.component */ "./src/modules/forum/components/addThreadInput/addThreadInput.component.ts");
-var i9 = __webpack_require__(/*! ../../services/forum.thread.api.service */ "./src/modules/forum/services/forum.thread.api.service.ts");
-var i10 = __webpack_require__(/*! @angular/material/snack-bar */ "@angular/material/snack-bar");
-var i11 = __webpack_require__(/*! ../../../user/services/user.service */ "./src/modules/user/services/user.service.ts");
-var i12 = __webpack_require__(/*! ./threadList.component */ "./src/modules/forum/components/threadList/threadList.component.ts");
+var i4 = __webpack_require__(/*! @angular/common */ "@angular/common");
+var i5 = __webpack_require__(/*! ../../../../../node_modules/@angular/material/progress-spinner/typings/index.ngfactory */ "./node_modules/@angular/material/progress-spinner/typings/index.ngfactory.js");
+var i6 = __webpack_require__(/*! @angular/material/progress-spinner */ "@angular/material/progress-spinner");
+var i7 = __webpack_require__(/*! @angular/cdk/platform */ "@angular/cdk/platform");
+var i8 = __webpack_require__(/*! @angular/platform-browser/animations */ "@angular/platform-browser/animations");
+var i9 = __webpack_require__(/*! ../forumPost/forumBreadcrumb.component.ngfactory */ "./src/modules/forum/components/forumPost/forumBreadcrumb.component.ngfactory.js");
+var i10 = __webpack_require__(/*! ../forumPost/forumBreadcrumb.component */ "./src/modules/forum/components/forumPost/forumBreadcrumb.component.ts");
+var i11 = __webpack_require__(/*! ../addThreadInput/addThreadInput.component.ngfactory */ "./src/modules/forum/components/addThreadInput/addThreadInput.component.ngfactory.js");
+var i12 = __webpack_require__(/*! ../addThreadInput/addThreadInput.component */ "./src/modules/forum/components/addThreadInput/addThreadInput.component.ts");
+var i13 = __webpack_require__(/*! ../../services/forum.thread.api.service */ "./src/modules/forum/services/forum.thread.api.service.ts");
+var i14 = __webpack_require__(/*! @angular/material/snack-bar */ "@angular/material/snack-bar");
+var i15 = __webpack_require__(/*! ../../../user/services/user.service */ "./src/modules/user/services/user.service.ts");
+var i16 = __webpack_require__(/*! ./threadList.component */ "./src/modules/forum/components/threadList/threadList.component.ts");
 var styles_ThreadListComponent = [i0.styles];
 var RenderType_ThreadListComponent = i1.ɵcrt({ encapsulation: 0, styles: styles_ThreadListComponent, data: {} });
 exports.RenderType_ThreadListComponent = RenderType_ThreadListComponent;
-function View_ThreadListComponent_1(_l) { return i1.ɵvid(0, [(_l()(), i1.ɵeld(0, 0, null, null, 2, "span", [], null, null, null, null, null)), (_l()(), i1.ɵeld(1, 0, null, null, 1, "thread-overview", [], [[8, "className", 0]], null, null, i2.View_ThreadOverviewComponent_0, i2.RenderType_ThreadOverviewComponent)), i1.ɵdid(2, 49152, null, 0, i3.ThreadOverviewComponent, [], { thread: [0, "thread"] }, null)], function (_ck, _v) { var currVal_1 = _v.context.$implicit; _ck(_v, 2, 0, currVal_1); }, function (_ck, _v) { var currVal_0 = i1.ɵinlineInterpolate(1, "test_thread_", _v.context.index, ""); _ck(_v, 1, 0, currVal_0); }); }
-function View_ThreadListComponent_0(_l) { return i1.ɵvid(0, [(_l()(), i1.ɵeld(0, 0, null, null, 3, "forum-breadcrumb", [], null, null, null, i4.View_ForumBreadcrumbComponent_0, i4.RenderType_ForumBreadcrumbComponent)), i1.ɵdid(1, 49152, null, 0, i5.ForumBreadcrumbComponent, [], { path: [0, "path"] }, null), i1.ɵpod(2, { title: 0 }), i1.ɵpad(3, 1), (_l()(), i1.ɵand(16777216, null, null, 2, null, View_ThreadListComponent_1)), i1.ɵdid(5, 278528, null, 0, i6.NgForOf, [i1.ViewContainerRef, i1.TemplateRef, i1.IterableDiffers], { ngForOf: [0, "ngForOf"] }, null), i1.ɵpid(131072, i6.AsyncPipe, [i1.ChangeDetectorRef]), (_l()(), i1.ɵeld(7, 0, null, null, 1, "add-thread-input", [], null, [[null, "threadAdded"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("threadAdded" === en)) {
+function View_ThreadListComponent_2(_l) { return i1.ɵvid(0, [(_l()(), i1.ɵeld(0, 0, null, null, 1, "thread-overview", [], [[8, "className", 0]], null, null, i2.View_ThreadOverviewComponent_0, i2.RenderType_ThreadOverviewComponent)), i1.ɵdid(1, 49152, null, 0, i3.ThreadOverviewComponent, [], { thread: [0, "thread"] }, null)], function (_ck, _v) { var currVal_1 = _v.context.$implicit; _ck(_v, 1, 0, currVal_1); }, function (_ck, _v) { var currVal_0 = i1.ɵinlineInterpolate(1, "test_thread_", _v.context.index, ""); _ck(_v, 0, 0, currVal_0); }); }
+function View_ThreadListComponent_1(_l) { return i1.ɵvid(0, [(_l()(), i1.ɵeld(0, 0, null, null, 3, "span", [], null, null, null, null, null)), (_l()(), i1.ɵand(16777216, null, null, 2, null, View_ThreadListComponent_2)), i1.ɵdid(2, 278528, null, 0, i4.NgForOf, [i1.ViewContainerRef, i1.TemplateRef, i1.IterableDiffers], { ngForOf: [0, "ngForOf"] }, null), i1.ɵpid(131072, i4.AsyncPipe, [i1.ChangeDetectorRef])], function (_ck, _v) { var _co = _v.component; var currVal_0 = i1.ɵunv(_v, 2, 0, i1.ɵnov(_v, 3).transform(_co.threadList)); _ck(_v, 2, 0, currVal_0); }, null); }
+function View_ThreadListComponent_3(_l) { return i1.ɵvid(0, [(_l()(), i1.ɵeld(0, 0, null, null, 1, "mat-spinner", [["class", "center-box mat-spinner mat-progress-spinner"], ["mode", "indeterminate"], ["role", "progressbar"]], [[2, "_mat-animation-noopable", null], [4, "width", "px"], [4, "height", "px"]], null, null, i5.View_MatSpinner_0, i5.RenderType_MatSpinner)), i1.ɵdid(1, 49152, null, 0, i6.MatSpinner, [i1.ElementRef, i7.Platform, [2, i4.DOCUMENT], [2, i8.ANIMATION_MODULE_TYPE], i6.MAT_PROGRESS_SPINNER_DEFAULT_OPTIONS], null, null)], null, function (_ck, _v) { var currVal_0 = i1.ɵnov(_v, 1)._noopAnimations; var currVal_1 = i1.ɵnov(_v, 1).diameter; var currVal_2 = i1.ɵnov(_v, 1).diameter; _ck(_v, 0, 0, currVal_0, currVal_1, currVal_2); }); }
+function View_ThreadListComponent_0(_l) { return i1.ɵvid(0, [(_l()(), i1.ɵeld(0, 0, null, null, 3, "forum-breadcrumb", [], null, null, null, i9.View_ForumBreadcrumbComponent_0, i9.RenderType_ForumBreadcrumbComponent)), i1.ɵdid(1, 49152, null, 0, i10.ForumBreadcrumbComponent, [], { path: [0, "path"] }, null), i1.ɵpod(2, { title: 0 }), i1.ɵpad(3, 1), (_l()(), i1.ɵand(16777216, null, null, 1, null, View_ThreadListComponent_1)), i1.ɵdid(5, 16384, null, 0, i4.NgIf, [i1.ViewContainerRef, i1.TemplateRef], { ngIf: [0, "ngIf"] }, null), (_l()(), i1.ɵand(16777216, null, null, 1, null, View_ThreadListComponent_3)), i1.ɵdid(7, 16384, null, 0, i4.NgIf, [i1.ViewContainerRef, i1.TemplateRef], { ngIf: [0, "ngIf"] }, null), (_l()(), i1.ɵeld(8, 0, null, null, 1, "add-thread-input", [], null, [[null, "threadAdded"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("threadAdded" === en)) {
         var pd_0 = (_co.threadAdded() !== false);
         ad = (pd_0 && ad);
-    } return ad; }, i7.View_AddThreadInputComponent_0, i7.RenderType_AddThreadInputComponent)), i1.ɵdid(8, 114688, null, 0, i8.AddThreadInputComponent, [i9.ForumThreadApiService, i10.MatSnackBar, i11.UserService], null, { threadAdded: "threadAdded" })], function (_ck, _v) { var _co = _v.component; var currVal_0 = _ck(_v, 3, 0, _ck(_v, 2, 0, "Topics")); _ck(_v, 1, 0, currVal_0); var currVal_1 = i1.ɵunv(_v, 5, 0, i1.ɵnov(_v, 6).transform(_co.threadList)); _ck(_v, 5, 0, currVal_1); _ck(_v, 8, 0); }, null); }
+    } return ad; }, i11.View_AddThreadInputComponent_0, i11.RenderType_AddThreadInputComponent)), i1.ɵdid(9, 114688, null, 0, i12.AddThreadInputComponent, [i13.ForumThreadApiService, i14.MatSnackBar, i15.UserService], null, { threadAdded: "threadAdded" })], function (_ck, _v) { var _co = _v.component; var currVal_0 = _ck(_v, 3, 0, _ck(_v, 2, 0, "Topics")); _ck(_v, 1, 0, currVal_0); var currVal_1 = !_co.loadingPosts; _ck(_v, 5, 0, currVal_1); var currVal_2 = _co.loadingPosts; _ck(_v, 7, 0, currVal_2); _ck(_v, 9, 0); }, null); }
 exports.View_ThreadListComponent_0 = View_ThreadListComponent_0;
-function View_ThreadListComponent_Host_0(_l) { return i1.ɵvid(0, [(_l()(), i1.ɵeld(0, 0, null, null, 1, "thread-list", [], null, null, null, View_ThreadListComponent_0, RenderType_ThreadListComponent)), i1.ɵdid(1, 114688, null, 0, i12.ThreadListComponent, [i9.ForumThreadApiService], null, null)], function (_ck, _v) { _ck(_v, 1, 0); }, null); }
+function View_ThreadListComponent_Host_0(_l) { return i1.ɵvid(0, [(_l()(), i1.ɵeld(0, 0, null, null, 1, "thread-list", [], null, null, null, View_ThreadListComponent_0, RenderType_ThreadListComponent)), i1.ɵdid(1, 114688, null, 0, i16.ThreadListComponent, [i13.ForumThreadApiService], null, null)], function (_ck, _v) { _ck(_v, 1, 0); }, null); }
 exports.View_ThreadListComponent_Host_0 = View_ThreadListComponent_Host_0;
-var ThreadListComponentNgFactory = i1.ɵccf("thread-list", i12.ThreadListComponent, View_ThreadListComponent_Host_0, {}, {}, []);
+var ThreadListComponentNgFactory = i1.ɵccf("thread-list", i16.ThreadListComponent, View_ThreadListComponent_Host_0, {}, {}, []);
 exports.ThreadListComponentNgFactory = ThreadListComponentNgFactory;
 
 
@@ -3078,9 +3084,14 @@ var forum_thread_api_service_1 = __webpack_require__(/*! ../../services/forum.th
 var ThreadListComponent = /** @class */ (function () {
     function ThreadListComponent(forumThreadService) {
         this.forumThreadService = forumThreadService;
+        this.loadingPosts = true;
     }
     ThreadListComponent.prototype.ngOnInit = function () {
+        var _this = this;
         this.threadList = this.forumThreadService.getThreadList();
+        this.threadList.subscribe(function (t) {
+            _this.loadingPosts = false;
+        });
     };
     ThreadListComponent.prototype.threadAdded = function () {
         this.ngOnInit();
@@ -4641,7 +4652,6 @@ exports.AppServerModule = AppServerModule;
 "use strict";
 
 /*
-
 [
     ["bold", "italic", "underline", "strikeThrough", "superscript", "subscript"],
     ["fontSize", "color"],
@@ -4650,7 +4660,7 @@ exports.AppServerModule = AppServerModule;
     ["paragraph", "blockquote", "removeBlockquote", "horizontalLine", "orderedList", "unorderedList"],
     ["link", "unlink", "image"]
 ]
-* */
+*/
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.NgxEditorConfig = {
     spellcheck: true,
