@@ -1,5 +1,4 @@
 /*
-
 [
     ["bold", "italic", "underline", "strikeThrough", "superscript", "subscript"],
     ["fontSize", "color"],
@@ -8,7 +7,7 @@
     ["paragraph", "blockquote", "removeBlockquote", "horizontalLine", "orderedList", "unorderedList"],
     ["link", "unlink", "image"]
 ]
-* */
+*/
 
 export const NgxEditorConfig = {
   spellcheck: true,
