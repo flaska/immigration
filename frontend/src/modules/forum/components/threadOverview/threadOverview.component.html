@@ -1,5 +1,6 @@
 <mat-card *ngIf="thread" class="thread">
   <info-property-list>
+    <info-property [propertyName]="'User'">{{thread.userName}}</info-property>
     <info-property [propertyName]="'Posts'">{{thread.postsCount}}</info-property>
     <!--<info-property [propertyName]="'Views'">{{thread.views}}</info-property>-->
     <info-property [propertyName]="'Last Post'">{{thread.lastPostDate | date}}</info-property>
