@@ -1,6 +1,11 @@
-<floating-action-button [action]="'add'" (click)="writingPost=true" *ngIf="!writingPost" id="test_addPost"></floating-action-button>
+<floating-action-button [icon]="'reply'" [color]="'accent'" (click)="writingPost=true" *ngIf="!writingPost" id="test_addPost" [tooltip]="'Reply'"></floating-action-button>
 
 <mat-card (click)="writingPost=true" *ngIf="writingPost">
+
+  <close-button (click)="writingPost=false"></close-button>
+
+  <div class="clearfix"></div>
+
   <app-ngx-editor [config]="ngxEditorConfig" [(ngModel)]="post.content"></app-ngx-editor>
   <br>
   Posting as
@@ -8,7 +13,7 @@
     <input matInput placeholder="Your name" [(ngModel)]="post.userName" id="test_userName">
   </mat-form-field>
 
-  <button mat-raised-button color="accent" id="sendPost" (click)="submitPost()">Send</button>
+  <button mat-raised-button color="accent" id="sendPost" (click)="submitPost()" [disabled]="!canSend()">Send</button>
   <div class="clearfix"></div>
 </mat-card>
 

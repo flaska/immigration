@@ -1,6 +1,8 @@
-<floating-action-button [action]="'add'" (click)="writingPost=true" *ngIf="!writingPost" id="test_newThread"></floating-action-button>
+<floating-action-button [icon]="'add'" [color]="'accent'" (click)="writingPost=true" *ngIf="!writingPost" id="test_newThread" [tooltip]="'New Topic'"></floating-action-button>
 
 <mat-card (click)="writingPost=true" *ngIf="writingPost">
+
+  <close-button (click)="writingPost=false"></close-button>
 
   <mat-form-field class="full-width">
     <input matInput placeholder="Title" [(ngModel)]="thread.title"  id="test_threadTitleInput">

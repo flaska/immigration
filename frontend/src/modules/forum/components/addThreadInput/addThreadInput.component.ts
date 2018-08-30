@@ -37,7 +37,7 @@ export class AddThreadInputComponent implements OnInit{
   }
 
   canSubmit():boolean{
-    return this.thread.content.length>10 && this.thread.title.length>10;
+    return this.thread.content.length>10 && this.thread.title.length>10 && this.thread.userName.length>3;
   }
 }
 

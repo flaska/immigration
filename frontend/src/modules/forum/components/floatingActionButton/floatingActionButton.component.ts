@@ -7,5 +7,7 @@ import {Component, Input} from '@angular/core';
   styleUrls: ['./floatingActionButton.component.scss']
 })
 export class FloatingActionButtonComponent {
-  @Input() action: string;
+  @Input() icon: string;
+  @Input() color: string;
+  @Input() tooltip: string;
 }

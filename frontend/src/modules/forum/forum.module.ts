@@ -23,6 +23,7 @@ import {FormsModule} from '@angular/forms';
 import {ForumThreadApiService} from './services/forum.thread.api.service';
 import {ForumPostApiService} from './services/forum.post.api.service';
 import {AddThreadInputComponent} from './components/addThreadInput/addThreadInput.component';
+import {CloseButtonComponent} from './components/closeButton/closeButton.component';
 
 
 
@@ -42,7 +43,8 @@ export let routes: Routes = [
     ForumBreadcrumbComponent,
     InfoPropertyListComponent,
     InfoPropertyComponent,
-    FloatingActionButtonComponent
+    FloatingActionButtonComponent,
+    CloseButtonComponent
   ],
   imports: [
     CommonModule,
@@ -50,9 +52,7 @@ export let routes: Routes = [
     RouterModule.forChild(routes),
     MaterialForumModule,
     FormsModule,
-
     NgxEditorModule,
-    // FroalaEditorModule.forRoot(), FroalaViewModule.forRoot()
   ],
   exports: [],
   providers: [ForumThreadApiService, ForumPostApiService]

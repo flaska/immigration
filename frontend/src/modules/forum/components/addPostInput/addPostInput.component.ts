@@ -41,5 +41,9 @@ export class AddPostInputComponent implements OnInit{
       this.ngOnInit();
     });
   }
+
+  canSend():boolean{
+    return this.post.content.length>5 && this.post.userName.length>3;
+  }
 }
 

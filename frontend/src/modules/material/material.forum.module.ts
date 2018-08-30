@@ -1,12 +1,11 @@
 import {NgModule} from '@angular/core';
 import {
-  MatButtonModule, MatCardModule, MatChipsModule, MatDividerModule, MatIconModule, MatInputModule, MatProgressSpinnerModule,
-  MatSnackBarModule
+  MatButtonModule, MatCardModule, MatChipsModule,MatInputModule, MatProgressSpinnerModule, MatSnackBarModule, MatTooltipModule
 } from '@angular/material';
 
 
 @NgModule({
-  imports: [MatButtonModule, MatCardModule, MatChipsModule, MatInputModule, MatSnackBarModule, MatProgressSpinnerModule],
-  exports: [MatButtonModule, MatCardModule, MatChipsModule, MatInputModule, MatSnackBarModule, MatProgressSpinnerModule],
+  imports: [MatButtonModule, MatCardModule, MatChipsModule, MatInputModule, MatSnackBarModule, MatProgressSpinnerModule, MatTooltipModule],
+  exports: [MatButtonModule, MatCardModule, MatChipsModule, MatInputModule, MatSnackBarModule, MatProgressSpinnerModule, MatTooltipModule],
 })
 export class MaterialForumModule { }

@@ -1,4 +1,14 @@
-Forum >
+<div class="float-right" id="breadcrumbBack">
+  <a [routerLink]="['/forum']" *ngIf="path.length>1" >
+    <i class="material-icons">
+      arrow_back
+    </i>
+  </a>
+</div>
+
+<a [routerLink]="['/forum']">
+  <h1>Forum</h1> >
+</a>
 <span *ngFor="let element of path; let i = index">
   <span *ngIf="i<path.length-1" >
     <a [routerLink]="[element.url]">{{element.title}}</a> >

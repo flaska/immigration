@@ -18,9 +18,9 @@ export class ForumThread {
 
 export class ForumPost {
   threadId: string = null;
-  userName: string = null;
+  userName: string = '';
   datePosted: Date = new Date();
-  content: string = null;
+  content: string = '';
   likes: number = 0;
 
   constructor(post: any){

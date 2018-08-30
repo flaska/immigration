@@ -1,9 +1,11 @@
 <forum-breadcrumb [path]="[{title: 'Topics'}]"></forum-breadcrumb>
 
-<span *ngIf="!loadingPosts">
-  <thread-overview *ngFor="let thread of threadList | async; let i = index;" [thread]="thread" class="test_thread_{{i}}"></thread-overview>
-</span>
-
 <mat-spinner *ngIf="loadingPosts" class="center-box"></mat-spinner>
 
-<add-thread-input (threadAdded)="threadAdded()"></add-thread-input>
+<span *ngIf="!loadingPosts">
+  <thread-overview *ngFor="let thread of threadList | async; let i = index;" [thread]="thread" class="test_thread_{{i}}"></thread-overview>
+  <add-thread-input (threadAdded)="threadAdded()"></add-thread-input>
+</span>
+
+
+
