@@ -7,10 +7,8 @@ describe('Thread List', function() {
       'Forum > Topics',
       'What to do with my case?',
       'Is my lawyer bad?',
-      'Posts', '2',
-      // 'Views', '34',
-      'Last Post', 'Jan 1, 2018',
-      // 'Likes', '3'
+      '2',
+      'Jan 1, 2018',
     ]);
   });
 
