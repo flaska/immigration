@@ -1,4 +1,9 @@
-<mat-chip color="primary" selected>
-  <div class="propertyName"><strong>{{propertyName}}</strong></div>
-  &nbsp; <span class="test_infoPropertyValue_{{toId(propertyName)}}"><ng-content></ng-content></span>
+<mat-chip color="primary" title="{{propertyName}}">
+  <i class="propertyIcon material-icons">
+    {{icon}}
+  </i>
+&nbsp; <span class="test_infoPropertyValue_{{toId(propertyName)}}">
+    <ng-content></ng-content>
+  </span>
 </mat-chip>
+

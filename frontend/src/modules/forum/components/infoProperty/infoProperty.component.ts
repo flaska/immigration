@@ -8,6 +8,7 @@ import {Component, Input} from '@angular/core';
 })
 export class InfoPropertyComponent {
   @Input() propertyName: string;
+  @Input() icon: string;
 
   toId(propertyName: string): string{
     return propertyName.replace(/ /g,'_');

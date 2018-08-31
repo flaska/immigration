@@ -1,17 +1,23 @@
 <div class="float-right" id="breadcrumbBack">
-  <a [routerLink]="['/forum']" *ngIf="path.length>1" >
+  <a [routerLink]="['/forum']" mat-mini-fab color="primary" *ngIf="path.length>1" >
     <i class="material-icons">
       arrow_back
     </i>
   </a>
 </div>
 
-<a [routerLink]="['/forum']">
-  <h1>Forum</h1> >
-</a>
+
+<h1>
+  <a [routerLink]="['/forum']" class="primary-color">
+    Forum
+  </a>
+</h1>
+
+>
+
 <span *ngFor="let element of path; let i = index">
-  <span *ngIf="i<path.length-1" >
-    <a [routerLink]="[element.url]">{{element.title}}</a> >
+  <span *ngIf="i<path.length-1">
+    <a [routerLink]="[element.url]" class="primary-color">{{element.title}}</a> >
   </span>
   <span *ngIf="i==path.length-1" id="lastBreadCrumbPath">{{element.title}}</span>
 </span>

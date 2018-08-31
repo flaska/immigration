@@ -1,19 +1,30 @@
 <mat-card *ngIf="thread" class="thread">
-  <info-property-list>
-    <info-property [propertyName]="'User'">{{thread.userName}}</info-property>
-    <info-property [propertyName]="'Posts'">{{thread.postsCount}}</info-property>
-    <!--<info-property [propertyName]="'Views'">{{thread.views}}</info-property>-->
-    <info-property [propertyName]="'Last Post'">{{thread.lastPostDate | date}}</info-property>
-    <!--<info-property [propertyName]="'Likes'">{{thread.likes}}</info-property>-->
-  </info-property-list>
 
-  <div class="threadName">
+  <div class="threadName float-left">
     <a [routerLink]="['/forum/thread/view/',thread.id]">
       {{thread.title}}
     </a>
   </div>
 
+  <div class="clearfix small-only-700">
+    <hr/>
+  </div>
+
+
+  <info-property-list>
+    <info-property [propertyName]="'User'" [icon]="'person'">{{thread.userName}}</info-property>
+    <info-property [propertyName]="'Posts'" [icon]="'chat_bubble'">{{thread.postsCount}}</info-property>
+    <!--<info-property [propertyName]="'Views'">{{thread.views}}</info-property>-->
+    <info-property [propertyName]="'Last Post'" [icon]="'calendar_today'">{{thread.lastPostDate | date}}</info-property>
+    <!--<info-property [propertyName]="'Likes'">{{thread.likes}}</info-property>-->
+  </info-property-list>
+
+  <div class="clearfix">
+  </div>
+
+
   <hr *ngIf="fullMode"/>
   <div *ngIf="fullMode" [innerHTML]="thread.content"></div>
 
 </mat-card>
+

@@ -26,8 +26,9 @@
             ],
             "styles": [
               "src/css/theme.scss",
+              "src/css/responsive.scss",
               "src/css/sharedStyles.scss",
-              "src/css/utilities.css",
+              "src/css/utilities.scss",
               "src/css/import/_component_import.scss"
             ],
             "scripts": []

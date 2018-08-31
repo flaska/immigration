@@ -1,0 +1,6 @@
+.small-only-700{
+  display: block;
+  @media(min-width: 701px) {
+    display: none;
+  }
+}
