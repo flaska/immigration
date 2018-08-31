@@ -109,6 +109,17 @@
             "main": "src/main.server.ts",
             "tsConfig": "src/tsconfig.server.json"
           }
+        },
+        "static": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "index": "src/index.html",
+            "main": "src/main.ts",
+            "polyfills": "src/polyfills.ts",
+            "outputPath": "dist/static",
+            "main": "src/main.static.ts",
+            "tsConfig": "src/tsconfig.static.json"
+          }
         }
       }
     }

@@ -12,7 +12,8 @@
     "test": "npm run test:clean && npm run test:data:load && protractor test/conf/protractor.conf.js",
     "test:clean": "rm -r test/report/beauty",
     "test:data:load": "sh test/scripts/load.data.sh",
-    "test:data:dump": "sh test/scripts/dump.data.sh"
+    "test:data:dump": "sh test/scripts/dump.data.sh",
+    "phonegap:copy": "cp -r dist/browser/* ../../imm-phonegap/www"
   },
   "private": true,
   "dependencies": {
