@@ -8,13 +8,13 @@
       "updateMode": "prefetch",
       "urls": [
         "/admin-admin-module-ngfactory.1424a145fcdb0f2010ae.js",
-        "/forum-forum-module-ngfactory.6f901bd29d923e9869f1.js",
+        "/forum-forum-module-ngfactory.38dc96de878cea7533f2.js",
         "/index.html",
-        "/main.78ec7c2647df36a9ced5.js",
+        "/main.79e3919edd3a0cb60fff.js",
         "/page-page-module-ngfactory.d99358af3e4b67fe8e01.js",
         "/polyfills.f4a90428e6a07940b7dc.js",
-        "/runtime.cfc16b1464bada777ff3.js",
-        "/styles.c4296a0cdcff63c76091.css"
+        "/runtime.c27f6e9c93f11ee68d70.js",
+        "/styles.29fe7ae97120135ed737.css"
       ],
       "patterns": []
     },
@@ -40,13 +40,13 @@
     "/assets/icons/icon512.png": "044f91f1cbcebea72f4ef892c594587a32091f5a",
     "/assets/img/code-house.png": "8980038b742c6092f58fe4896581da234d9bd46f",
     "/assets/manifest.json": "5504362c4218fd2839be7bf6d67fd6aa5e214f72",
-    "/forum-forum-module-ngfactory.6f901bd29d923e9869f1.js": "9da496d70f8eec83680974e7bef6a61ddb52ccbd",
-    "/index.html": "1dcf793694f53ea4a0e3ed302502654c37d00df1",
-    "/main.78ec7c2647df36a9ced5.js": "033e44c0254da6ddac4eacf1605e02d5f6d37c0d",
+    "/forum-forum-module-ngfactory.38dc96de878cea7533f2.js": "1553a56baff985017589d6f6d42591eac596b4d8",
+    "/index.html": "1b7ac78bb32b82f4ea78be66a26af21de3235e7c",
+    "/main.79e3919edd3a0cb60fff.js": "19e664b39acaaae57149e61666561d4fe45b4dae",
     "/page-page-module-ngfactory.d99358af3e4b67fe8e01.js": "dcb3093dc25c0e36cf45033df951c89434d24c0c",
     "/polyfills.f4a90428e6a07940b7dc.js": "5ebbf2d6f84b840ab0324eff5a4f509863daecca",
-    "/runtime.cfc16b1464bada777ff3.js": "420eb95711feca0ca44dd395cab3e4f3d14ce54c",
-    "/styles.c4296a0cdcff63c76091.css": "c8c3c62b21525092152c9c12978e04c8481df025"
+    "/runtime.c27f6e9c93f11ee68d70.js": "d4ed58dc80634d47e811d6135d968a228d53828e",
+    "/styles.29fe7ae97120135ed737.css": "7e9a85b11f82e70fbc254b99bbc4ff43ca334d05"
   },
   "navigationUrls": [
     {
