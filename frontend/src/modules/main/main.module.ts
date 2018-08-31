@@ -9,7 +9,7 @@ import {environment} from '../../environments/environment';
 import {RouterModule, Routes} from '@angular/router';
 import {MainNewsComponent} from '../news/components/mainNews/mainNews.component';
 import {NotFoundComponent} from './components/notFound/notFound.component';
-import {MatButtonModule} from '@angular/material';
+import {MatButtonModule, MatProgressSpinnerModule} from '@angular/material';
 import {UserModule} from '../user/user.module';
 
 export let appRoutes: Routes = [
@@ -35,7 +35,8 @@ export let appRoutes: Routes = [
     ServiceWorkerModule.register('/ngsw-worker.js', { enabled: environment.production }),
     NewsModule,
     UserModule,
-    MatButtonModule
+    MatButtonModule,
+    MatProgressSpinnerModule
   ],
   providers: [],
   bootstrap: [MainComponent]

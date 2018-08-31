@@ -1,7 +1,7 @@
 <div id="header">
   <nav>
-    <a class="nav-link" [routerLink]="['/forum']">Forum</a>
-    <a class="nav-link" [routerLink]="['/']" >News</a>
+    <a class="nav-link primary-color" [routerLink]="['/forum']" >Forum</a>
+    <a class="nav-link primary-color" [routerLink]="['/']" >News</a>
   </nav>
   <a [routerLink]="['/']">
     <h1 id="main_heading" class="">
@@ -14,6 +14,7 @@
 </div>
 
 <div class="main_content_wrapper" id="content">
+  <mat-spinner *ngIf="navigatingRoute" class="center-box"></mat-spinner>
   <router-outlet></router-outlet>
 </div>
 
