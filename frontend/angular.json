@@ -22,7 +22,8 @@
               "src/assets",
               "src/manifest.json",
               "src/robots.txt",
-              "src/sitemap.txt"
+              "src/sitemap.txt",
+              "src/ads.txt"
             ],
             "styles": [
               "src/css/theme.scss",
