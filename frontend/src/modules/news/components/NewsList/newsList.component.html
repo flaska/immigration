@@ -1,5 +1,8 @@
-<span *ngFor="let newsItem of newsItems">
+<span *ngFor="let newsItem of newsItems; let i = index">
   <news-item [newsItem]="newsItem"></news-item>
+  <div *ngIf="i===5">
+    <input type="hidden" name="IL_IN_TAG" value="2"/>
+  </div>
 </span>
 <div class="center" *ngIf="newsItems?.length>0">
   <button (click)="fetchMore.emit()" mat-raised-button id="load_more_news" color="primary">Load more news...</button>
