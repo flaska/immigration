@@ -1,9 +1,9 @@
 <span *ngFor="let newsItem of newsItems; let i = index">
   <news-item [newsItem]="newsItem"></news-item>
-  <div *ngIf="i===8">
+  <div *ngIf="i===7">
     <input type="hidden" name="IL_IN_TAG" value="2"/>
   </div>
-  <div *ngIf="i===3">
+  <div *ngIf="i===2">
     <input type="hidden" name="IL_IN_ARTICLE">
   </div>
 </span>
