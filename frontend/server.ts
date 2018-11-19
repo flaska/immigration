@@ -17,18 +17,18 @@ const app = express();
 const PORT = process.env.PORT || 4000;
 const DIST_FOLDER = join(process.cwd(), 'dist');
 
-app.use(function(req, res, next) {
-  if (process.env.PORT) {
-    if (req.headers['x-forwarded-proto'] != 'https') {
-      res.redirect(302, 'https://' + req.hostname + req.originalUrl);
-    }
-    else {
-      next();
-    }
-  } else {
-    next();
-  }
-});
+// app.use(function(req, res, next) {
+//   if (process.env.PORT) {
+//     if (req.headers['x-forwarded-proto'] != 'https') {
+//       res.redirect(302, 'https://' + req.hostname + req.originalUrl);
+//     }
+//     else {
+//       next();
+//     }
+//   } else {
+//     next();
+//   }
+// });
 
 app.use(compression());
 app.use(bodyParser.json());
