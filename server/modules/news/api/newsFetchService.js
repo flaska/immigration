@@ -34,7 +34,7 @@ function fetchNewsChannel(keyword, scoring){
       });
       feeds.shift();
 
-      stripUrl(feeds);
+      // stripUrl(feeds);
       getImg(feeds);
       stripSource(feeds);
       feeds = filterPernamentlyBlocked(feeds);
