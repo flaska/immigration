@@ -77,7 +77,14 @@ function stripSource(feeds){
 function stripUrl(feeds){
   feeds = feeds.map(f=>{
     var re = /\&url\=.+$/;
-    var found = f.url.match(re)[0].substr(5,1000);
+
+    var found;
+    try {
+      found = f.url.match(re)[0].substr(5, 1000);
+    } catch (e){
+      console.log(e);
+      console.log(JSON.stringify(f));
+    }
     f.url = found;
     return f;
   });
